@@ -27,17 +27,10 @@
 
 <body>
 
-<<<<<<< HEAD
+
     {{ $slot }}
-
-    <x-footer></x-footer>
-
     <script src="{{ asset('js/app.js') }}"></script>
-=======
-{{$slot}}
-<script src="{{asset('js/app.js')}}"></script>
-<x-footer></x-footer>
->>>>>>> 2e18f6ba8318b1a383dd8c74ba3dcd9d66c74d1a
+    <x-footer></x-footer>
 </body>
 
 </html>

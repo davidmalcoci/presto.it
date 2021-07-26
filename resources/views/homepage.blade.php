@@ -21,6 +21,8 @@
             </div>
         </div>
 
-    </section><!-- End header -->
+    </section>
+
     <div class="divprova"></div>
+
 </x-layout>
