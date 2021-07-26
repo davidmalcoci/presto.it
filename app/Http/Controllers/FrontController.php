@@ -13,7 +13,7 @@ class FrontController extends Controller
        return view('auth.register');
         }
 
-    public function Login(){
+    public function Login(Request $request){
         return view('auth.login');
     }
 }
