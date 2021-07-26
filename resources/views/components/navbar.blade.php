@@ -15,13 +15,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 text-center">
                         <li class=" nav-item">
-<<<<<<< HEAD
-                            <a class="nav-link d-inline-block pointer" aria-current="page"
-                                href="./index.html">Home</a>
-=======
                             <a class="nav-link d-inline-block px-2 mx-3 pointer" aria-current="page"
                                 href="{{route('homepage')}}">Home</a>
->>>>>>> 69e31089e5f395e41c4a7680d6b60a1bfa8df968
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-inline-block pointer" href="#">Categorie</a>
@@ -90,18 +85,10 @@
               </form> -->
                 </div>
 
-<<<<<<< HEAD
-
-            </div>
-
-        </nav>
-
-=======
             </div>
 
         </nav>
     </div>
 
 </nav>
->>>>>>> 69e31089e5f395e41c4a7680d6b60a1bfa8df968
 
