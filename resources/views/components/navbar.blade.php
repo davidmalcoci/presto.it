@@ -39,7 +39,7 @@
                         </li>
 
                         <div class="align-self-center">
-                            <button class="navbar-btn-revisore">Inserisci Annuncio</button>
+                            <a href="{{route('announcement.create')}}"><button class="navbar-btn-revisore">Inserisci Annuncio</button></a>
                         </div>
 
                         <li class="nav-item d-flex justify-content-center">
