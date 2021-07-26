@@ -9,4 +9,8 @@ class FrontController extends Controller
     function homepage() {
         return view('homepage');
     }
+
+    function store() {
+        
+    }
 }
