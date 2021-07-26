@@ -3113,6 +3113,58 @@ function within(min, value, max) {
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
+__webpack_require__(/*! ./script */ "./resources/js/script.js");
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/***/ (() => {
+
+//--------------- Cambio colore menù ---------------
+document.addEventListener('scroll', function () {
+  var navbar = document.querySelector('#navbar-presto');
+  var navbarSupported = document.querySelector('#navbarSupportedContent');
+  var navbarToggler = document.querySelector('#navbar-toggler');
+
+  if (window.scrollY > 100) {
+    navbarToggler.classList.remove('text-white');
+  } else {
+    navbarToggler.classList.add('text-white');
+  }
+
+  if (window.scrollY > 100) {
+    navbar.classList.add('p-bg-white', 'shadow', 'transition');
+  } else {
+    navbar.classList.remove('p-bg-white', 'shadow');
+  }
+
+  if (navbarSupported.classList.contains('show') && window.scrollY < 1) {
+    navbar.classList.add('p-bg-white');
+  }
+});
+document.addEventListener('click', function () {
+  var navbar = document.querySelector('#navbar-presto');
+  navbar.classList.add('p-bg-white', 'shadow', 'transition');
+}); //--------------- Cambio icona menù ---------------
+
+var iconMenu = document.querySelector('#icon-menu');
+var iconIcs = document.querySelector('#icon-ics');
+iconMenu.addEventListener('click', function icon() {
+  if (iconIcs.classList.contains('d-none')) {
+    iconIcs.classList.remove('d-none');
+    iconMenu.classList.add('d-none');
+  }
+});
+iconIcs.addEventListener('click', function icon() {
+  if (iconMenu.classList.contains('d-none')) {
+    iconMenu.classList.remove('d-none');
+    iconIcs.classList.add('d-none');
+  }
+});
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
