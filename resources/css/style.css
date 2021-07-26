@@ -2,6 +2,12 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #212529;
+}
+
+
 :root {
     --main: #64a1ff;
     --sec: #8bfcfe;
@@ -49,4 +55,8 @@
 
 .shadow {
     box-shadow: 10px 10px 100px black;
+}
+
+a {
+    text-decoration: none !important;
 }
