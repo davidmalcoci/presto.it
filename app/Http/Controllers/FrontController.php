@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -10,7 +9,11 @@ class FrontController extends Controller
         return view('homepage');
     }
 
-    function store() {
-        
+    public function Register(Request $request){
+       return view('auth.register');
+        }
+
+    public function Login(){
+        return view('auth.login');
     }
 }

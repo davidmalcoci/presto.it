@@ -15,4 +15,3 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::get('/', [FrontController::class, 'homepage'])->name('homepage');
-Route::post('/register', [FrontController::class, 'store'])->name('register');
