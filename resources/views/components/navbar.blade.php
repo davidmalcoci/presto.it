@@ -85,18 +85,10 @@
               </form> -->
                 </div>
 
-<<<<<<< HEAD
-
-            </div>
-
-        </nav>
-
-=======
             </div>
 
         </nav>
     </div>
 
 </nav>
->>>>>>> 69e31089e5f395e41c4a7680d6b60a1bfa8df968
 
