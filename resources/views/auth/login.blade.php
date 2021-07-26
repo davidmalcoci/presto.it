@@ -25,8 +25,11 @@ Accedi
             <input type="password" name="password" class="form-control" id="exampleInputPassword1">
         </div>
         <button type="submit" class="btn btn-primary">Accedi</button>
+
         </form>
+        <p>Non sei ancora registrto? <a href="{{route('register')}}">Registrati adesso</a></p>
             </div>
         </div>
     </div>
+
 </x-layout>
