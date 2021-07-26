@@ -5,7 +5,7 @@
                 <a class="navbar-brand col-10 col-lg-3" href="{{route('homepage')}}"><img id="logo-presto logo-img-color'"
                         class="logo-img img-fluid" src="./img/graph/logo-ex.svg" alt=""></a>
 
-                <button id="navbar-toggler" class="navbar-toggler tc-main fs-3 col-lg-6 bg-main text-white text-end"
+                <button id="navbar-toggler" class="navbar-toggler tc-main fs-3 col-lg-6 bg-main text-end"
                     type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i id="icon-menu" class="fas fa-stream"></i>

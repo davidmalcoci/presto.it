@@ -122,3 +122,16 @@ img {
         margin: 0px 8px;
     }
 }
+
+
+@media (max-width: 450px) {
+    .nav-link {
+        font-size: 14px !important;
+        padding: 15px 10px !important;
+    }
+    .navbar-btn-revisore {
+        font-size: 14px !important;
+        padding: 0px 10px;
+        margin: 10px 8px;
+    }
+}

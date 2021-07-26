@@ -7,6 +7,9 @@ body {
     color: #212529;
 }
 
+.container{
+    width: 100vw !important;
+}
 
 :root {
     --main: #64a1ff;

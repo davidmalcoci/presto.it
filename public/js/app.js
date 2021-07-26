@@ -3130,12 +3130,6 @@ document.addEventListener('scroll', function () {
   var navbarToggler = document.querySelector('#navbar-toggler');
 
   if (window.scrollY > 100) {
-    navbarToggler.classList.remove('text-white');
-  } else {
-    navbarToggler.classList.add('text-white');
-  }
-
-  if (window.scrollY > 100) {
     navbar.classList.add('p-bg-white', 'shadow', 'transition');
   } else {
     navbar.classList.remove('p-bg-white', 'shadow');
