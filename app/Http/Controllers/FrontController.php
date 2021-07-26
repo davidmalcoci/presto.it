@@ -16,4 +16,5 @@ class FrontController extends Controller
     public function Login(Request $request){
         return view('auth.login');
     }
+
 }

@@ -9,7 +9,7 @@
 
             <div class="container-fluid justify-content-between d-flex pe-3">
 
-                <a class="navbar-brand col-10 col-lg-3" href="./index.html"><img id="logo-presto logo-img-color'"
+                <a class="navbar-brand col-10 col-lg-3" href="{{route('homepage')}}"><img id="logo-presto logo-img-color'"
                         class="logo-img img-fluid" src="./img/graph/logo-ex.svg" alt=""></a>
 
                 <button id="navbar-toggler" class="navbar-toggler tc-main fs-3 col-lg-6 bg-main text-white text-end"
@@ -23,7 +23,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 text-center">
                         <li class=" nav-item">
                             <a class="nav-link d-inline-block px-2 mx-3 pointer" aria-current="page"
-                                href="./index.html">Home</a>
+                                href="{{route('homepage')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-inline-block px-2 mx-3 pointer" href="#">Categorie</a>
@@ -46,7 +46,7 @@
                         </li>
 
                         <div class="align-self-center">
-                            <button class="navbar-btn-revisore">Diventa revisore</button>
+                            <button class="navbar-btn-revisore">Inserisci Annuncio</button>
                         </div>
 
                         <li class="nav-item d-flex justify-content-center">
