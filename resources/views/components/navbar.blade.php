@@ -16,17 +16,29 @@
           <a class="nav-link" href="{{route('register')}}">Registrati</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{Auth::user()->name}}
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          @if(Auth::user())
+          Hello, {{Auth::user()->name}}
+          @else
+          Account
+          @endif
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            @if(Auth::user() == false)
+            <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
+            <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
+            
+            @else
+            
+            <li><a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
+            <form method="POST" action="{{route('logout')}}" id="form-logout">
+              @csrf
+            </form>
+          </li>
+            </ul>
+        </ul>
+        @endif
       <!-- <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
