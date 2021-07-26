@@ -1,0 +1,89 @@
+img {
+    filter: brightness(100%);
+}
+
+.p-bg-white {
+    background-color: var(--white) !important;
+}
+
+#navbar-presto {
+    color: var(--main) !important;
+}
+
+#navbar-presto .navbar-expand-lg {
+    background-color: var(--sec) !important;
+}
+
+.nav-link {
+    padding: 20px !important;
+}
+
+#navbar-presto .nav-link {
+    color: var(--main);
+    transition: 250ms;
+    /* transform: scale(1); */
+}
+
+#navbar-presto .nav-link:hover {
+    transform: scale(1.05);
+}
+
+#navbar-presto.p-bg-white .nav-link {
+    color: var(--main);
+}
+
+.navbar-brand {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#navbar-presto .navbar-toggler {
+    padding: 0px !important;
+    transition: all 0.5s;
+}
+
+#navbar-presto .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-back {
+    background: transparent;
+}
+
+.logo-img {
+    width: 8em;
+    /* padding: 10px; */
+}
+
+.divprova {
+    background-color: var(--black);
+    height: 8000px !important;
+}
+
+.navbar-btn-revisore {
+    font-weight: 600;
+    border: 1px solid var(--violet);
+    ;
+    background: transparent !important;
+    color: var(--violet);
+    border-radius: 15px;
+    padding: 0px 20px;
+    margin: 20px 20px;
+    /* outline: none; */
+    max-height: 30px;
+    transition: 250ms;
+}
+
+.navbar-btn-revisore:hover {
+    font-weight: 600;
+    border: 1px solid var(--violet) !important;
+    background: var(--violet) !important;
+    box-shadow: 0px 0px 5px var(--violet);
+    color: var(--white);
+    border-radius: 15px;
+    padding: 0px 20px;
+    margin: 20px 20px;
+    /* outline: none; */
+    max-height: 30px;
+    transform: scale(1.05);
+}
