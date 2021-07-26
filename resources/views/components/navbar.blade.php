@@ -2,7 +2,7 @@
 
             <div class="container-fluid justify-content-between d-flex pe-3">
 
-                <a class="navbar-brand col-10 col-lg-3" href="./index.html"><img id="logo-presto logo-img-color'"
+                <a class="navbar-brand col-10 col-lg-3" href="{{route('homepage')}}"><img id="logo-presto logo-img-color'"
                         class="logo-img img-fluid" src="./img/graph/logo-ex.svg" alt=""></a>
 
                 <button id="navbar-toggler" class="navbar-toggler tc-main fs-3 col-lg-6 bg-main text-white text-end"
@@ -15,8 +15,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 text-center">
                         <li class=" nav-item">
+<<<<<<< HEAD
                             <a class="nav-link d-inline-block pointer" aria-current="page"
                                 href="./index.html">Home</a>
+=======
+                            <a class="nav-link d-inline-block px-2 mx-3 pointer" aria-current="page"
+                                href="{{route('homepage')}}">Home</a>
+>>>>>>> 69e31089e5f395e41c4a7680d6b60a1bfa8df968
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-inline-block pointer" href="#">Categorie</a>
@@ -39,7 +44,7 @@
                         </li>
 
                         <div class="align-self-center">
-                            <button class="navbar-btn-revisore">Diventa revisore</button>
+                            <button class="navbar-btn-revisore">Inserisci Annuncio</button>
                         </div>
 
                         <li class="nav-item d-flex justify-content-center">
@@ -85,9 +90,18 @@
               </form> -->
                 </div>
 
+<<<<<<< HEAD
 
             </div>
 
         </nav>
 
+=======
+            </div>
+
+        </nav>
+    </div>
+
+</nav>
+>>>>>>> 69e31089e5f395e41c4a7680d6b60a1bfa8df968
 

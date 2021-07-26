@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::get('/', [FrontController::class, 'homepage'])->name('homepage');
+Route::get('/inserisci-annuncio', [AnnouncementController::class, 'create'])->name('announcement.create');
