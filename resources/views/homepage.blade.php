@@ -21,7 +21,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     @if (session('message'))
@@ -31,31 +30,63 @@
     @endif
 
 
-    <section id="categories" class="categories section-bg">
+    <section id="categories" class="categories section-category-header">
         <div class="container">
-        <div class="section-title">
+            <div class="section-title">
                 <h2>Annunci</h2>
                 <p>Scopri gli ultimi annunci</p>
             </div>
-            <div class="row">
-
-    @foreach($announcements as $announcement)
-    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <img src="https://via.placeholder.com/150C/O https://placeholder.com/" class="img-fluid rounded-circle mb-3" alt="">
-                        <h4 class="title"><a href="{{route('announcement.show', compact('announcement'))}}">{{$announcement->title}}</a></h4>
-                        <p class="description">{{$announcement->created_at->format('l jS F Y')}}</p>
-                        <p class="description">{{$announcement->description}}</p>
-                        <p class="description">Prezzo: {{$announcement->price}}€</p>
-                        <a href="{{route('category.show', [$announcement->category->name, $announcement->category->id])}}"><p class="description">Categoria: {{$announcement->category->name}}</p></a>
+            <div class="row justify-content-around">
+                @foreach ($announcements as $announcement)
+                    {{-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box">
+                            <img src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                class="img-fluid mb-3" alt="">
+                            <h4 class="title"><a
+                                    href="{{ route('announcement.show', compact('announcement')) }}">{{ $announcement->title }}</a>
+                            </h4>
+                            <p class="description">{{ $announcement->created_at->format('l jS F Y') }}</p>
+                            <p class="description">{{ $announcement->description }}</p>
+                            <p class="description">Prezzo: {{ $announcement->price }}€</p>
+                            <a
+                                href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}">
+                                <p class="description">Categoria: {{ $announcement->category->name }}</p>
+                            </a>
+                        </div>
+                    </div> --}}
+                    <div class="col-6 col-lg-2 mt-2 comp-product-card ">
+                        <div class="product-card">
+                            <div class="product-card-body">
+                                <div class="card-img-actions"> <img
+                                        src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                        class="card-img img-fluid" width="96" height="350" alt=""> </div>
+                            </div>
+                            <div class="product-card-body text-center m-2">
+                                <div class="mb-2">
+                                    <h6 class="mb-2"> <a
+                                            href="{{ route('announcement.show', compact('announcement')) }}"
+                                            class="product-card-title mb-2"
+                                            data-abc="true">{{ $announcement->title }}</a></h6>
+                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                        class="text-muted" data-abc="true"> {{ $announcement->category->name }}</a>
+                                </div>
+                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
+                                <p class="description">{{ $announcement->description }}</p>
+                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                                <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}</div>
+                                <button type="button" class="btn btn-product-card"><i class="fa fa-cart-plus mr-2"></i>
+                                    Add to cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-    @endforeach
-    </div>
 
-</div>
-</section>
+
 
     <!-- ======= Categorie ======= -->
 
@@ -106,6 +137,25 @@
 
             </div>
 
+        </div>
+    </section>
+
+    <!-- ======= Info section ======= -->
+
+    <section id="section-info" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column justify-content-center">
+                    <h1>Vendi il tuo usato o diventa un revisore</h1>
+                    <h2>Nuove opportunità e tante offerte</h2>
+                    <div>
+                        <a href="#about" class="btn-get-started">Scopri</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-2 order-lg-1 section-info-img">
+                    <img src="./img/header.svg" class="img-fluid animated" alt="">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -207,7 +257,5 @@
 
         </div>
     </section>
-
-    <div class="divprova"></div>
 
 </x-layout>

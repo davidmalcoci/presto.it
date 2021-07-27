@@ -10893,7 +10893,7 @@ body {
     color: #212529;
 }
 
-.container{
+.container {
     width: 100vw !important;
 }
 
@@ -10954,8 +10954,132 @@ body {
 a {
     text-decoration: none !important;
 }
-img {
-    filter: brightness(100%);
+
+/* ------------------ Footer  ------------------ */
+
+footer img{
+    height: 3.5em;
+    margin: 50px 0px 50px 0px;
+}
+
+footer {
+    color: rgb(255, 255, 255);
+    background-color: var(--black);
+    padding: 100px 0px 100px 0px;
+}
+
+footer h6 {
+    color: var(--violet);
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer h4 {
+    color: var(--orange);
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: rgb(255, 255, 255);
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+}
+
+.btn-footer {
+    color: var(--var(--white));
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 13px;
+    padding: 7px 30px;
+    line-height: 47px;
+}
+
+.btn-footer:hover {
+    text-decoration: none;
+}
+
+.form-footer input {
+    width: 35vw;
+    max-width: 200px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+::-moz-placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.form-footer button {
+    border-radius: 30px;
+    border: none;
+    background: var(--violet);
+    color: #fff;
+    outline: none;
+    margin: 10px 0px;
+    padding: 2px 12px;
+}
+
+.social .fab {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+footer ul li {
+    list-style: none;
+    display: block;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+
+/* ------------------ Brand logos (home)  ------------------ */
+
+.brand-logos {
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+.brand-logos i {
+    font-size: 3vh;
+    max-width: 100px;
+    transition: 250ms;
+}
+
+.brand-logos i:hover {
+    transform: scale(1.2);
 }
 
 .p-bg-white {
@@ -10964,11 +11088,14 @@ img {
 
 .nav-link {
     font-size: 15px !important;
+    font-weight: 600;
     padding: 20px !important;
 }
 
 #navbar-presto {
     color: var(--main) !important;
+    background-color: var(--white);
+    /* max-height: 80px; */
 }
 
 #navbar-presto .navbar-expand-lg {
@@ -11008,7 +11135,7 @@ img {
 }
 
 .logo-img {
-    width: 8em;
+    width: 6em;
     /* padding: 10px; */
 }
 
@@ -11096,8 +11223,8 @@ img {
 --------------------------------------------------------------*/
 
 #header {
-    width: 100vw;
-    height: 90vh;
+    /* width: 100vw; */
+    height: 100vh;
     background: var(--white);
 }
 
@@ -11199,8 +11326,120 @@ img {
 }
 
 /*--------------------------------------------------------------
+# Section info
+--------------------------------------------------------------*/
+
+#section-info {
+    /* width: 100vw; */
+    padding: 250px 0px 250px 0px;
+    height: 80vh;
+    background: var(--black);
+}
+
+#section-info h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--main);
+}
+
+#section-info h2 {
+    color: var(--warmgray);
+    margin: 15px 0 0 0;
+    font-size: 24px;
+}
+
+#section-info .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: var(--orange);
+}
+
+#section-info .btn-get-started:hover {
+    background: var(--main);
+}
+
+#section-info .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+    #section-info {
+        height: calc(100vh - 72px);
+    }
+    #section-info .animated {
+        -webkit-animation: none;
+        animation: none;
+    }
+    #section-info .section-info-img {
+        text-align: center;
+    }
+    #section-info .section-info-img img {
+        width: 80%;
+        margin: 80px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    #section-info h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    #section-info h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #section-info .section-info-img img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #section-info .section-info-img img {
+        width: 80%;
+    }
+}
+
+@media (max-height: 600px) {
+    #section-info {
+        height: calc(120vh);
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/*--------------------------------------------------------------
 # Categories
 --------------------------------------------------------------*/
+
+#categories {
+    padding: 250px 0px 250px 0px;
+}
 
 .categories .icon-box {
     padding: 30px;
@@ -11290,12 +11529,18 @@ section {
     left: calc(50% - 30px);
 }
 
+.section-lastads {
+    background-color: var(--black);
+    padding: 150px 0px 150px 0px;
+}
+
 /*--------------------------------------------------------------
 # F.A.Q
 --------------------------------------------------------------*/
 
 .faq {
-    padding: 60px 0;
+    padding: 250px 0px 250px 0px;
+    
 }
 
 .faq .faq-list {
@@ -11468,5 +11713,137 @@ input {
     margin: 0 5px;
     height: 40px;
     width: 40px;
+}
+.row-product-card {
+    margin: 0;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: var(--black);
+    text-align: left;
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-card-body {
+    /* background-color: #f3f3f386; */
+    padding: 0px 0px 1.5rem 0px;
+    /* padding: 1rem; */
+    text-align: center
+}
+
+.product-card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.product-card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-img {
+    width: 350px;
+}
+
+.star {
+    color: var(--orange);
+}
+
+.btn-product-card {
+    font-size: 1em;
+    /* max-height: 10%;
+    width: 70%; */
+    border-radius: 50px;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+.btn-product-card:hover {
+    box-shadow: 0px 0px 5px var(--violet);
+    color: #fff
+}
+
+/* <!-- ======= Product single show ======= --> */
+
+#product-show {
+    padding: 4em 0px 250px 0px !important;
+}
+
+#product-show h1{
+    color: var(--main);
+}
+
+#product-show h2{
+    position: relative;
+}
+
+#product-show h2::after {
+    content: '';
+    margin-top: 10px;
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--orange);
+    bottom: 0;
+}
+#card-product-category p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#card-product-category h3 {
+    color: var(--main);
+}
+
+.section-category-header {
+    background-color: var(--black);
+    padding: 150px 0px 150px 0px;
+}
+
+.btn-category-card {
+    font-size: 1em;
+    /* max-height: 10%;
+    width: 70%; */
+    border-radius: 50px;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+.btn-category-card:hover {
+    box-shadow: 0px 0px 5px var(--violet);
+    color: #fff
+}
+
+#badge {
+    color: var(--black);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: var(--orange);
 }
 

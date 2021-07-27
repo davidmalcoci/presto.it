@@ -3,3 +3,5 @@
 @import'navbar';
 @import'home';
 @import'auth';
+@import'products';
+@import'category';

@@ -1,18 +1,17 @@
-img {
-    filter: brightness(100%);
-}
-
 .p-bg-white {
     background-color: var(--white) !important;
 }
 
 .nav-link {
     font-size: 15px !important;
+    font-weight: 600;
     padding: 20px !important;
 }
 
 #navbar-presto {
     color: var(--main) !important;
+    background-color: var(--white);
+    /* max-height: 80px; */
 }
 
 #navbar-presto .navbar-expand-lg {
@@ -52,7 +51,7 @@ img {
 }
 
 .logo-img {
-    width: 8em;
+    width: 6em;
     /* padding: 10px; */
 }
 

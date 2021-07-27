@@ -7,7 +7,7 @@ body {
     color: #212529;
 }
 
-.container{
+.container {
     width: 100vw !important;
 }
 
@@ -62,4 +62,119 @@ body {
 
 a {
     text-decoration: none !important;
+}
+
+/* ------------------ Footer  ------------------ */
+
+footer img{
+    height: 3.5em;
+    margin: 50px 0px 50px 0px;
+}
+
+footer {
+    color: rgb(255, 255, 255);
+    background-color: var(--black);
+    padding: 100px 0px 100px 0px;
+}
+
+footer h6 {
+    color: var(--violet);
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer h4 {
+    color: var(--orange);
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: rgb(255, 255, 255);
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+}
+
+.btn-footer {
+    color: var(--var(--white));
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 13px;
+    padding: 7px 30px;
+    line-height: 47px;
+}
+
+.btn-footer:hover {
+    text-decoration: none;
+}
+
+.form-footer input {
+    width: 35vw;
+    max-width: 200px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.form-footer button {
+    border-radius: 30px;
+    border: none;
+    background: var(--violet);
+    color: #fff;
+    outline: none;
+    margin: 10px 0px;
+    padding: 2px 12px;
+}
+
+.social .fab {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+footer ul li {
+    list-style: none;
+    display: block;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+
+/* ------------------ Brand logos (home)  ------------------ */
+
+.brand-logos {
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+.brand-logos i {
+    font-size: 3vh;
+    max-width: 100px;
+    transition: 250ms;
+}
+
+.brand-logos i:hover {
+    transform: scale(1.2);
 }
