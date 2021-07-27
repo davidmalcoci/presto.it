@@ -49,7 +49,8 @@ class AnnouncementController extends Controller
             'title'=>$request->title,
             'description'=>$request->description,
             'category_id'=>$request->category,
-            'user_id'=>Auth::id()
+            'user_id'=>Auth::id(),
+            'price'=>$request->price
             
         ]);
 

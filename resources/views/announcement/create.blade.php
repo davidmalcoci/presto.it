@@ -14,9 +14,14 @@
     <label for="exampleInputPassword1" class="form-label">Descrizione annuncio</label>
     <input type="text" name="description" class="form-control" id="exampleInputPassword1">
   </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Prezzo</label>
+    <input type="number" name="price" class="form-control" id="exampleInputPassword1">
+  </div>
   
 <div class="mb-3">
-<label for="categories" class="form-label">Descrizione annuncio</label>
+<label for="categories" class="form-label">Categoria annuncio</label>
 <select name="category" class="form-select">
   <option selected>Categorie</option>
   @foreach ($categories as $category)
