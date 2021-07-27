@@ -31,6 +31,32 @@
     @endif
 
 
+    <section id="categories" class="categories section-bg">
+        <div class="container">
+        <div class="section-title">
+                <h2>Annunci</h2>
+                <p>Scopri gli ultimi annunci</p>
+            </div>
+            <div class="row">
+
+    @foreach($announcements as $announcement)
+    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <img src="https://via.placeholder.com/150C/O https://placeholder.com/" class="img-fluid rounded-circle mb-3" alt="">
+                        <h4 class="title"><a href="">{{$announcement->title}}</a></h4>
+                        <p class="description">{{$announcement->created_at}}</p>
+                        <p class="description">{{$announcement->description}}</p>
+                        <p class="description">Prezzo: {{$announcement->price}}€</p>
+                        <a href="{{$announcement->category->name}}"><p class="description">Categoria: {{$announcement->category->name}}</p></a>
+                    </div>
+                </div>
+
+    @endforeach
+    </div>
+
+</div>
+</section>
+
     <!-- ======= Categorie ======= -->
 
     <section id="categories" class="categories section-bg">
