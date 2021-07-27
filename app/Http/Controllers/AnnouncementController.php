@@ -52,6 +52,8 @@ class AnnouncementController extends Controller
             'user_id'=>Auth::id()
             
         ]);
+
+        return redirect(route('homepage'))->with('message', 'Il tuo annuncio è stato inserito');
     }
 
     /**

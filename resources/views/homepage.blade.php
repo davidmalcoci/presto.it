@@ -3,10 +3,10 @@
         Home | Presto.it
     @endpush
 
+
     <!-- ======= Header ======= -->
 
     <section id="header" class="d-flex align-items-center">
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -23,6 +23,12 @@
         </div>
 
     </section>
+
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
 
 
     <!-- ======= Categorie ======= -->
