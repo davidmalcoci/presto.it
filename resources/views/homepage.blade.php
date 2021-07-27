@@ -44,7 +44,7 @@
                     <div class="icon-box">
                         <img src="https://via.placeholder.com/150C/O https://placeholder.com/" class="img-fluid rounded-circle mb-3" alt="">
                         <h4 class="title"><a href="{{route('announcement.show', compact('announcement'))}}">{{$announcement->title}}</a></h4>
-                        <p class="description">{{$announcement->created_at}}</p>
+                        <p class="description">{{$announcement->created_at->format('l jS F Y')}}</p>
                         <p class="description">{{$announcement->description}}</p>
                         <p class="description">Prezzo: {{$announcement->price}}€</p>
                         <a href="{{$announcement->category->name}}"><p class="description">Categoria: {{$announcement->category->name}}</p></a>
