@@ -18,3 +18,4 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/', [FrontController::class, 'homepage'])->name('homepage');
 Route::get('/inserisci-annuncio', [AnnouncementController::class, 'create'])->name('announcement.create');
 Route::post('/annuncio-store', [AnnouncementController::class, 'store'])->name('announcement.store');
+Route::get('/mostra-dettaglio/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
