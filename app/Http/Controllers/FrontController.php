@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
     function homepage() {
-        $announcements = Announcement::all()->sortByDesc('created_at');
+        $announcements = Announcement::all()->sortByDesc('created_at')->take(5);
         return view('homepage', compact('announcements'));
     }
 
