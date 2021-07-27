@@ -47,7 +47,7 @@
                         <p class="description">{{$announcement->created_at->format('l jS F Y')}}</p>
                         <p class="description">{{$announcement->description}}</p>
                         <p class="description">Prezzo: {{$announcement->price}}€</p>
-                        <a href="{{$announcement->category->name}}"><p class="description">Categoria: {{$announcement->category->name}}</p></a>
+                        <a href="{{route('category.show', [$announcement->category->name, $announcement->category->id])}}"><p class="description">Categoria: {{$announcement->category->name}}</p></a>
                     </div>
                 </div>
 

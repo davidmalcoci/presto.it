@@ -103,4 +103,11 @@ class AnnouncementController extends Controller
     {
         //
     }
+
+    public function catdisplay(Announcement $announcement, $name, $id){
+        
+        $announcements = Announcement::where('category_id', $id)->get();
+        return view ('category.show', compact('name', 'id', 'announcements'));
+    }
+
 }
