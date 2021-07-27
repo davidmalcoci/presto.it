@@ -44,12 +44,13 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
+        
         $announcement = announcement::Create([
             'title'=>$request->title,
             'description'=>$request->description,
-            'category'=>$request->category,
+            'category_id'=>$request->category,
             'user_id'=>Auth::id()
-
+            
         ]);
     }
 
