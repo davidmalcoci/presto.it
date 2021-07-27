@@ -9,11 +9,11 @@ class FrontController extends Controller
         return view('homepage');
     }
 
-    public function Register(Request $request){
+    public function Register(){
        return view('auth.register');
         }
 
-    public function Login(Request $request){
+    public function Login(){
         return view('auth.login');
     }
 

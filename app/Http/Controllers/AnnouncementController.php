@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AnnouncementController extends Controller
 {
@@ -29,7 +31,9 @@ class AnnouncementController extends Controller
      */
     public function create()
     {
-        return view('announcement.create');
+        $categories = Category::all();
+
+        return view('announcement.create', compact('categories') );
     }
 
     /**
@@ -40,7 +44,13 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $announcement = announcement::Create([
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'category'=>$request->category,
+            'user_id'=>Auth::id()
+
+        ]);
     }
 
     /**
