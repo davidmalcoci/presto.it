@@ -1,8 +1,11 @@
 <x-layout>
+@push('title')
+        Categoria {{ $name }}
+    @endpush
     <section class="section-category-header">
         <div class="container">
             <div class="section-title">
-                <h2>Nome categoria</h2>
+                <h2>{{$name}}</h2>
                 <p>Scopri gli ultimi annunci</p>
             </div>
         </div>

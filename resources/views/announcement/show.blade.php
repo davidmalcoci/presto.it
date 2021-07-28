@@ -1,5 +1,7 @@
 <x-layout>
-
+@push('title')
+        Dettaglio {{ $announcement->title }}
+    @endpush
     {{-- <section class="mt-5">
         <div class="container">
             <div class="row mt-5">
@@ -18,7 +20,7 @@
                 <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
                         src="https://via.placeholder.com/600C/O https://placeholder.com/" alt="..." /></div>
                 <div class="col-md-6">
-                    <h4 class=" mb-1">{{ $announcement->category->name }}</h4>
+                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"><h4 class=" mb-1">{{ $announcement->category->name }}</h4></a>
                     <div class="small mb-1">{{ $announcement->created_at->format('l jS F Y') }}</div>
                     <h1 class="display-5 fw-bolder">{{ $announcement->title }}</h1>
                     <div class="fs-5 mb-5">

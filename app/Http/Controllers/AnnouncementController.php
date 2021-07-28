@@ -12,7 +12,7 @@ class AnnouncementController extends Controller
 
 
     public function __construct(){
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except('index', 'show', 'catdisplay');
     } 
     /**
      * Display a listing of the resource.

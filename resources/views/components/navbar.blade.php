@@ -60,11 +60,11 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @if (Auth::user() == false)
-                                    <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
 
                                 @else
 
