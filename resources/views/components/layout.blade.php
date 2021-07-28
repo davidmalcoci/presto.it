@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./img/graph/favicon.svg" />
 
     <!-- FontAwesome -->
@@ -32,8 +32,10 @@
 
 
     {{ $slot }}
+
     <script src="{{ asset('js/app.js') }}"></script>
     <x-footer></x-footer>
 </body>
+
 
 </html>
