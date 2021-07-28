@@ -104,6 +104,23 @@
     }
 }
 
+@media (max-width: 1081px) {
+    .nav-link {
+        font-size: 13px !important;
+        padding: 5px !important;
+    }
+    .navbar-btn-revisore {
+        font-size: 14px !important;
+        padding: 0px 10px;
+        margin: 0px 8px;
+    }
+    .navbar-btn-revisore:hover {
+        font-size: 14px !important;
+        padding: 0px 10px;
+        margin: 0px 8px;
+    }
+}
+
 
 @media (max-width: 1000px) {
     .nav-link {

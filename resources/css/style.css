@@ -7,6 +7,10 @@ body {
     color: #212529;
 }
 
+body {
+    background-color:  #fffcfc;
+}
+
 .container {
     width: 100vw !important;
 }

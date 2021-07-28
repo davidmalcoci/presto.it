@@ -92,3 +92,29 @@
     background: var(--orange);
     bottom: 0;
 }
+
+
+.card-product {
+    border: hidden !important;
+    overflow: hidden;
+    /* background: white; */
+    /* border: 2px solid rgb(236, 236, 236) !important; */
+    border-radius: 20px;
+    max-width: 400px;
+    /* box-shadow: 0px 0px 10px rgb(197, 197, 197); */
+}
+
+.card-product .card-product-body {
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-product-body h6 {
+    font-size: 1.8em;
+}
+
+.card-product-body .fa-heart {
+    font-size: 1.5em !important;
+}

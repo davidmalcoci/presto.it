@@ -6,9 +6,61 @@
     <section id="product-show" class="py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                        src="https://via.placeholder.com/600C/O https://placeholder.com/" alt="..." /></div>
                 <div class="col-md-6">
+                    {{-- <img class="card-img-top mb-5 mb-md-0" src="https://via.placeholder.com/600C/O https://placeholder.com/" alt="..." /> --}}
+                    <div class="container-gallery">
+
+                        <!-- Gallery -->
+                        <div id="js-gallery" class="gallery">
+                
+                            <!--Gallery Hero-->
+                            <div class="gallery__hero">
+                                <a href="" class="gallery__hero-enlarge ir" data-gallery="zoom">Zoom</a>
+                
+                                <img src="https://via.placeholder.com/600C/O https://placeholder.com">
+                            </div>
+                            <!--Gallery Hero-->
+                
+                            <!--Gallery Thumbs-->
+                            <div class="gallery__thumbs">
+                
+                                <a href="https://via.placeholder.com/600C/O https://placeholder.com"
+                                    data-gallery="thumb" class="is-active">
+                                    <img
+                                        src="https://via.placeholder.com/600C/O https://placeholder.com">
+                                </a>
+                
+                                <a href="https://via.placeholder.com/600/0000FF/808080 ?Text=Digital.com"
+                                    data-gallery="thumb">
+                                    <img
+                                        src="https://via.placeholder.com/600/0000FF/808080 ?Text=Digital.com">
+                                </a>
+                
+                                <a href="https://via.placeholder.com/600/FF0000/FFFFFF?Text=Down.com"
+                                    data-gallery="thumb">
+                                    <img
+                                        src="https://via.placeholder.com/600/FF0000/FFFFFF?Text=Down.com">
+                                </a>
+                
+                                <a href="https://via.placeholder.com/600C/O https://placeholder.com"
+                                data-gallery="thumb" class="is-active">
+                                <img
+                                    src="https://via.placeholder.com/600C/O https://placeholder.com">
+                            </a>
+                
+                            </div>
+                            <!--Gallery Thumbs-->
+                
+                        </div>
+                        <!--.gallery-->
+                        <!-- Gallery -->
+                
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
                     <a
                         href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}">
                         <h4 class=" mb-1">{{ $announcement->category->name }}</h4>
