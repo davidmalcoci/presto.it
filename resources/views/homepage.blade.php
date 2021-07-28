@@ -50,10 +50,19 @@
             </div>
         </header>
     </section>
-
+    
+    <!-- messaggio utente loggato -->
     @if (session('message'))
         <div class="alert alert-success">
             {{ session('message') }}
+        </div>
+    @endif
+
+
+<!-- messaggio errorre utente non revisore -->
+    @if (session('access.denied.revisor.only'))
+        <div class="alert alert-danger">
+            {{ session('access.denied.revisor.only') }}
         </div>
     @endif
 
