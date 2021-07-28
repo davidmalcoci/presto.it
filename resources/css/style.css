@@ -1,5 +1,5 @@
 * {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif ;
 }
 
 body {
@@ -9,6 +9,11 @@ body {
 
 body {
     background-color:  #fffcfc;
+}
+
+li{
+    text-decoration: none !important;
+    list-style: none !important;
 }
 
 .container {
@@ -24,8 +29,9 @@ body {
     --orange: #fcc989;
     --gray: #eaeced;
     --warmgray: #a08f86;
-    --gradient-one: linear-gradient(127deg #64a1ff, #8bfcfe);
-    --gradient-two: linear-gradient(127deg #d278f2, #fcc989);
+    --gradient-one: linear-gradient(127deg, #64a1ff, #8bfcfe);
+    --gradient-two: linear-gradient(127deg, #d278f2, #fcc989);
+    --gradient-light: linear-gradient(127deg, #e9f2ff, #cacaca);
 }
 
 ::selection {
@@ -175,7 +181,8 @@ footer ul li a {
 
 .brand-logos i {
     font-size: 3vh;
-    max-width: 100px;
+    font-size: max(1vw, 30px);
+    max-height: 30px !important;
     transition: 250ms;
 }
 

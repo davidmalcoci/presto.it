@@ -160,5 +160,20 @@ var App = (function () {
 App.init();
 
 
+//--------------- Notification  ---------------
+
+const countIndicator = document.getElementById("unseen_count");
+// let currentCount = 0;
+
+function actionAdd() {
+//   currentCount++;
+//   countIndicator.innerText = currentCount;
+  countIndicator.classList.remove('unseen-count-animation');
+  setTimeout(function() {
+    countIndicator.classList.add('unseen-count-animation');
+  }, 50)
+}
+actionAdd()
+
 //--------------- Swiper  ---------------
 
