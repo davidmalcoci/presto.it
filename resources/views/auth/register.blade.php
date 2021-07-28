@@ -1,5 +1,5 @@
 @push('title')
-    Registra account
+    Registra account | Presto.it
 @endpush
 <x-layout>
     <div class="container ">

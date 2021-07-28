@@ -1,5 +1,5 @@
 @push('title')
-    Accedi
+    Accedi | Presto.it
 @endpush
 <x-layout>
     <div class="container">

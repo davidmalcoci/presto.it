@@ -1,6 +1,6 @@
 <x-layout>
 @push('title')
-        Categoria {{ $name }}
+        Categoria {{ $name }} | Presto.it
     @endpush
     <section class="section-category-header">
         <div class="container">

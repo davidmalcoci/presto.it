@@ -1,3 +1,7 @@
+@push('title')
+    Inserisci annuncio | Presto.it
+@endpush
+
 <x-layout>
     <div class="container">
         <div class="row">
