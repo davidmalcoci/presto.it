@@ -35,7 +35,8 @@
             </div>
         </header>
     </section>
-
+    
+    <!-- messaggio utente loggato -->
     @if (session('message'))
         <div class="alert alert-success">
             {{ session('message') }}
@@ -46,7 +47,15 @@
     # Ultimi annunci
     --------------------------------------------------------------*/ --}}
 
-    {{-- <section id="categories" class="categories section-category-header">
+<!-- messaggio errorre utente non revisore -->
+    @if (session('access.denied.revisor.only'))
+        <div class="alert alert-danger">
+            {{ session('access.denied.revisor.only') }}
+        </div>
+    @endif
+
+
+    <section id="categories" class="categories section-category-header">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>

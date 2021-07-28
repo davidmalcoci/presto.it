@@ -38,6 +38,16 @@
                             </div>
                         </li>
 
+                        @if (Auth::user()->is_revisor)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('revisor.home')}}">
+                                    Dashboard revisore
+                                    <span class="badge badge-pill badge-danger" style="color: red">{{\App\Models\Announcement::ToBeRevisionedCount()}}</span>
+                                    <!-- Stilizzare il colore del contatore che abbiamo stilizzato in linea  -->
+                                </a>
+                            </li>
+                        @endif
+
                         <div class="align-self-center">
                             <a href="{{route('announcement.create')}}"><button class="navbar-btn-revisore">Inserisci Annuncio</button></a>
                         </div>
@@ -54,6 +64,8 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 @if (Auth::user())
                                     Hello, {{ Auth::user()->name }}
+                                    
+
                                 @else
                                     Account
                                 @endif
@@ -65,6 +77,7 @@
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+
 
                                 @else
 

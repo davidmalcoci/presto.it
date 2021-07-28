@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -20,3 +21,8 @@ Route::get('/inserisci-annuncio', [AnnouncementController::class, 'create'])->na
 Route::post('/annuncio-store', [AnnouncementController::class, 'store'])->name('announcement.store');
 Route::get('/mostra-dettaglio/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
 Route::get('/dettaglio-categoria/{id}/{name}',[AnnouncementController::class, 'catdisplay'])->name('category.show');
+
+
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.home');
+/* Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
+Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject'); */
