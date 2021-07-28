@@ -6,7 +6,8 @@
 
     <!-- ======= Header ======= -->
 
-    <section id="header" class="d-flex align-items-center">
+
+    {{-- <section id="header" class="d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -21,6 +22,33 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+    <section id="header" class="d-flex align-items-center">
+        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center ">
+            <div class="row align-items-center ">
+                <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
+                    <p class="tc-main fw-black">Acquista subito e goditi i tuoi risparmi</p>
+                    <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                            class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                    </h2>
+                    <p class="lead fs-5">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus
+                        dolorem labore exercitationem? In perferendis nemo ex eligendi obcaecati aperiam consequatur
+                    </p>
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 align-self-top p-0 px-2">
+                                <button type="button" class="btn btn-product-card">
+                                    Scopri di più</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 img-fluid text-center">
+                    <img src="./img/header.svg" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </header>
     </section>
 
     @if (session('message'))

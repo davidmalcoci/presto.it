@@ -11043,8 +11043,8 @@ footer h6:after {
 }
 
 .social .fab {
-    color: rgb(255, 255, 255);
-    font-size: 22px;
+    color: var(--black);
+    font-size: 1em;
     padding: 10px 15px;
 }
 
@@ -11228,7 +11228,7 @@ footer ul li a {
     background: var(--white);
 }
 
-#header h1 {
+/* #header h1 {
     margin: 0;
     font-size: 48px;
     font-weight: 700;
@@ -11258,7 +11258,7 @@ footer ul li a {
 
 #header .btn-get-started:hover {
     background: var(--main);
-}
+} */
 
 #header .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
@@ -11323,6 +11323,61 @@ footer ul li a {
     100% {
         transform: translateY(-10px);
     }
+}
+
+/* .bg-home-header {
+    background: linear-gradient(to right, #1a2c44, #3a5e7d);
+} */
+
+.masthead {
+    margin: 200px 0px;
+    padding: 100px 20px 0px 20px !important;
+}
+
+/* .div-image {
+    top: -250px;
+    z-index: -1;
+    background-image: url(./img/decoration_home.svg);
+    background-size: cover;
+    background-position: left;
+    height: 110%;
+} */
+
+.logos-header {
+    height: 20px;
+}
+
+.img-used {
+    margin: 20px;
+    height: 10vh;
+}
+
+.img-home {
+    max-height: 60vh;
+    margin-bottom: 50px;
+}
+
+.evidenziation {
+    border-radius: 10px;
+    color: white;
+    background-color: var(--violet);
+}
+
+.btn-header {
+    min-height: 4vh;
+    background-color: var(--sec) !important;
+    border: hidden !important;
+    border-radius: 100px !important;
+    color: white !important;
+    margin: 20px 20px 20px 0px;
+}
+
+.btn-header:hover {
+    box-shadow: 0px 0px 7px white;
+    background-color: white!important;
+    border: hidden !important;
+    border-radius: 100px !important;
+    color: var(--main) !important;
 }
 
 /*--------------------------------------------------------------
@@ -11540,7 +11595,6 @@ section {
 
 .faq {
     padding: 250px 0px 250px 0px;
-    
 }
 
 .faq .faq-list {
