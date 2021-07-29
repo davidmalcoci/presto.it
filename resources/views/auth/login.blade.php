@@ -8,7 +8,7 @@
                 <div class="form-container sign-in-container">
                     <form class="form-login" method="POST" action="{{ route('login') }}">
                         @csrf
-                        <h1>Log in</h1>
+                        <h1 class="mb-3">Log in</h1>
                         <span>entra nella community</span>
                         <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"
                             name="email">
