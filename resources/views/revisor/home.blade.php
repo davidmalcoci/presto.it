@@ -2,13 +2,12 @@
     @push('title')
         Dashboard revisore 
     @endpush
-    
     <section id="product-show" class="py-5">
         <h1 class="mt-5">Area revisore</h1>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center offset-md-4 flex-column" style="border: 1px solid black; width: 300px, border-radius: 15px">
-                    
+                @if ($announcement)
                     <img src="https://via.placeholder.com/150C/O https://placeholder.com/" alt="">
                     <h3>{{$announcement->user->id}}</h3>
                     <h2>{{$announcement->user->name}}</h2>
@@ -46,7 +45,9 @@
  
          </div>
        
+         @else 
+         <h1>Non ci sono annunci da revisionare</h1>
+         @endif
     </section>
-    
 
 </x-layout>
