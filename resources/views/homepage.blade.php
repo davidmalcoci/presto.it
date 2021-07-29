@@ -35,7 +35,21 @@
             </div>
         </header>
     </section>
-    
+
+    <div class="row search-row p-3 m-0 justify-content-center text-center">
+
+        <div class="col-10 col-lg-5 d-flex align-items-center ">
+
+            <div class="input-group border rounded-pill p-1 icon-search">
+                <input type="search" placeholder="Cosa stai cercando?" aria-describedby="button-addon3" class="form-control form-control-search bg-none border-0">
+                <div class="input-group-append  justify-content-center text-center align-self-center">
+                  <button id="button-addon3" type="button" class="btn btn-link"><i class="fa fa-search "></i></button>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
     <!-- messaggio utente loggato -->
     @if (session('message'))
         <div class="alert alert-success">
@@ -47,7 +61,7 @@
     # Ultimi annunci
     --------------------------------------------------------------*/ --}}
 
-<!-- messaggio errorre utente non revisore -->
+    <!-- messaggio errorre utente non revisore -->
     @if (session('access.denied.revisor.only'))
         <div class="alert alert-danger">
             {{ session('access.denied.revisor.only') }}
@@ -92,7 +106,7 @@
                 @endforeach
             </div>
         </div>
-    </section> --}}
+    </section>
 
     <section id="categories" class="categories section-category-header">
         <div class="container">
