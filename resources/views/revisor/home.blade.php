@@ -18,9 +18,22 @@
                     <h5>{{$announcement->created_at->format('l jS F Y')}}</h5>
 
                     <div class="d-flex justify-content-center">
-                        <i class="fas fa-check"></i>
-                        <i class="fas fa-times"></i>
+                        <form action="{{route('revisor.accept', [$announcement->id])}}" method="post">
+                        @csrf    
+                            <button type="submit">
+                                <i class="fas fa-check"></i>
+    
+                            </button>
+                        </form>
 
+                        <form action="{{route('revisor.reject', [$announcement->id])}}" method="post">
+                        @csrf    
+                            <button type="submit">
+                               
+                                <i class="fas fa-times"></i>
+    
+                            </button>
+                        </form>
                     </div>
 
                 </div>
