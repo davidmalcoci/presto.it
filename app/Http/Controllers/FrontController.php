@@ -30,4 +30,8 @@ class FrontController extends Controller
 
     }
 
+    public function work() {
+        return view('work');
+    }
+
 }

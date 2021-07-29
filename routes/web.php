@@ -28,3 +28,5 @@ Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'acc
 Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
 
 Route::get('/search', [FrontController::class, 'search'])->name('search.results');
+
+Route::get('/lavora-con-noi', [FrontController::class, 'work'])->name('work');

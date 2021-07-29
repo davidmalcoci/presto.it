@@ -42,20 +42,29 @@
                     <a href="{{ route('announcement.create') }}"><button class="navbar-btn-annuncio">Inserisci
                             Annuncio</button></a>
                 </div>
+
+                
+
+                
+                
                 @if (Auth::user())
-                @if (Auth::user()->is_revisor)
-                   
-                    <div class="align-self-center">
-                        <a href="{{ route('revisor.home') }}">
-                            <button class="navbar-btn-revisore d-flex">
-                                <div lass="nav-link"> Dashboard revisore</div>
-                                <div class="unseen-count" id="unseen_count">
-                                    {{ \App\Models\Announcement::ToBeRevisionedCount() }}</div>
-                                {{-- <div class="revisore-badge">{{\App\Models\Announcement::ToBeRevisionedCount()}}</div> --}}
-                            </button>
-                        </a>
-                    </div>
-                @endif
+                    @if (Auth::user()->is_revisor)
+                    
+                        <div class="align-self-center">
+                            <a href="{{ route('revisor.home') }}">
+                                <button class="navbar-btn-revisore d-flex">
+                                    <div lass="nav-link"> Dashboard revisore</div>
+                                    <div class="unseen-count" id="unseen_count">
+                                        {{ \App\Models\Announcement::ToBeRevisionedCount() }}</div>
+                                    {{-- <div class="revisore-badge">{{\App\Models\Announcement::ToBeRevisionedCount()}}</div> --}}
+                                </button>
+                            </a>
+                        </div>
+                        @else
+                        <div class="align-self-center">
+                            <a href="{{ route('work') }}"><button class="navbar-btn-annuncio">Diventa revisore</button></a>
+                        </div>
+                    @endif
                 @endif
             </ul>
 
