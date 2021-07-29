@@ -140,7 +140,7 @@
 
 
 @foreach ($announcements as $single)
-@if ($single->is_accepted == 0)
+@if ($single->is_accepted === 0)
 <div class="row">
     <div class="col-12 col-md-6 offset-md-3">
     {{$single->title}}
