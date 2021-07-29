@@ -77,6 +77,7 @@
             </div>
             <div class="row justify-content-around">
                 @foreach ($announcements as $announcement)
+                @if ($announcement->is_accepted == true)
                     <div class="col-6 col-lg-2 mt-2 comp-product-card ">
                         <div class="product-card">
                             <div class="product-card-body">
@@ -103,6 +104,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 @endforeach
             </div>
         </div>
