@@ -8,18 +8,22 @@
             <div class="section-title">
                 <h2>Area revisore</h2>
                 <p>Benvenuto {{ Auth::user()->name }}</p>
-                <h3>Hai <span>{{ \App\Models\Announcement::ToBeRevisionedCount() }}</span> annunci da revisionare</h3>
+                @if(!$announcement)
+                    <h1>Non ci sono più annunci da revisionare</h1>
+                @else
+                    <h3>Hai <span>{{ \App\Models\Announcement::ToBeRevisionedCount() }}</span> annunci da revisionare</h3>
+                @endif
             </div>
         </div>
     </section>
 
-    <div class="row icon-revisor">
+    <!-- <div class="row icon-revisor">
         <div class="col-12 d-flex justify-content-center align-items-center">
             <i class="fas fa-arrow-down px-3"></i>
             <i class="fas fa-arrow-down px-3"></i>
             <i class="fas fa-arrow-down px-3"></i>
         </div>
-    </div>
+    </div> -->
 
 
     <section id="revisor-show" class="py-5">
@@ -27,6 +31,7 @@
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-start">
 
+            @if($announcement)
                 <div class="col-md-6">
                     {{-- <img class="card-img-top mb-5 mb-md-0" src="https://via.placeholder.com/600C/O https://placeholder.com/" alt="..." /> --}}
                     <div class="container-gallery">
@@ -98,69 +103,32 @@
                     </div>
                     <p class="lead">{{ $announcement->description }}</p>
                     <div class="d-flex pt-3">
-                        <button type="button" class="btn btn-product-card">
+
+                        
+                        <form action="{{route('revisor.accept', [$announcement->id])}}" method="post">
+                        @csrf    
+                        <button type="submit" class="btn btn-product-card">
                             Approva <i class="fa fa-check ms-2"></i></button>
-                        </button>
-                        <button type="button" class="btn2 btn-product-card ms-3">
-                            Rifiuta <i class="fas fa-times ms-2"></i></i></button>
-                        </button>
+                        </form>
+
+                        <form action="{{route('revisor.reject', [$announcement->id])}}" method="post">
+                        @csrf    
+                        <button type="submit" class="btn2 btn-product-card ms-3">
+                            Rifiuta <i class="fas fa-times ms-2"></i></button>
+                        </form>
+                    
+
                     </div>
                 </div>
+               
+                @endif
 
             </div>
         </div>
 
     </section>
 
-    {{-- da rivedere style --}}
-
-    <section id="product-show" class="py-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center offset-md-4 flex-column" style="border: 1px solid black; width: 300px, border-radius: 15px">
-                @if ($announcement)
-                    <img src="https://via.placeholder.com/150C/O https://placeholder.com/" alt="">
-                    <h3>ID Utente:{{$announcement->user->id}}</h3>
-                    <h2>Nome Utente:{{$announcement->user->name}}</h2>
-                    <h5>Email Utente:{{$announcement->user->email}}</h5>
-                    <h2>Titolo Annuncio:{{$announcement->title}}</h2>
-                    <h4>Descrizione:{{$announcement->description}}</h4>
-                    <h5>Data:{{$announcement->created_at->format('l jS F Y')}}</h5>
-
-                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center offset-md-4 flex-column"
-                    style="border: 1px solid black; width: 300px, border-radius: 15px">
-                    <img src="https://via.placeholder.com/150C/O https://placeholder.com/" alt="">
-                    <h3>{{ $announcement->user->id }}</h3>
-                    <h2>{{ $announcement->user->name }}</h2>
-                    <h5>{{ $announcement->user->email }}</h5>
-                    <h2>{{ $announcement->title }}</h2>
-                    <h4>{{ $announcement->description }}</h4>
-                    <h5>{{ $announcement->created_at->format('l jS F Y') }}</h5>
-                    <div class="d-flex justify-content-center">
-                        <form action="{{route('revisor.accept', [$announcement->id])}}" method="post">
-                        @csrf    
-                            <button class="btn btn-success" style="width: 100px" type="submit">
-                                <i class="fas fa-check"></i>
-                            </button>
-                        </form>
-
-                        <form action="{{route('revisor.reject', [$announcement->id])}}" method="post">
-                        @csrf    
-                            <button class="btn btn-danger" style="width: 100px" type="submit">
-                               
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-        <div>
- 
-         </div>
-       
-         @else 
-         <h1>Non ci sono annunci da revisionare</h1>
-         @endif
-    </section>
+  
 
 
 </x-layout>
