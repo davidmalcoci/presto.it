@@ -12,7 +12,7 @@
         <header class="container-fluid p-0 bg-home-header col-8 justify-content-center ">
             <div class="row align-items-center ">
                 <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
-                    <p class="tc-main fw-black">Acquista subito e goditi i tuoi risparmi</p>
+                    <h5 class="tc-main fw-black">Acquista subito e goditi i tuoi risparmi</h5>
                     <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
                             class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
                     </h2>
@@ -22,9 +22,16 @@
                     </p>
                     <div class="container-fluid p-0">
                         <div class="row">
-                            <div class="col-12 col-lg-6 align-self-top p-0 px-2">
-                                <button type="button" class="btn btn-product-card">
-                                    Scopri di più</button>
+                            <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
+                                    Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                <h5 class="tc-main fw-black my-3">Main categories:</h5>
+                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3"><i class="fas fa-tshirt fs-3"></i></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 ms-1"><i class="fas fa-home fs-3"></i></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 ms-1"><i class="fas fa-car-side fs-3"></i></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 ms-1"><i class="fas fa-briefcase fs-3"></i></i></button></a>
+                                
+                                
                             </div>
                         </div>
                     </div>
@@ -53,9 +60,10 @@
 
     <!-- messaggio utente loggato -->
     @if (session('message'))
-        <div class="alert alert-success">
+        {{-- <div class="alert alert-success">
             {{ session('message') }}
-        </div>
+        </div> --}}
+        <script>swal("Benvenuto!", "  {{ session('message') }}", "success");</script>
     @endif
 
     {{-- /*--------------------------------------------------------------

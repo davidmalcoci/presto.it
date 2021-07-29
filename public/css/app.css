@@ -10921,13 +10921,13 @@ li{
 }
 
 ::-moz-selection {
-    color: #fffcfc;
-    background: #d278f2;
+    color: var(--black);
+    background: var(--gray);
 }
 
 ::selection {
-    color: #fffcfc;
-    background: #d278f2;
+    color: var(--black);
+    background: var(--gray);
 }
 
 ::-moz-selection {
@@ -11453,6 +11453,29 @@ nav{
     height: 90vh;
     background: var(--white);
 }
+
+.icon-header button{
+    color: var(--black);
+    background-color:  var(--gray);
+    border: 2px solid  var(--gray);
+    border-radius: 50px;
+}
+
+.icon-header button:hover{
+    color: var(--warmgray);
+    background-color:  var(--gray);
+    border: 2px solid  var(--gray);
+    border-radius: 50px;
+    box-shadow: 0px 0px 7px var(--gray);
+}
+
+.icon-header h5{
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: 30px !important;
+ 
+}
+
 
 /* #header h1 {
     margin: 0;
@@ -12280,7 +12303,7 @@ img {
 }
 
 .section-category-revisor {
-    background-color: var(--gray);
+    background-color: var(--white);
     padding: 150px 0px 50px 0px;
     position: relative;
 }
@@ -12334,6 +12357,9 @@ img {
     color: var(--main);
 }
 
+#revisor-show {
+  padding: 5em 0px 5em 0px;
+}
 
 #revisor-show h1{
     color: var(--main) !important;
@@ -12564,4 +12590,40 @@ body {
     width: clamp(320px, 35%, 480px);
     padding: 24px;
 } */
+
+@keyframes smile {
+	 from {
+		 background-position: 0px;
+	}
+	 to {
+		 background-position: -900px;
+	}
+}
+ @-webkit-keyframes smile {
+	 from {
+		 background-position: 0px;
+	}
+	 to {
+		 background-position: -900px;
+	}
+}
+ #sprites {
+	 width: 300px;
+	 height: 200px;
+	 background-image: url("https://res.cloudinary.com/shana-talley/image/upload/v1627569340/animation-smile_znpq6p.png");
+	 animation: smile 1s steps(3, end) infinite;
+	 -webkit-animation: smile 1s steps(3, end) infinite;
+}
+ a.accion {
+	 display: inline-block;
+	 padding: 10px;
+	 margin: 10px;
+	 border: 1px solid #ddd;
+	 border-radius: 5px;
+}
+ 
+
+
+
+
 

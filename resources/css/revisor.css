@@ -1,5 +1,5 @@
 .section-category-revisor {
-    background-color: var(--gray);
+    background-color: var(--white);
     padding: 150px 0px 50px 0px;
     position: relative;
 }
@@ -53,6 +53,9 @@
     color: var(--main);
 }
 
+#revisor-show {
+  padding: 5em 0px 5em 0px;
+}
 
 #revisor-show h1{
     color: var(--main) !important;
@@ -281,3 +284,38 @@ body {
     width: clamp(320px, 35%, 480px);
     padding: 24px;
 } */
+
+@keyframes smile {
+	 from {
+		 background-position: 0px;
+	}
+	 to {
+		 background-position: -900px;
+	}
+}
+ @-webkit-keyframes smile {
+	 from {
+		 background-position: 0px;
+	}
+	 to {
+		 background-position: -900px;
+	}
+}
+ #sprites {
+	 width: 300px;
+	 height: 200px;
+	 background-image: url("https://res.cloudinary.com/shana-talley/image/upload/v1627569340/animation-smile_znpq6p.png");
+	 animation: smile 1s steps(3, end) infinite;
+	 -webkit-animation: smile 1s steps(3, end) infinite;
+}
+ a.accion {
+	 display: inline-block;
+	 padding: 10px;
+	 margin: 10px;
+	 border: 1px solid #ddd;
+	 border-radius: 5px;
+}
+ 
+
+
+

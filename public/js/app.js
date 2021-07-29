@@ -3258,6 +3258,22 @@ function actionAdd() {
 
 actionAdd(); //--------------- Swiper  ---------------
 
+function parar() {
+  var el = document.getElementById("sprites");
+  el.style.webkitAnimationPlayState = 'paused';
+  el.style.AnimationPlayState = 'paused';
+  el.style.MozAnimationPlayState = 'paused';
+  el.style.MsAnimationPlayState = 'paused';
+}
+
+function continuar() {
+  var el = document.getElementById("sprites");
+  el.style.webkitAnimationPlayState = 'running';
+  el.style.AnimationPlayState = 'running';
+  el.style.MozAnimationPlayState = 'running';
+  el.style.MsAnimationPlayState = 'running';
+}
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":

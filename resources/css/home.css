@@ -9,6 +9,29 @@
     background: var(--white);
 }
 
+.icon-header button{
+    color: var(--black);
+    background-color:  var(--gray);
+    border: 2px solid  var(--gray);
+    border-radius: 50px;
+}
+
+.icon-header button:hover{
+    color: var(--warmgray);
+    background-color:  var(--gray);
+    border: 2px solid  var(--gray);
+    border-radius: 50px;
+    box-shadow: 0px 0px 7px var(--gray);
+}
+
+.icon-header h5{
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: 30px !important;
+ 
+}
+
+
 /* #header h1 {
     margin: 0;
     font-size: 48px;

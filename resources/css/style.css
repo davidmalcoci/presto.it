@@ -35,8 +35,8 @@ li{
 }
 
 ::selection {
-    color: #fffcfc;
-    background: #d278f2;
+    color: var(--black);
+    background: var(--gray);
 }
 
 ::-moz-selection {
