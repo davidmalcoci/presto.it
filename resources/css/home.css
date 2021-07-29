@@ -189,7 +189,7 @@
 --------------------------------------------------------------*/
 
 .search-row {
-    background: var(--gradient-light);
+    background: rgb(243, 243, 243);
 }
 
 .input-group {
@@ -220,7 +220,7 @@
     /* width: 100vw; */
     padding: 250px 0px 250px 0px;
     height: 80vh;
-    background: var(--black);
+    background: var(--gray);
 }
 
 #section-info h1 {
@@ -491,3 +491,25 @@ section {
 /*--------------------------------------------------------------
 # SWIPER
 --------------------------------------------------------------*/
+
+/* .gallery {
+    background: #EEE;
+  } */
+  
+  .gallery-cell {
+    min-width: auto;
+    min-height: auto;
+    margin-right: 50px;
+    /* background: #8C8; */
+    counter-increment: gallery-cell;
+  }
+  
+/* 
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  } */

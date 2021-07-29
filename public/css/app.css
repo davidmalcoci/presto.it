@@ -10910,6 +10910,7 @@ li{
     --main: #64a1ff;
     --sec: #8bfcfe;
     --black: #00001e;
+    --blue: #00001e;
     --white: #fffcfc;
     --violet: #d278f2;
     --orange: #fcc989;
@@ -11634,7 +11635,7 @@ nav{
 --------------------------------------------------------------*/
 
 .search-row {
-    background: var(--gradient-light);
+    background: rgb(243, 243, 243);
 }
 
 .input-group {
@@ -11677,7 +11678,7 @@ nav{
     /* width: 100vw; */
     padding: 250px 0px 250px 0px;
     height: 80vh;
-    background: var(--black);
+    background: var(--gray);
 }
 
 #section-info h1 {
@@ -11949,6 +11950,27 @@ section {
 # SWIPER
 --------------------------------------------------------------*/
 
+/* .gallery {
+    background: #EEE;
+  } */
+  
+  .gallery-cell {
+    min-width: auto;
+    min-height: auto;
+    margin-right: 50px;
+    /* background: #8C8; */
+    counter-increment: gallery-cell;
+  }
+  
+/* 
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  } */
 /*--------------------------------------------------------------
 # Log IN
 --------------------------------------------------------------*/
@@ -12195,8 +12217,8 @@ input {
 }
 
 .section-category-header {
-    background-color: var(--black);
-    padding: 150px 0px 150px 0px;
+    background: var(--gray);
+    padding: 150px 0px 50px 0px;
 }
 
 .btn-category-card {
@@ -12286,7 +12308,7 @@ img {
 } */
 .gallery__thumbs {
     text-align: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0);
 }
 .gallery__thumbs a {
     display: inline-block;
@@ -12302,11 +12324,11 @@ img {
     opacity: 0.2;
 }
 
-.badge-trash{
-    background-color:  rgb(250, 75, 75) !important;
+.badge-trash {
+    background-color: rgb(250, 75, 75) !important;
 }
 
-.trash-card{
+.trash-card {
     min-width: 6em !important;
     max-height: 10px !important;
 }
@@ -12317,9 +12339,11 @@ img {
     margin-top: 3em;
 } */
 
-.container-trash{
-    background: var(--gradient-light) !important;
+.container-trash {
+    /* background: #f0f0f0 !important; */
     padding: 6em 2em;
+    /* width: 80vw;
+box-shadow: 0px 0px 10px #f0f0f0 ; */
 }
 
 /* .card-img-top{
@@ -12327,23 +12351,21 @@ img {
     max-width: 4em;
 } */
 
-
 .section-category-revisor {
     background-color: var(--white);
     padding: 150px 0px 50px 0px;
     position: relative;
 }
 
-.section-category-revisor h3{
+.section-category-revisor h3 {
     color: var(--warmgray);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 700;
-    margin: 0px ;
-    
+    margin: 0px;
 }
 
-.section-category-revisor span{
+.section-category-revisor span {
     color: var(--white);
     background-color: var(--main);
     border: 2px solid var(--main);
@@ -12352,11 +12374,10 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 700;
-    margin: 0px ;
+    margin: 0px;
 }
 
-
-.icon-revisor{
+.icon-revisor {
     color: var(--violet);
     position: absolute;
     font-size: 60px;
@@ -12364,51 +12385,55 @@ img {
     left: calc(50vw - 135px);
 }
 
-.user-revisor{
+.user-revisor {
     /* border: 2px solid var(--warmgray); */
     border-radius: 80px;
     margin-bottom: 30px;
+    background-color: var(--white);
     box-shadow: 0px 0px 20px #d4d7d8c7;
 }
 
-.user-revisor span{
+.user-revisor span {
     font-size: 11px;
     font-weight: 900;
     text-transform: uppercase;
     color: var(--warmgray);
-    padding-right: 8px ;
+    padding-right: 8px;
 }
 
-.user-revisor i{
+.user-revisor i {
     color: var(--main);
 }
 
 #revisor-show {
-  padding: 5em 0px 5em 0px;
+    width: 100vw !important;
+    /* height: 80vh; */
+    /* padding: 3em 0px 5em 0px; */
+    background-color: #f0f0f0 !important;
+
 }
 
-#revisor-show h1{
+#revisor-show h1 {
     color: var(--main) !important;
 }
 
-.price span{
+.price span {
     font-size: 0.7em;
     /* font-weight: 900; */
     text-transform: uppercase;
     /* color: var(--warmgray); */
-    padding-left: 3px ;
+    padding-left: 3px;
 }
 
-.user-revisor h4{
+.user-revisor h4 {
     /* text-transform: uppercase; */
     font-weight: 700;
-    padding-right: 12px ;
+    padding-right: 12px;
 }
 
-.container-card{
+.container-card {
     position: relative;
 }
-
 
 .container-card img {
     width: 300px;
@@ -12490,122 +12515,37 @@ img {
     text-transform: uppercase;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 0px 20px  #d4d7d8c7;
+    box-shadow: 0 0px 20px #d4d7d8c7;
     transform: scale(1.02);
 }
 
-.recipe, .pizza-box {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.section-category-revisortrash {
+    background-color: var(--white);
+    padding: 70px 0px 0px 0px;
+    position: relative;
 }
 
-.pizza-box {
-    flex: 3 1 30ch;
-    height: calc(282px + 5vw);
-    overflow: hidden;
-}
-
-.pizza-box img {
-    max-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 50% 50%;
-       object-position: 50% 50%;
-}
-
-.recipe {
-    border: 2px solid #f2f2f2;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.recipe-content {
-    padding: 16px 32px;
-    flex: 4 1 40ch;
-}
-
-.recipe-tags {
-    margin: 0 -8px;
-}
-
-.recipe-tag {
-    display: inline-block;
-    margin: 8px;
-    font-size: 0.875em;
+.section-category-revisortrash h3 {
+    color: var(--warmgray);
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--primary);
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin: 0px;
 }
 
-.recipe-title {
-    margin: 0;
-    font-size: clamp(1.4em, 2.1vw, 2.1em);
-    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+.section-category-revisortrash span {
+    color: var(--white);
+    background-color: var(--main);
+    border: 2px solid var(--main);
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin: 0px;
 }
 
-.recipe-title a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.recipe-metadata {
-    margin: 0;
-}
-
-.recipe-rating {
-    font-size: 1.2em;
-    letter-spacing: 0.05em;
-    color: var(--primary);
-}
-
-.recipe-rating span {
-    color: var(--grey);
-}
-
-.recipe-votes {
-    font-size: 0.825em;
-    font-style: italic;
-    color: var(--lightgrey);
-}
-
-.recipe-save {
-    display: flex;
-    align-items: center;
-    padding: 6px 14px 6px 12px;
-    border-radius: 4px;
-    border: 2px solid currentColor;
-    color: var(--primary);
-    background: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.recipe-save svg {
-    margin-right: 6px;
-}
-
-/* Body Layout */
-
-/* * {
-    box-sizing: border-box;
-}
-
-body {
-    --primary: #e05d26;
-    --grey: #454545;
-    --lightgrey: #666;
-    color: var(--grey);
-    line-height: 1.55;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-} */
+/* Animation smile */
 
 .big {
     width: clamp(320px, 65%, 65%);
@@ -12618,38 +12558,36 @@ body {
 } */
 
 @keyframes smile {
-	 from {
-		 background-position: 0px;
-	}
-	 to {
-		 background-position: -900px;
-	}
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -900px;
+    }
 }
- @-webkit-keyframes smile {
-	 from {
-		 background-position: 0px;
-	}
-	 to {
-		 background-position: -900px;
-	}
+
+@-webkit-keyframes smile {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -900px;
+    }
 }
- #sprites {
-	 width: 300px;
-	 height: 200px;
-	 background-image: url("https://res.cloudinary.com/shana-talley/image/upload/v1627569340/animation-smile_znpq6p.png");
-	 animation: smile 1s steps(3, end) infinite;
-	 -webkit-animation: smile 1s steps(3, end) infinite;
+
+#sprites {
+    width: 300px;
+    height: 200px;
+    background-image: url("https://res.cloudinary.com/shana-talley/image/upload/v1627569340/animation-smile_znpq6p.png");
+    animation: smile 1s steps(3, end) infinite;
+    -webkit-animation: smile 1s steps(3, end) infinite;
 }
- a.accion {
-	 display: inline-block;
-	 padding: 10px;
-	 margin: 10px;
-	 border: 1px solid #ddd;
-	 border-radius: 5px;
+
+a.accion {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
- 
-
-
-
-
 

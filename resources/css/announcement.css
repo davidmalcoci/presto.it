@@ -64,7 +64,7 @@ img {
 } */
 .gallery__thumbs {
     text-align: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0);
 }
 .gallery__thumbs a {
     display: inline-block;

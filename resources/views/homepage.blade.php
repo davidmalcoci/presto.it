@@ -137,15 +137,17 @@
         </div>
     </section>
 
-    <section id="categories" class="categories section-category-header">
+
+    {{-- <section id="categories" class="categories section-category-header">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>
-                <p>Scopri gli ultimi annunci</p>
+                <p>prova prova prova</p>
             </div>
             <div class="row justify-content-around">
+                <div class="gallery js-flickity"  data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
                 @foreach ($announcements as $announcement)
-                    <div class="col-6 col-lg-2 mt-2 comp-product-card ">
+                    <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
                         <div class="product-card">
                             <div class="product-card-body">
                                 <div class="card-img-actions"> <img
@@ -157,7 +159,7 @@
                                     <h6 class="mb-2"> <a
                                             href="{{ route('announcement.show', compact('announcement')) }}"
                                             class="product-card-title mb-2"
-                                            data-abc="true">{{ $announcement->title }}</a></h6>
+                                            data-abc="true">TITOLO 11111</a></h6>
                                     <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
                                         class="text-muted" data-abc="true"> {{ $announcement->category->name }}</a>
                                 </div>
@@ -170,11 +172,12 @@
                                     Add to cart</button>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 @endforeach
             </div>
+            </div>
         </div>
-    </section>
+    </section> --}}
 
 
     {{-- /*--------------------------------------------------------------
