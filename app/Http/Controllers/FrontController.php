@@ -19,4 +19,15 @@ class FrontController extends Controller
         return view('auth.login');
     }
 
+    public function search(Request $request){
+
+        $query = $request->input('query');
+        $announcements= Announcement::search($query)->get();
+        
+
+        return view('search.results', compact('query', 'announcements'));
+
+
+    }
+
 }
