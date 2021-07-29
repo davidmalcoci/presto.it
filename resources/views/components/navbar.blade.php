@@ -37,8 +37,8 @@
                                 <a class="dropdown-item" href="#">mission</a>
                             </div>
                         </li>
-
-                        @if (Auth::user()->is_revisor)
+                        @if (Auth::user())
+                            @if (Auth::user()->is_revisor)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('revisor.home')}}">
                                     Dashboard revisore
@@ -46,7 +46,10 @@
                                     <!-- Stilizzare il colore del contatore che abbiamo stilizzato in linea  -->
                                 </a>
                             </li>
+                        
                         @endif
+                        @endif
+                        
 
                         <div class="align-self-center">
                             <a href="{{route('announcement.create')}}"><button class="navbar-btn-revisore">Inserisci Annuncio</button></a>
