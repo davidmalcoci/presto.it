@@ -14,7 +14,7 @@
                         <div id="sprites" class="col-4"></div>
                     </div>
                     <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 mt-5">
-                        Torna alla home <i class="fas fa-arrow-right ms-2"></i></i></button></a>
+                            Torna alla home <i class="fas fa-arrow-right ms-2"></i></i></button></a>
 
                 @else
                     <h3>Hai <span>{{ \App\Models\Announcement::ToBeRevisionedCount() }}</span> annunci da revisionare
@@ -138,22 +138,48 @@
 
     </div>
 
+    <section class="py-5 container-trash">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div id="card-product-category" class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="https://via.placeholder.com/300C/O https://placeholder.com/"
+                                alt="{{ $announcement->title }}" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <div id="badge" class="badge"">Offerta</div>
+                                    <h3 class="fw-bolder">{{ $announcement->title }}</h3>
+                                    <h4 class="">{{ $announcement->price }}€</h4>
+                                </div>
+                                <p class="card-text">{{ $announcement->description }}</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                                <a href="{{ route('announcement.show', compact('announcement')) }}"><button
+                                        type="button" class="btn btn-category-card"><i class="fas fa-undo ms-2"></i>
+                                        Scopri di più</button></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
 
-@foreach ($announcements as $single)
-@if ($single->is_accepted === 0)
-<div class="row">
-    <div class="col-12 col-md-6 offset-md-3">
-    {{$single->title}}
-    <form action="{{route('revisor.nullify', [$single->id])}}" method="post">
-                        @csrf    
+
+    @foreach ($announcements as $single)
+        @if ($single->is_accepted === 0)
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3">
+                    {{ $single->title }}
+                    <form action="{{ route('revisor.nullify', [$single->id]) }}" method="post">
+                        @csrf
                         <button type="submit" class="btn2 btn-product-card ms-3">
                             Redo <i class="fas fa-undo ms-2"></i></button>
-                        </form>
-    </div>
-</div>
+                    </form>
+                </div>
+            </div>
 
-@endif
-@endforeach
+        @endif
+    @endforeach
 
 
 </x-layout>

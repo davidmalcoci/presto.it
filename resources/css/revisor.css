@@ -1,3 +1,29 @@
+.badge-trash{
+    background-color:  rgb(250, 75, 75) !important;
+}
+
+.trash-card{
+    min-width: 6em !important;
+    max-height: 10px !important;
+}
+
+/* .trash{
+    background: var(--gradient-light) !important;
+    padding: 30px 30px;
+    margin-top: 3em;
+} */
+
+.container-trash{
+    background: var(--gradient-light) !important;
+    padding: 6em 2em;
+}
+
+/* .card-img-top{
+    max-height: 4em !important;
+    max-width: 4em;
+} */
+
+
 .section-category-revisor {
     background-color: var(--white);
     padding: 150px 0px 50px 0px;

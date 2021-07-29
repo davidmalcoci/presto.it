@@ -40,7 +40,6 @@
                                     <div id="badge" class="badge"">Offerta</div>
                                     <h3 class="fw-bolder">{{ $announcement->title }}</h3>
                                     <h4 class="">{{ $announcement->price }}€</h4>
-
                                 </div>
                                 <p class="card-text">{{ $announcement->description }}</p>
                             </div>

@@ -26,12 +26,20 @@
                                 {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
                                     Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
                                 <h5 class="tc-main fw-black my-3">Main categories:</h5>
-                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3"><i class="fas fa-tshirt fs-3"></i></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 ms-1"><i class="fas fa-home fs-3"></i></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 ms-1"><i class="fas fa-car-side fs-3"></i></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 ms-1"><i class="fas fa-briefcase fs-3"></i></i></button></a>
-                                
-                                
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3"><i
+                                            class="fas fa-tshirt fs-3"></i></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1"><i
+                                            class="fas fa-home fs-3"></i></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1"><i
+                                            class="fas fa-car-side fs-3"></i></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1"><i
+                                            class="fas fa-briefcase fs-3"></i></i></button></a>
+
+
                             </div>
                         </div>
                     </div>
@@ -43,18 +51,20 @@
         </header>
     </section>
 
-    <form action="{{route('search.results')}}" method="get">
-    <div class="row search-row p-3 m-0 justify-content-center text-center">
+    <form action="{{ route('search.results') }}" method="get">
+        <div class="row search-row p-3 m-0 justify-content-center text-center">
 
             <div class="col-10 col-lg-5 d-flex align-items-center ">
                 <div class="input-group border rounded-pill p-1 icon-search">
-                    <input type="text" name="query" placeholder="Cosa stai cercando?" aria-describedby="button-addon3" class="form-control form-control-search bg-none border-0">
+                    <input type="text" name="query" placeholder="Cosa stai cercando?" aria-describedby="button-addon3"
+                        class="form-control form-control-search bg-none border-0">
                     <div class="input-group-append  justify-content-center text-center align-self-center">
-                    <button id="button-addon3" type="submit" class="btn btn-link"><i class="fa fa-search "></i></button>
+                        <button id="button-addon3" type="submit" class="btn btn-link"><i
+                                class="fa fa-search "></i></button>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </form>
 
@@ -63,27 +73,25 @@
         {{-- <div class="alert alert-success">
             {{ session('message') }}
         </div> --}}
-        <script>swal("Benvenuto!", "  {{ session('message') }}", "success");</script>
+        <script>
+            swal("Ben fatto!", "{{ session('message') }}", "success");
+        </script>
     @endif
 
-        {{-- messaggio richiesta revisore --}}
+    {{-- messaggio richiesta revisore --}}
     @if (session('mailMessage'))
-        <div class="alert alert-success">
+        {{-- <div class="alert alert-success">
             {{ session('mailMessage') }}
-        </div>
+        </div> --}}
+        <script>
+            swal("{{ session('mailMessage') }}");
+        </script>
     @endif
+
 
     {{-- /*--------------------------------------------------------------
     # Ultimi annunci
     --------------------------------------------------------------*/ --}}
-
-    <!-- messaggio errorre utente non revisore -->
-    @if (session('access.denied.revisor.only'))
-        <div class="alert alert-danger">
-            {{ session('access.denied.revisor.only') }}
-        </div>
-    @endif
-
 
     <section id="categories" class="categories section-category-header">
         <div class="container">
@@ -93,33 +101,36 @@
             </div>
             <div class="row justify-content-around">
                 @foreach ($announcements as $announcement)
-                @if ($announcement->is_accepted == true)
-                    <div class="col-6 col-lg-2 mt-2 comp-product-card ">
-                        <div class="product-card">
-                            <div class="product-card-body">
-                                <div class="card-img-actions"> <img
-                                        src="https://via.placeholder.com/150C/O https://placeholder.com/"
-                                        class="card-img img-fluid" width="96" height="350" alt=""> </div>
-                            </div>
-                            <div class="product-card-body text-center m-2">
-                                <div class="mb-2">
-                                    <h6 class="mb-2"> <a
-                                            href="{{ route('announcement.show', compact('announcement')) }}"
-                                            class="product-card-title mb-2"
-                                            data-abc="true">{{ $announcement->title }}</a></h6>
-                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                        class="text-muted" data-abc="true"> {{ $announcement->category->name }}</a>
+                    @if ($announcement->is_accepted == true)
+                        <div class="col-6 col-lg-2 mt-2 comp-product-card ">
+                            <div class="product-card">
+                                <div class="product-card-body">
+                                    <div class="card-img-actions"> <img
+                                            src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                            class="card-img img-fluid" width="96" height="350" alt=""> </div>
                                 </div>
-                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
-                                <p class="description">{{ $announcement->description }}</p>
-                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                                <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}</div>
-                                <button type="button" class="btn btn-product-card"><i class="fa fa-cart-plus mr-2"></i>
-                                    Add to cart</button>
+                                <div class="product-card-body text-center m-2">
+                                    <div class="mb-2">
+                                        <h6 class="mb-2"> <a
+                                                href="{{ route('announcement.show', compact('announcement')) }}"
+                                                class="product-card-title mb-2"
+                                                data-abc="true">{{ $announcement->title }}</a></h6>
+                                        <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                            class="text-muted" data-abc="true">
+                                            {{ $announcement->category->name }}</a>
+                                    </div>
+                                    <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
+                                    <p class="description">{{ $announcement->description }}</p>
+                                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                            class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                                    <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}
+                                    </div>
+                                    <button type="button" class="btn btn-product-card"><i
+                                            class="fa fa-cart-plus mr-2"></i>
+                                        Add to cart</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endif
                 @endforeach
             </div>
