@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Mail\RevisorMail;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
 {
@@ -28,6 +30,20 @@ class FrontController extends Controller
         return view('search.results', compact('query', 'announcements'));
 
 
+    }
+
+    public function work() {
+        return view('work');
+    }
+
+    public function send(Request $request){
+        $mail = $request->input('email');
+        $nome = $request->input('name');
+
+        $contact = compact('mail', 'nome');
+        Mail::to($mail)->send(new RevisorMail($contact));
+
+        return redirect(route('homepage'))->with('mailMessage', 'La tua richiesta da revisore è stata accolta e sarà valutata!');
     }
 
 }

@@ -139,6 +139,21 @@
     </div>
 
 
+@foreach ($announcements as $single)
+@if ($single->is_accepted == 0)
+<div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+    {{$single->title}}
+    <form action="{{route('revisor.nullify', [$single->id])}}" method="post">
+                        @csrf    
+                        <button type="submit" class="btn2 btn-product-card ms-3">
+                            Redo <i class="fas fa-undo ms-2"></i></button>
+                        </form>
+    </div>
+</div>
+
+@endif
+@endforeach
 
 
 </x-layout>

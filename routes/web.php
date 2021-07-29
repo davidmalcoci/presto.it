@@ -26,5 +26,10 @@ Route::get('/dettaglio-categoria/{id}/{name}',[AnnouncementController::class, 'c
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.home');
 Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
 Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
+Route::post('/revisor/announcement/{id}/nullify', [RevisorController::class, 'nullify'])->name('revisor.nullify');
 
 Route::get('/search', [FrontController::class, 'search'])->name('search.results');
+
+Route::get('/lavora-con-noi', [FrontController::class, 'work'])->name('work');
+
+Route::post('/richiesta/revisore', [FrontController::class, 'send'])->name('send');
