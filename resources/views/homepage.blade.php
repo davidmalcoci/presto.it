@@ -36,19 +36,20 @@
         </header>
     </section>
 
+    <form action="{{route('search.results')}}" method="get">
     <div class="row search-row p-3 m-0 justify-content-center text-center">
 
-        <div class="col-10 col-lg-5 d-flex align-items-center ">
-
-            <div class="input-group border rounded-pill p-1 icon-search">
-                <input type="search" placeholder="Cosa stai cercando?" aria-describedby="button-addon3" class="form-control form-control-search bg-none border-0">
-                <div class="input-group-append  justify-content-center text-center align-self-center">
-                  <button id="button-addon3" type="button" class="btn btn-link"><i class="fa fa-search "></i></button>
+            <div class="col-10 col-lg-5 d-flex align-items-center ">
+                <div class="input-group border rounded-pill p-1 icon-search">
+                    <input type="text" name="query" placeholder="Cosa stai cercando?" aria-describedby="button-addon3" class="form-control form-control-search bg-none border-0">
+                    <div class="input-group-append  justify-content-center text-center align-self-center">
+                    <button id="button-addon3" type="submit" class="btn btn-link"><i class="fa fa-search "></i></button>
+                    </div>
                 </div>
-              </div>
-
+            </div>
+            
         </div>
-    </div>
+    </form>
 
     <!-- messaggio utente loggato -->
     @if (session('message'))

@@ -7,9 +7,11 @@ use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Announcement extends Model
 {
+    use Searchable;
     use HasFactory;
 
     protected $fillable = [
@@ -20,6 +22,20 @@ class Announcement extends Model
         'price'
 
     ];
+
+    public function toSearchableArray()
+    {
+        $array = [
+
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description
+        ];
+
+        
+
+        return $array;
+    }
 
 
     public function category(){
