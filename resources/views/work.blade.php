@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3 div-login">
                 <div class="form-container sign-in-container">
-                    <form class="form-login" method="POST" action="{{ route('login') }}">
+                    <form class="form-login" method="POST" action="{{ route('send') }}">
                         @csrf
                         <h1>Diventa revisore</h1>
                         <span>Lavora con noi</span>

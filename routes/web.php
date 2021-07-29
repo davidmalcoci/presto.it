@@ -30,3 +30,5 @@ Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'rej
 Route::get('/search', [FrontController::class, 'search'])->name('search.results');
 
 Route::get('/lavora-con-noi', [FrontController::class, 'work'])->name('work');
+
+Route::post('/richiesta/revisore', [FrontController::class, 'send'])->name('send');

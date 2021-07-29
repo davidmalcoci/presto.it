@@ -58,6 +58,13 @@
         </div>
     @endif
 
+        {{-- messaggio richiesta revisore --}}
+    @if (session('mailMessage'))
+        <div class="alert alert-success">
+            {{ session('mailMessage') }}
+        </div>
+    @endif
+
     {{-- /*--------------------------------------------------------------
     # Ultimi annunci
     --------------------------------------------------------------*/ --}}
