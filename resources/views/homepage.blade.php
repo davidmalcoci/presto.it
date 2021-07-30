@@ -9,7 +9,7 @@
     --------------------------------------------------------------*/ --}}
 
     <section id="header" class="d-flex align-items-center">
-        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center ">
+        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center mt-5">
             <div class="row align-items-center ">
                 <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
                     <h5 class="tc-main fw-black">Acquista subito e goditi i tuoi risparmi</h5>
