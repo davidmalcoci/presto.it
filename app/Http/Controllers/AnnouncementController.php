@@ -16,13 +16,13 @@ class AnnouncementController extends Controller
     } 
 
 
-    public function newAnnouncements() {
+    
+    // public function newAnnouncements() {
 
-        $uniqueSecret=base_convert(sha1(uniqid(mt_rand())), 16, 36);
-        return view('announcement.create', compact('uniqueSecret'));
-    }
-
-
+    //     $uniqueSecret=base_convert(sha1(uniqid(mt_rand())), 16, 36);
+    //     return view('announcement.create', compact('uniqueSecret'));
+    // }
+    
     /**
      * Display a listing of the resource.
      *
@@ -32,7 +32,7 @@ class AnnouncementController extends Controller
     {
         //
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -41,16 +41,18 @@ class AnnouncementController extends Controller
     public function create()
     {
         $categories = Category::all();
-
-        return view('announcement.create', compact('categories') );
+        $uniqueSecret=base_convert(sha1(uniqid(mt_rand())), 16, 36);
+        
+        return view('announcement.create', compact('categories', 'uniqueSecret') );
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         
@@ -61,13 +63,16 @@ class AnnouncementController extends Controller
             'user_id'=>Auth::id(),
             'price'=>$request->price
             
+            
         ]);
-
+        
         $uniqueSecret = $request->input('uniqueSecret');
         dd($uniqueSecret);
-
+        
         return redirect(route('homepage'))->with('message', 'Il tuo annuncio è stato inserito');
     }
+    
+
 
     /**
      * Display the specified resource.

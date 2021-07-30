@@ -10,7 +10,7 @@
                     <form class="form-login" method="POST" action="{{ route('announcement.store') }}">
                         @csrf
 
-                    
+                      <h3>DEBUG::SECRET{{$uniqueSecret}}</h3>
                         <h1>Inserisci annuncio</h1>
                         <span>al resto ci pensiamo noi</span>
                         <div class="mb-3 mt-5">
@@ -30,8 +30,7 @@
                         <input 
                             type="hidden"
                             name="uniqueSecret"
-                            value="{{$uniqueSecret}}"
-                        >
+                            value="{{ $uniqueSecret }}">
                         
                         <div class="mb-3">
                             <label for="categories" class="form-label">Categoria annuncio</label>
