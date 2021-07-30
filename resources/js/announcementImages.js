@@ -1,11 +1,11 @@
 $(function() {
 
-    if($('#drophere').lenght > 0){
+    if($('#drophere').length > 0){
 
         let csrfToken = $('meta[name="csrf-token"]').attr('content');
         let uniqueSecret = $('input[name="uniqueSecret"]').attr('value');
 
-        let myDropzone = new Dropzone('drophere', {
+        let myDropzone = new Dropzone('#drophere', {
             url: '/announcement/images/upload',
 
             params: {

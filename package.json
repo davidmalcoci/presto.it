@@ -21,6 +21,7 @@
         "@popperjs/core": "^2.9.2",
         "bootstrap": "^5.0.2",
         "dropzone": "^5.9.2",
+        "jquery": "^3.6.0",
         "webpack": "^5.47.1"
     }
 }
