@@ -14,6 +14,15 @@ class AnnouncementController extends Controller
     public function __construct(){
         $this->middleware('auth')->except('index', 'show', 'catdisplay');
     } 
+
+
+    public function newAnnouncements() {
+
+        $uniqueSecret=base_convert(sha1(uniqid(mt_rand())), 16, 36);
+        return view('announcement.create', compact('uniqueSecret'));
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -53,6 +62,9 @@ class AnnouncementController extends Controller
             'price'=>$request->price
             
         ]);
+
+        $uniqueSecret = $request->input('uniqueSecret');
+        dd($uniqueSecret);
 
         return redirect(route('homepage'))->with('message', 'Il tuo annuncio è stato inserito');
     }

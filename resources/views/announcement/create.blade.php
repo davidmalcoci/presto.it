@@ -9,6 +9,8 @@
                 <div class="form-container sign-in-container">
                     <form class="form-login" method="POST" action="{{ route('announcement.store') }}">
                         @csrf
+
+                    
                         <h1>Inserisci annuncio</h1>
                         <span>al resto ci pensiamo noi</span>
                         <div class="mb-3 mt-5">
@@ -25,6 +27,12 @@
                                 placeholder="Prezzo" name="price">
                         </div>
 
+                        <input 
+                            type="hidden"
+                            name="uniqueSecret"
+                            value="{{$uniqueSecret}}"
+                        >
+                        
                         <div class="mb-3">
                             <label for="categories" class="form-label">Categoria annuncio</label>
                             <select name="category" class="form-select">
