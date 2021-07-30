@@ -7,3 +7,5 @@
 @import'category';
 @import'announcement';
 @import'revisor';
+@import'~dropzone/dist/basic';
+@import'~dropzone/dist/dropzone';

@@ -41,6 +41,19 @@
                                 @endforeach
                             </select>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="images" class="col-md-12 col-form-label text-md-left">Immagini</label>
+                            <div class="col-md-12">
+                                <div class="dropzone" id="drophere"></div>
+                                @error('images')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{$message}}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
+                        </div>
                         <button type="submit" class="button-login">Crea</button>
                     </form>
                 </div>

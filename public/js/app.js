@@ -3112,7 +3112,21 @@ function within(min, value, max) {
 /***/ (() => {
 
 $(function () {
+<<<<<<< HEAD
   alert('ci sono');
+=======
+  if ($('#drophere').lenght > 0) {
+    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+    var uniqueSecret = $('input[name="uniqueSecret"]').attr('value');
+    var myDropzone = new Dropzone('drophere', {
+      url: '/announcement/images/upload',
+      params: {
+        _token: csrfToken,
+        uniqueSecret: uniqueSecret
+      }
+    });
+  }
+>>>>>>> 7b770fff98e53f398056680181e0b6187462c514
 });
 
 /***/ }),
