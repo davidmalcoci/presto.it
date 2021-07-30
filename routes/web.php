@@ -20,6 +20,10 @@ Route::get('/', [FrontController::class, 'homepage'])->name('homepage');
 Route::get('/inserisci-annuncio', [AnnouncementController::class, 'create'])->name('announcement.create');
 Route::post('/annuncio-store', [AnnouncementController::class, 'store'])->name('announcement.store');
 Route::post('/announcement/images/upload', [AnnouncementController::class, 'upload'])->name('announcement.images.upload');
+Route::post('/announcement/images/remove', [AnnouncementController::class, 'remove'])->name('announcement.images.remove');
+
+
+
 
 Route::get('/mostra-dettaglio/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
 Route::get('/dettaglio-categoria/{id}/{name}',[AnnouncementController::class, 'catdisplay'])->name('category.show');

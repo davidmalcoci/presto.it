@@ -55,11 +55,23 @@ class AnnouncementController extends Controller
         $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
         session()->push("images.{$uniqueSecret}", $fileName);
     
-        /* return response()->json(
-            session()->get("images.{$uniqueSecret}")
-        ); */
+        return response()->json(
+            [
+                'id' => $fileName
+            ]
+        );
 
     } 
+
+    public function remove(Request $request){
+        $uniqueSecret = $request->input('uniqueSecret');
+        $fileName = $request->input('id');
+        session()->push("removedimages.{$uniqueSecret}", $fileName);
+        Storage::delete($fileName);
+
+        return response()->json('ok');
+
+    }
     
     /**
      * Store a newly created resource in storage.
@@ -82,7 +94,11 @@ class AnnouncementController extends Controller
         ]);
         
         $uniqueSecret = $request->input('uniqueSecret');
-        $images = session()->get("images.{$uniqueSecret}");
+        
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
+
+        $images = array_diff($images, $removedImages);
 
         foreach ($images as $image){
             $i = new AnnouncementImage();
