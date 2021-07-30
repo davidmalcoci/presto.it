@@ -80,7 +80,6 @@ class AnnouncementController extends Controller
         
         $uniqueSecret = $request->input('uniqueSecret');
         $images = session()->get("images.{$uniqueSecret}");
-        dd($images);
 
         foreach ($images as $image){
         $i = new AnnouncementImage();
