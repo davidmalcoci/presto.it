@@ -93,7 +93,7 @@
     # Ultimi annunci
     --------------------------------------------------------------*/ --}}
 
-    <section id="categories" class="categories section-category-header">
+    <!-- <section id="categories" class="categories section-category-header">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>
@@ -135,18 +135,19 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> -->
 
 
-    {{-- <section id="categories" class="categories section-category-header">
+     <section id="categories" class="categories section-category-header">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>
-                <p>prova prova prova</p>
+                <p>Scopri gli ultimi annunci</p>
             </div>
             <div class="row justify-content-around">
                 <div class="gallery js-flickity"  data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
                 @foreach ($announcements as $announcement)
+                @if ($announcement->is_accepted == true)
                     <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
                         <div class="product-card">
                             <div class="product-card-body">
@@ -154,17 +155,17 @@
                                         src="https://via.placeholder.com/150C/O https://placeholder.com/"
                                         class="card-img img-fluid" width="96" height="350" alt=""> </div>
                             </div>
-                            <div class="product-card-body text-center m-2">
+                            <div class="product-card-body text-center m-2" style="height:300px;">
                                 <div class="mb-2">
                                     <h6 class="mb-2"> <a
                                             href="{{ route('announcement.show', compact('announcement')) }}"
                                             class="product-card-title mb-2"
-                                            data-abc="true">TITOLO 11111</a></h6>
+                                            data-abc="true">{{ $announcement->title }}</a></h6>
                                     <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
                                         class="text-muted" data-abc="true"> {{ $announcement->category->name }}</a>
                                 </div>
                                 <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
-                                <p class="description">{{ $announcement->description }}</p>
+                                <p class="description">{{substr($announcement->description, 0, 10).".."}}</p>
                                 <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
                                         class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
                                 <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}</div>
@@ -172,12 +173,13 @@
                                     Add to cart</button>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    @endif                    
                 @endforeach
             </div>
             </div>
         </div>
-    </section> --}}
+    </section> 
 
 
     {{-- /*--------------------------------------------------------------
