@@ -47,7 +47,11 @@ class AnnouncementController extends Controller
     }
 
     public function upload(Request $request){
-        dd($request->input());
+        
+        $uniqueSecret = $request->input('uniqueSecret');
+        $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
+        session()->push("images.{$uniqueSecret}", $fileName);
+        
 
     } 
     
@@ -72,7 +76,8 @@ class AnnouncementController extends Controller
         ]);
         
         $uniqueSecret = $request->input('uniqueSecret');
-        dd($uniqueSecret);
+        $images = session()->get("images.{$uniqueSecret}");
+        
         
         return redirect(route('homepage'))->with('message', 'Il tuo annuncio è stato inserito');
     }
