@@ -24,11 +24,6 @@
                             <input type="number" id="exampleInputEmail1" aria-describedby="emailHelp"
                                 placeholder="Prezzo" name="price">
                         </div>
-
-                        <input 
-                            type="hidden"
-                            name="uniqueSecret"
-                            value="{{ $uniqueSecret }}">
                         
                         <div class="mb-3">
                             <label for="categories" class="form-label">Categoria annuncio</label>
@@ -39,6 +34,11 @@
                                 @endforeach
                             </select>
                         </div>
+                        
+                        <input 
+                            type="hidden"
+                            name="uniqueSecret"
+                            value="{{ $uniqueSecret }}">
 
                         <div class="form-group row">
                             <label for="images" class="col-md-12 col-form-label text-md-left">Immagini</label>

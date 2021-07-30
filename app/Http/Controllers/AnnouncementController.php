@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AnnouncementController extends Controller
 {
@@ -51,7 +53,8 @@ class AnnouncementController extends Controller
         $uniqueSecret = $request->input('uniqueSecret');
         $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
         session()->push("images.{$uniqueSecret}", $fileName);
-        
+    
+        dd(session()->get("images.{$uniqueSecret}"));
 
     } 
     
@@ -77,6 +80,21 @@ class AnnouncementController extends Controller
         
         $uniqueSecret = $request->input('uniqueSecret');
         $images = session()->get("images.{$uniqueSecret}");
+        dd($images);
+
+        foreach ($images as $image){
+        $i = new AnnouncementImage();
+
+        $fileName = basename($image);
+        $file = Storage::move($image, "/public/announcements/{$announcement->id}/{$fileName}");
+
+
+        $i->file = $file;
+        $i->announcement_id = $announcement->id;
+
+        $i->save();
+    }
+        File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         
         
         return redirect(route('homepage'))->with('message', 'Il tuo annuncio è stato inserito');
