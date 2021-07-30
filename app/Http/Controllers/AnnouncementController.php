@@ -45,6 +45,11 @@ class AnnouncementController extends Controller
         
         return view('announcement.create', compact('categories', 'uniqueSecret') );
     }
+
+    public function upload(Request $request){
+        dd($request->input());
+
+    } 
     
     /**
      * Store a newly created resource in storage.
