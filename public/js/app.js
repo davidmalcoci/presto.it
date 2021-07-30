@@ -3127,7 +3127,7 @@ $(function () {
       file.serverId = response.id;
     });
     myDropzone.on("removedfile", function (file) {
-      $ajax({
+      $.ajax({
         type: 'DELETE',
         url: '/announcement/images/remove',
         data: {
