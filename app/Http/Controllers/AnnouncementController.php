@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use File;
 
 class AnnouncementController extends Controller
 {
@@ -54,7 +55,9 @@ class AnnouncementController extends Controller
         $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
         session()->push("images.{$uniqueSecret}", $fileName);
     
-        dd(session()->get("images.{$uniqueSecret}"));
+        /* return response()->json(
+            session()->get("images.{$uniqueSecret}")
+        ); */
 
     } 
     
@@ -82,17 +85,18 @@ class AnnouncementController extends Controller
         $images = session()->get("images.{$uniqueSecret}");
 
         foreach ($images as $image){
-        $i = new AnnouncementImage();
+            $i = new AnnouncementImage();
 
-        $fileName = basename($image);
-        $file = Storage::move($image, "/public/announcements/{$announcement->id}/{$fileName}");
+            $fileName = basename($image);
+            $newFileName = "/public/announcements/{$announcement->id}/{$fileName}";
+            Storage::move($image, $newFileName);
 
 
-        $i->file = $file;
-        $i->announcement_id = $announcement->id;
+            $i->file = $newFileName;
+            $i->announcement_id = $announcement->id;
 
-        $i->save();
-    }
+            $i->save();
+        }
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         
         
