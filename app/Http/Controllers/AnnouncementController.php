@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use File;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use File;
+use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
 {
@@ -80,7 +81,7 @@ class AnnouncementController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request)
+    public function store(AnnouncementRequest $request)
     {
         
         $announcement = announcement::Create([

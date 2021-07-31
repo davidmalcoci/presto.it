@@ -11,6 +11,15 @@
                         @csrf
                         <h1>Inserisci annuncio</h1>
                         <span>al resto ci pensiamo noi</span>
+                                                                @if ($errors->any())
+                                                                    <div class="alert alert-danger">
+                                                                        <ul>
+                                                                            @foreach ($errors->all() as $error)
+                                                                                <li>{{ $error }}</li>
+                                                                            @endforeach
+                                                                        </ul>
+                                                                    </div>
+                                                                @endif
                         <div class="mb-3 mt-5">
                             <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
                                 placeholder="Titolo Annuncio" name="title">
