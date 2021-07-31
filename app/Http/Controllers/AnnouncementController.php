@@ -42,10 +42,13 @@ class AnnouncementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $categories = Category::all();
-        $uniqueSecret=base_convert(sha1(uniqid(mt_rand())), 16, 36);
+        $uniqueSecret = $request->old(
+            'uniqueSecret',
+             base_convert(sha1(uniqid(mt_rand())), 16, 36)
+        );
         
         return view('announcement.create', compact('categories', 'uniqueSecret') );
     }
@@ -173,6 +176,26 @@ class AnnouncementController extends Controller
         
         $announcements = Announcement::where('category_id', $id)->get();
         return view ('category.show', compact('name', 'id', 'announcements'));
+    }
+
+    public function getimages(Request $request){
+        $uniqueSecret = $request->input('uniqueSecret');
+
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
+
+        $images = array_diff($images, $removedImages);
+
+        $data = [];
+
+        foreach($images as $image) {
+            $data[] = [
+                'id' => $image,
+                'src' => Storage::url($image)
+            ];
+        }
+
+        return response()->json($data);
     }
 
 }

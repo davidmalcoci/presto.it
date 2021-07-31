@@ -9,6 +9,7 @@
                 <div class="form-container sign-in-container">
                     <form class="form-login" method="POST" action="{{ route('announcement.store') }}">
                         @csrf
+                        <h3>DEBUG:: SECRET {{ $uniqueSecret }} </h3>
                         <h1>Inserisci annuncio</h1>
                         <span>al resto ci pensiamo noi</span>
                                                                 @if ($errors->any())
@@ -22,16 +23,16 @@
                                                                 @endif
                         <div class="mb-3 mt-5">
                             <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Titolo Annuncio" name="title">
+                                placeholder="Titolo Annuncio" name="title" value="{{old('title')}}">
                         </div>
                         <div class="mb-3">
                             <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Descrizione annuncio" name="description">
+                                placeholder="Descrizione annuncio" name="description" value="{{old('description')}}">
                         </div>
 
                         <div class="mb-3">
                             <input type="number" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Prezzo" name="price">
+                                placeholder="Prezzo" name="price" value="{{old('price')}}">
                         </div>
                         
                         <div class="mb-3">
