@@ -47,15 +47,14 @@
 
                             <!-- Gallery -->
                             <div id="js-gallery" class="gallery">
-
+                            
                                 <!--Gallery Hero-->
                                 <div class="gallery__hero">
                                     {{-- <a href="" class="gallery__hero-enlarge ir" data-gallery="zoom">Zoom</a> --}}
-
                                     <img src="https://via.placeholder.com/600C/O https://placeholder.com">
                                 </div>
                                 <!--Gallery Hero-->
-
+                            
                                 <!--Gallery Thumbs-->
                                 <div class="gallery__thumbs">
 
@@ -138,7 +137,11 @@
 
     </div>
 
-
+   <!--  @foreach($announcement->images as $image)
+    <div>
+        <img src="{{ Storage::url($image->file) }}" alt="">
+    </div>
+    @endforeach -->
 
     <section class="p-0 container-trash">
         {{-- @if ($announcements =! 0) --}}

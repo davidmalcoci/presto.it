@@ -26,8 +26,8 @@ class AnnouncementRequest extends FormRequest
         return [
             'title'=>'required|min:10',
             'description'=>'required|min:10|max:120',
-            'price'=>'required',
-            'category_id'=>'required'
+            'price'=>'required'
+            
         ];
 
     }
@@ -40,8 +40,8 @@ class AnnouncementRequest extends FormRequest
         'description.required' => 'La descrizione è obbligatoria!',
         'description.min' => 'La descrizione è troppo corta',
         'description.max' => 'La descrizione è troppo lunga',
-        'price.required' => 'Il prezzo è obbligatorio!',
-        'category_id.required' => 'Devi indicare una categoria',
+        'price.required' => 'Il prezzo è obbligatorio!'
+        
     ];
     }
 
