@@ -94,7 +94,6 @@ class AnnouncementController extends Controller
             'user_id'=>Auth::id(),
             'price'=>$request->price
             
-            
         ]);
         
         $uniqueSecret = $request->input('uniqueSecret');
