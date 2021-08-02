@@ -80,7 +80,7 @@
                                 @foreach($announcement->images as $image)
                                     <a href="{{ Storage::url($image->file) }}"
                                         data-gallery="thumb" class="is-active">
-                                        <img src="{{ Storage::url($image->file) }}" alt="">
+                                        <img src="{{ Storage::url($image->getUrl(400, 500)) }}" alt="">
                                     </a>
                                     @endforeach
                                 </div>
