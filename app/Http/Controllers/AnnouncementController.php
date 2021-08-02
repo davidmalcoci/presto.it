@@ -196,7 +196,7 @@ class AnnouncementController extends Controller
         foreach($images as $image) {
             $data[] = [
                 'id' => $image,
-                'src' => AnnouncementImage::getUrlByFilePath($image, 80, 80)
+                'src' => AnnouncementImage::getUrlByFilePath($image, 400, 500)
             ];
         }
 
