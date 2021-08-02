@@ -11,12 +11,18 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "dropzone": "^5.9.2",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "webpack-cli": "^4.7.2"
     },
     "dependencies": {
         "@popperjs/core": "^2.9.2",
-        "bootstrap": "^5.0.2"
+        "bootstrap": "^5.0.2",
+        "dropzone": "^5.9.2",
+        "jqeury": "0.0.1-security",
+        "jquery": "^3.6.0",
+        "webpack": "^5.47.1"
     }
 }

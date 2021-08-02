@@ -59,41 +59,32 @@
 
                             <!-- Gallery -->
                             <div id="js-gallery" class="gallery">
-
                                 <!--Gallery Hero-->
                                 <div class="gallery__hero">
+                                @foreach($announcement->images as $image)
+                                @php
+                                $imagenum = $image->id-1
+                                @endphp
+                               
+                                @if ($imagenum < $image->id)
                                     {{-- <a href="" class="gallery__hero-enlarge ir" data-gallery="zoom">Zoom</a> --}}
-
-                                    <img src="https://via.placeholder.com/600C/O https://placeholder.com">
+                                    <img src="{{Storage::url($image->file)}}">
+                                    @break;
+                                    @endif
+                                    @endforeach
                                 </div>
                                 <!--Gallery Hero-->
-
+                                
                                 <!--Gallery Thumbs-->
                                 <div class="gallery__thumbs">
-
-                                    <a href="https://via.placeholder.com/600C/O https://placeholder.com"
+                                @foreach($announcement->images as $image)
+                                    <a href="{{ Storage::url($image->file) }}"
                                         data-gallery="thumb" class="is-active">
-                                        <img src="https://via.placeholder.com/600C/O https://placeholder.com">
+                                        <img src="{{ Storage::url($image->file) }}" alt="">
                                     </a>
-
-                                    <a href="https://via.placeholder.com/600/0000FF/808080 ?Text=Digital.com"
-                                        data-gallery="thumb">
-                                        <img src="https://via.placeholder.com/600/0000FF/808080 ?Text=Digital.com">
-                                    </a>
-
-                                    <a href="https://via.placeholder.com/600/FF0000/FFFFFF?Text=Down.com"
-                                        data-gallery="thumb">
-                                        <img src="https://via.placeholder.com/600/FF0000/FFFFFF?Text=Down.com">
-                                    </a>
-
-                                    <a href="https://via.placeholder.com/600C/O https://placeholder.com"
-                                        data-gallery="thumb" class="is-active">
-                                        <img src="https://via.placeholder.com/600C/O https://placeholder.com">
-                                    </a>
-
+                                    @endforeach
                                 </div>
                                 <!--Gallery Thumbs-->
-
                             </div>
                             <!--.gallery-->
                             <!-- Gallery -->
@@ -150,7 +141,7 @@
 
     </div>
 
-
+ 
 
 
 
