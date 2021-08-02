@@ -95,6 +95,20 @@
                         Annuncio <i class="fas fa-plus-circle"></i></button></a>
             </div>
 
+            <li class="nav-item">
+                @include('components.locale', ['lang' => 'it', 'nation' => 'it'])
+            </li>
+            <li class="nav-item">
+                @include('components.locale', ['lang' => 'gb', 'nation' => 'gb'])
+            </li>
+            <li class="nav-item">
+                @include('components.locale', ['lang' => 'es', 'nation' => 'es'])
+            </li>
+
+
+           
+
+
             <ul class="d-flex  navbar-nav  mb-2 mb-lg-0 px-4 text-center">
                 <li class="nav-item nav-link dropdown align-self-center">
                     <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"

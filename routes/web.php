@@ -21,9 +21,9 @@ Route::get('/inserisci-annuncio', [AnnouncementController::class, 'create'])->na
 Route::post('/annuncio-store', [AnnouncementController::class, 'store'])->name('announcement.store');
 Route::post('/announcement/images/upload', [AnnouncementController::class, 'upload'])->name('announcement.images.upload');
 Route::delete('/announcement/images/remove', [AnnouncementController::class, 'remove'])->name('announcement.images.remove');
-Route::get('/announcement/images', [AnnouncementController::class, 'getimages'])->name('announcement.images');
+Route::get('/announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.images');
 
-
+Route::post('/locale/{locale}', [FrontController::class, 'locale'])->name('locale');
 
 
 Route::get('/mostra-dettaglio/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
