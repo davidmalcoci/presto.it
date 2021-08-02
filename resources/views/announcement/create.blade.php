@@ -9,7 +9,6 @@
                 <div class="form-container sign-in-container">
                     <form class="form-login" method="POST" action="{{ route('announcement.store') }}">
                         @csrf
-                        <h3>DEBUG:: SECRET {{ $uniqueSecret }} </h3>
                         <h1>Inserisci annuncio</h1>
                         <span>al resto ci pensiamo noi</span>
                                                                 @if ($errors->any())
