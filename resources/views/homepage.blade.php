@@ -269,10 +269,10 @@
                         @if ($announcement->is_accepted == true)
                         @foreach($announcement->images as $image)
                         @php
-                                $imagenum = $image->id-1
-                                @endphp
+                        $imagenum = $image->id-1
+                        @endphp
+                        <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
                                 @if ($imagenum < $image->id)
-                            <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
                                 <div class="product-card">
                                     <div class="product-card-body">
                                         <div class="card-img-actions"> <img
