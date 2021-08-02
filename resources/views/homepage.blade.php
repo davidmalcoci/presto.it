@@ -267,13 +267,21 @@
                     data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
                     @foreach ($announcements as $announcement)
                         @if ($announcement->is_accepted == true)
+                        @foreach($announcement->images as $image)
+                        @php
+                                $imagenum = $image->id-1
+                                @endphp
+                                @if ($imagenum < $image->id)
                             <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
                                 <div class="product-card">
                                     <div class="product-card-body">
                                         <div class="card-img-actions"> <img
-                                                src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                                src="{{ $image->getUrl(400, 500) }}"
                                                 class="card-img img-fluid" width="96" height="350" alt=""> </div>
                                     </div>
+                                    @break;
+                                    @endif
+                                    @endforeach
                                     <div class="product-card-body text-center m-2" style="height:300px;">
                                         <div class="mb-2">
                                             <h6 class="mb-2"> <a
