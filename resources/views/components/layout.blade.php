@@ -74,7 +74,7 @@
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
     <!-- Bootstrap Bundle -->
-    {{-- <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
