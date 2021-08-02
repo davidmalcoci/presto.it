@@ -11001,7 +11001,6 @@ a {
     box-shadow: 0px 0px 10px var(--violet);
 }
 
-
 /* ------------------ Footer  ------------------ */
 
 footer img {
@@ -11065,18 +11064,25 @@ footer h6:after {
     font-size: 10px;
     padding-left: 10px;
     font-style: italic;
+    color: var(--black) !important;
 }
 
 :-ms-input-placeholder {
     font-size: 10px;
     padding-left: 10px;
     font-style: italic;
+    color: var(--black) !important;
 }
 
 ::placeholder {
     font-size: 10px;
     padding-left: 10px;
     font-style: italic;
+    color: var(--black) !important;
+}
+
+textarea  {
+    color: var(--black) !important;
 }
 
 .form-footer button {
@@ -11931,6 +11937,18 @@ nav {
     font-style: italic;
 }
 
+textarea::-moz-placeholder {
+    color: var(--black) !important;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--black) !important;
+}
+
+textarea::placeholder {
+    color: var(--black) !important;
+}
+
 /* .icon-search{
     max-height: 20px !important;
 } */
@@ -12254,35 +12272,33 @@ section {
 # Home carosell
 --------------------------------------------------------------*/
 
-
 .swiper-container {
     width: 600px;
     height: 300px;
-  }
+}
 
-  .swiper-container {
+.swiper-container {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-
+    /* background: #fff; */
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
+}
 /*--------------------------------------------------------------
 # Log IN
 --------------------------------------------------------------*/

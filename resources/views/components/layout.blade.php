@@ -86,13 +86,13 @@
     
    
 
+    <script src="{{ asset('js/app.js') }}"></script>
 
 
     <!-- Bootstrap Bundle -->
     <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="{{ asset('js/app.js') }}"></script>
-
+  
 
 
 </body>

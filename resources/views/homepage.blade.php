@@ -310,7 +310,7 @@
         </div>
     </section> --}}
 
-    <section id="" class="categories section-bg categories-add-pb">
+    <section id="" class="categories section-bg">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>

@@ -227,6 +227,10 @@
     font-style: italic;
 }
 
+textarea::placeholder {
+    color: var(--black) !important;
+}
+
 /* .icon-search{
     max-height: 20px !important;
 } */
@@ -550,22 +554,20 @@ section {
 # Home carosell
 --------------------------------------------------------------*/
 
-
 .swiper-container {
     width: 600px;
     height: 300px;
-  }
+}
 
-  .swiper-container {
+.swiper-container {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-
+    /* background: #fff; */
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -579,11 +581,11 @@ section {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}

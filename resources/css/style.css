@@ -110,7 +110,6 @@ a {
     box-shadow: 0px 0px 10px var(--violet);
 }
 
-
 /* ------------------ Footer  ------------------ */
 
 footer img {
@@ -174,6 +173,11 @@ footer h6:after {
     font-size: 10px;
     padding-left: 10px;
     font-style: italic;
+    color: var(--black) !important;
+}
+
+textarea  {
+    color: var(--black) !important;
 }
 
 .form-footer button {

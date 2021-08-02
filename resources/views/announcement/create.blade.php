@@ -21,18 +21,21 @@
                                                                     </div>
                                                                 @endif
                         <div class="mb-3 mt-5">
+                            <label for="">Titolo:</label>
                             <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Titolo Annuncio" name="title" value="{{old('title')}}">
+                                placeholder="" name="title" value="{{old('title')}}">
                         </div>
                         <div class="mb-3">
+                            <label for="">Descrizione:</label>
                             <textarea type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Descrizione annuncio" name="description" value="{{old('description')}}" style="color: var(--black)";>
+                               name="description" value="{{old('description')}}">
                             </textarea>    
                         </div>
 
                         <div class="mb-3">
+                            <label for="">Prezzo:</label>
                             <input type="number" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Prezzo" name="price" value="{{old('price')}}">
+                                placeholder="" name="price" value="{{old('price')}}">
                         </div>
                         
                         <div class="mb-3">

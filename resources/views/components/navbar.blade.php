@@ -90,7 +90,7 @@
                 @endif
             </ul>
 
-            <div class="align-self-center text-center">
+            <div class="align-self-center text-center px-4">
                 <a href="{{ route('announcement.create') }}"><button class="navbar-btn-annuncio">Inserisci
                         Annuncio <i class="fas fa-plus-circle"></i></button></a>
             </div>

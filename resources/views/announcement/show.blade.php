@@ -53,27 +53,6 @@
 
                 </div>
                 @endif
-                <div class="col-md-6">
-
-                    <a
-                        href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}">
-                        <h4 class=" mb-1">{{ $announcement->category->name }}</h4>
-                    </a>
-                    <div class="small mb-1">{{ $announcement->created_at->format('l jS F Y') }}</div>
-                    <h1 class="display-5 fw-bolder">{{ $announcement->title }}</h1>
-                    <div class="fs-5 mb-5">
-                        <h2>{{ $announcement->price }}€</h2>
-                    </div>
-                    <p class="lead">{{ $announcement->description }}</p>
-                    <div class="d-flex">
-                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
-                            style="max-width: 3rem" />
-                        <button type="button" class="btn btn-product-card"><i class="fa fa-cart-plus mr-2"></i>
-                            Add to cart</button>
-                        </button>
-                    </div>
-                </div> --}}
-
 
                 <div class="col-lg-6 col-xl-4 pt-4 order-1 order-lg-2 ml-lg-auto">
                     <div class="sticky-top" style="top: 100px;">
