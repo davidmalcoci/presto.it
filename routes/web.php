@@ -23,7 +23,7 @@ Route::post('/announcement/images/upload', [AnnouncementController::class, 'uplo
 Route::delete('/announcement/images/remove', [AnnouncementController::class, 'remove'])->name('announcement.images.remove');
 Route::get('/announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.images');
 
-
+Route::post('/locale/{locale}', [FrontController::class, 'locale'])->name('locale');
 
 
 Route::get('/mostra-dettaglio/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');

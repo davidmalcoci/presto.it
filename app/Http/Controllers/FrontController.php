@@ -46,4 +46,9 @@ class FrontController extends Controller
         return redirect(route('homepage'))->with('mailMessage', 'La tua richiesta da revisore è stata accolta e sarà valutata!');
     }
 
+    public function locale($locale){
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
+
 }
