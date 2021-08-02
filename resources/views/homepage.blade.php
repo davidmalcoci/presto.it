@@ -44,7 +44,7 @@
                     </h2> --}}
                     <h2 class="display-4 tc-white fw-bold">{{__('ui.vendi_subito')}}</h2>
                     <p class="lead fs-5">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
+                        Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
                     </p>
                     <div class="container-fluid p-0">
                         <div class="row">
