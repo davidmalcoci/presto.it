@@ -13258,6 +13258,44 @@ a.accion {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+.badge {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 5px;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.badge-danger[href]:focus, .badge-danger[href]:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #bd2130;
+}
+
+.section-smile{
+    background-color: #f0f0f0;
+}
+
+.table-hover tbody tr td, .table-hover tbody tr th {
+    background-color: #ffffff !important;
+  }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #ffffff !important;
+  }
+
+.section-smile h3 {
+    color: var(--warmgray);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin: 0px;
+}
 .dropzone, .dropzone * {
   box-sizing: border-box;
 }
@@ -13624,42 +13662,4 @@ a.accion {
   border-bottom: 6px solid #be2626;
 }
 
-
-.badge {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 3px 5px;
-}
-
-.badge-danger {
-    color: #fff;
-    background-color: #dc3545;
-}
-
-.badge-danger[href]:focus, .badge-danger[href]:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #bd2130;
-}
-
-.section-smile{
-    background-color: #f0f0f0;
-}
-
-.table-hover tbody tr td, .table-hover tbody tr th {
-    background-color: #ffffff !important;
-  }
-
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    background-color: #ffffff !important;
-  }
-
-.section-smile h3 {
-    color: var(--warmgray);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    margin: 0px;
-}
 
