@@ -58,7 +58,7 @@ iconIcs.addEventListener('click', function icon() {
 
 //--------------- Gallery  ---------------
 
-var App = (function () {
+let App = (function () {
 
     //=== Use Strict ===//
     'use strict';
@@ -166,48 +166,47 @@ const countIndicator = document.getElementById("unseen_count");
 // let currentCount = 0;
 
 function actionAdd() {
-//   currentCount++;
-//   countIndicator.innerText = currentCount;
-  countIndicator.classList.remove('unseen-count-animation');
-  setTimeout(function() {
-    countIndicator.classList.add('unseen-count-animation');
-  }, 50)
+    //   currentCount++;
+    //   countIndicator.innerText = currentCount;
+    // countIndicator.classList.remove('unseen-count-animation');
+    setTimeout(function () {
+        countIndicator.classList.add('unseen-count-animation');
+    }, 50)
 }
 actionAdd()
 
 //--------------- Swiper  ---------------
 
-function parar(){
-    var el = document.getElementById("sprites");
-    el.style.webkitAnimationPlayState = 'paused';
-    el.style.AnimationPlayState = 'paused';
-    el.style.MozAnimationPlayState  = 'paused';
-    el.style.MsAnimationPlayState  = 'paused';
-  }
-  function continuar(){
-    var el = document.getElementById("sprites");
-    el.style.webkitAnimationPlayState = 'running';
-    el.style.AnimationPlayState = 'running';
-    el.style.MozAnimationPlayState  = 'running';
-    el.style.MsAnimationPlayState  = 'running';
-  }
+// function parar() {
+//     let el = document.getElementById("sprites");
+//     el.style.webkitAnimationPlayState = 'paused';
+//     el.style.AnimationPlayState = 'paused';
+//     el.style.MozAnimationPlayState = 'paused';
+//     el.style.MsAnimationPlayState = 'paused';
+// }
+// function continuar() {
+//     let el = document.getElementById("sprites");
+//     el.style.webkitAnimationPlayState = 'running';
+//     el.style.AnimationPlayState = 'running';
+//     el.style.MozAnimationPlayState = 'running';
+//     el.style.MsAnimationPlayState = 'running';
+// }
 
-//--------------- Slidebar  ---------------
+//--------------- Btn back to top  ---------------
 
-  window.addEventListener('DOMContentLoaded', event => {
+let btn = $('#button');
 
-    // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
-    if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
-        sidebarToggle.addEventListener('click', event => {
-            event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
-        });
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
     }
-
 });
+
+btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+});
+
+//--------------- Swiper  ---------------

@@ -3250,47 +3250,43 @@ var countIndicator = document.getElementById("unseen_count"); // let currentCoun
 function actionAdd() {
   //   currentCount++;
   //   countIndicator.innerText = currentCount;
-  countIndicator.classList.remove('unseen-count-animation');
+  // countIndicator.classList.remove('unseen-count-animation');
   setTimeout(function () {
     countIndicator.classList.add('unseen-count-animation');
   }, 50);
 }
 
 actionAdd(); //--------------- Swiper  ---------------
+// function parar() {
+//     let el = document.getElementById("sprites");
+//     el.style.webkitAnimationPlayState = 'paused';
+//     el.style.AnimationPlayState = 'paused';
+//     el.style.MozAnimationPlayState = 'paused';
+//     el.style.MsAnimationPlayState = 'paused';
+// }
+// function continuar() {
+//     let el = document.getElementById("sprites");
+//     el.style.webkitAnimationPlayState = 'running';
+//     el.style.AnimationPlayState = 'running';
+//     el.style.MozAnimationPlayState = 'running';
+//     el.style.MsAnimationPlayState = 'running';
+// }
+//--------------- Btn back to top  ---------------
 
-function parar() {
-  var el = document.getElementById("sprites");
-  el.style.webkitAnimationPlayState = 'paused';
-  el.style.AnimationPlayState = 'paused';
-  el.style.MozAnimationPlayState = 'paused';
-  el.style.MsAnimationPlayState = 'paused';
-}
-
-function continuar() {
-  var el = document.getElementById("sprites");
-  el.style.webkitAnimationPlayState = 'running';
-  el.style.AnimationPlayState = 'running';
-  el.style.MozAnimationPlayState = 'running';
-  el.style.MsAnimationPlayState = 'running';
-} //--------------- Slidebar  ---------------
-
-
-window.addEventListener('DOMContentLoaded', function (event) {
-  // Toggle the side navigation
-  var sidebarToggle = document.body.querySelector('#sidebarToggle');
-
-  if (sidebarToggle) {
-    // Uncomment Below to persist sidebar toggle between refreshes
-    // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-    //     document.body.classList.toggle('sb-sidenav-toggled');
-    // }
-    sidebarToggle.addEventListener('click', function (event) {
-      event.preventDefault();
-      document.body.classList.toggle('sb-sidenav-toggled');
-      localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
-    });
+var btn = $('#button');
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
   }
 });
+btn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: 0
+  }, '300');
+}); //--------------- Swiper  ---------------
 
 /***/ }),
 

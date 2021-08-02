@@ -2,30 +2,30 @@
 
     <div class="col-10 col-lg-8 d-flex justify-content-around">
 
-        <div class="p-3 pointer">
+        <div class="icon-brand-p pointer">
             <i class="fas fa-tshirt"></i>
         </div>
 
-        <div class="p-3 pointer">
+        <div class="icon-brand-p pointer">
             <i class="fas fa-home"></i>
         </div>
 
-        <div class="p-3 pointer">
+        <div class="icon-brand-p pointer">
             <i class="fas fa-car-side"></i>
         </div>
 
 
 
 
-        <div class="p-3 pointer">
+        <div class="icon-brand-p pointer">
             <i class="fas fa-briefcase"></i>
         </div>
 
-        <div class="p-3 pointer">
+        <div class="icon-brand-p pointer">
             <i class="fas fa-car-side"></i>
         </div>
 
-        <div class="p-3 pointer">
+        <div class="icon-brand-p pointer">
             <i class="fas fa-tshirt"></i>
         </div>
 

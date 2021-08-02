@@ -7,6 +7,33 @@
     max-height: 10px !important;
 }
 
+td {
+    text-align: center !important;
+}
+
+.table {
+    border: hidden !important;
+}
+
+.table> :not(caption)>*>* {
+    border: hidden !important;
+}
+
+.table .table-desc {
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 1000px) {
+    .hide {
+        display: none !important;
+    }
+}
+
 /* .trash{
     background: var(--gradient-light) !important;
     padding: 30px 30px;
@@ -27,7 +54,7 @@ box-shadow: 0px 0px 10px #f0f0f0 ; */
 
 .section-category-revisor {
     background-color: var(--white);
-    padding: 150px 0px 50px 0px;
+    padding: 150px 0px 0px 0px;
     position: relative;
 }
 
@@ -84,7 +111,6 @@ box-shadow: 0px 0px 10px #f0f0f0 ; */
     /* height: 80vh; */
     /* padding: 3em 0px 5em 0px; */
     background-color: #f0f0f0 !important;
-
 }
 
 #revisor-show h1 {
@@ -263,4 +289,42 @@ a.accion {
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.badge {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 5px;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.badge-danger[href]:focus, .badge-danger[href]:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #bd2130;
+}
+
+.section-smile{
+    background-color: #f0f0f0;
+}
+
+.table-hover tbody tr td, .table-hover tbody tr th {
+    background-color: #ffffff !important;
+  }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #ffffff !important;
+  }
+
+.section-smile h3 {
+    color: var(--warmgray);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin: 0px;
 }

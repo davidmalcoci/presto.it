@@ -1,5 +1,5 @@
 * {
-    font-family: 'Open Sans', sans-serif ;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -8,10 +8,10 @@ body {
 }
 
 body {
-    background-color:  #fffcfc;
+    background-color: #fffcfc;
 }
 
-li{
+li {
     text-decoration: none !important;
     list-style: none !important;
 }
@@ -71,13 +71,17 @@ li{
     box-shadow: 10px 10px 100px black;
 }
 
+.pointer{
+    cursor: pointer !important;
+}
+
 a {
     text-decoration: none !important;
 }
 
 /* ------------------ Footer  ------------------ */
 
-footer img{
+footer img {
     height: 3.5em;
     margin: 50px 0px 50px 0px;
 }
@@ -171,8 +175,6 @@ footer ul li a {
     text-decoration: none;
 }
 
-
-
 /* ------------------ Brand logos (home)  ------------------ */
 
 .brand-logos {
@@ -182,11 +184,60 @@ footer ul li a {
 
 .brand-logos i {
     font-size: 3vh;
-    font-size: max(1vw, 30px);
+    font-size: max(1vw, 25px);
     max-height: 30px !important;
     transition: 250ms;
+
+}
+
+.icon-brand-p{
+    padding: 2vh;
+}
+
+@media (max-width: 500px){
+    .icon-brand-p{
+        padding: 1vh;
+    }
 }
 
 .brand-logos i:hover {
     transform: scale(1.2);
+}
+
+/* ------------------ Button back to top  ------------------ */
+
+#button {
+    display: inline-block;
+    color: var(--black);
+    background-color: var(--orange);
+    /* width: 50px;
+    height: 50px; */
+    text-align: center;
+    border-radius: 150px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: 250ms;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #ffad48;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#button p {
+    padding: 20px !important;
+    margin: 0px !important;
 }

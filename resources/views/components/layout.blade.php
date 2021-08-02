@@ -32,33 +32,19 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
-   
+    {{-- <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"> --}}
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"> --}}
 
-    <!-- jQuery 1.8 or later, 33 KB -->
+     <!-- jQuery 1.8 or later, 33 KB -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="    https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
-
-
-
-
-
-    <script>
-        $(document).ready(function() {
-            $('.dropdown-toggle, .dropdown-menu').hover(function() {
-                    $('#dropdownMenuButton', 'dropdown-menu').addClass('open', 'show');
-                },
-            });
-        });
-    </script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
 </head>
 
@@ -68,14 +54,29 @@
 
     {{ $slot }}
 
+    <!-- Back to top button -->
+    <div class="row align-self-center justify-content-center" id="button">
+        <p class="fas fa-arrow-up"></p>
+    </div>
 
-    <!-- Swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="{{ asset('js/app.js') }}"></script>
 
 
     <x-footer></x-footer>
+
+    {{-- |||||||||||||||||||||||||||||||||||||||||||||||||||||
+    /* ------------------ +++ SCRIPT +++  ------------------ */
+    /* ||||||||||||||||||||||||||||||||||||||||||||||||||||| */ --}}
+
+   
+
+    <!-- Script custom -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+    <!-- Bootstrap Bundle -->
+    {{-- <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+
 
 </body>
 

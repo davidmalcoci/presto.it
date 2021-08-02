@@ -1,4 +1,22 @@
-<nav id="navbar-presto" class="navbar navbar-expand-lg fixed-top px-4 py-3">
+<script>
+    $(document).ready(function() {
+        $(".dropdown, .dropdown-active").hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);
+        }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+        });
+    });
+
+    $(document).ready(function() {
+        $("#change").click(function() {
+            $("#search").toggle(500);
+            $("i", this).toggleClass("fa fa-search fa fa-times");
+        });
+    });
+</script>
+
+
+<nav id="navbar-presto" class="navbar navbar-expand-lg fixed-top px-4">
 
     <div class="container-fluid justify-content-between d-flex pe-3">
 
@@ -43,13 +61,13 @@
                             Annuncio</button></a>
                 </div>
 
-                
 
-                
-                
+
+
+
                 @if (Auth::user())
                     @if (Auth::user()->is_revisor)
-                    
+
                         <div class="align-self-center">
                             <a href="{{ route('revisor.home') }}">
                                 <button class="navbar-btn-revisore d-flex">
@@ -60,9 +78,10 @@
                                 </button>
                             </a>
                         </div>
-                        @else
+                    @else
                         <div class="align-self-center">
-                            <a href="{{ route('work') }}"><button class="navbar-btn-annuncio">Diventa revisore</button></a>
+                            <a href="{{ route('work') }}"><button class="navbar-btn-annuncio">Diventa
+                                    revisore</button></a>
                         </div>
                     @endif
                 @endif
@@ -71,9 +90,9 @@
 
 
             <ul class="d-flex  navbar-nav  mb-2 mb-lg-0 px-4 text-center">
-                <li class="nav-item dropdown align-self-center">
-                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item nav-link dropdown align-self-center">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @if (Auth::user())
                             <i class="fas fa-user-circle"></i>
                             {{ Auth::user()->name }}
@@ -83,13 +102,13 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         @if (Auth::user() == false)
-                            <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
-                            <li>
+                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                            {{-- <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                            </li> --}}
+                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                         @else
-                            <li><a class="dropdown-item" href="{{ route('logout') }}"
+                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
                                 <form method="POST" action="{{ route('logout') }}" id="form-logout">
                                     @csrf
@@ -99,17 +118,39 @@
                     @endif
                 </li>
 
-                
-                
+
+
             </ul>
-            <li class="nav-item d-flex justify-content-center">
-                <a class="nav-link d-inline-block px-2 pointer" href="./user_profile.html"><i
+            <li id="#sidebarCart" class="nav-item d-flex justify-content-center me-5">
+                <a class="nav-link d-inline-block px-2 pointer" href=""><i
                         class="fas fa-shopping-cart cart"></i></a>
             </li>
             <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form> -->
+
+            <form action="{{ route('search.results') }}" method="get">
+                <div class="contSearch">
+                    <div class="contIcon" id="change">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="contForm" id="search">
+                        <nav class="navbar navbar-light ">
+                            <form class="form-inline">
+                                <input type="text" name="query" placeholder="Cosa stai cercando?" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </nav>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
         </div>
     </div>
 </nav>

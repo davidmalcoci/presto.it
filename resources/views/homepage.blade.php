@@ -4,69 +4,10 @@
     @endpush
 
 
-    {{-- /*--------------------------------------------------------------
-    # Header
-    --------------------------------------------------------------*/ --}}
 
-    <section id="header" class="d-flex align-items-center">
-        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center mt-5">
-            <div class="row align-items-center ">
-                <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
-                    <h5 class="tc-main fw-black">Acquista subito e goditi i tuoi risparmi</h5>
-                    <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
-                            class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
-                    </h2>
-                    <p class="lead fs-5">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus
-                        dolorem labore exercitationem? In perferendis nemo ex eligendi obcaecati aperiam consequatur
-                    </p>
-                    <div class="container-fluid p-0">
-                        <div class="row">
-                            <div class="col-12 align-self-top p-0 px-2 icon-header">
-                                {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
-                                    Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
-                                <h5 class="tc-main fw-black my-3">Main categories:</h5>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3"><i
-                                            class="fas fa-tshirt fs-3"></i></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1"><i
-                                            class="fas fa-home fs-3"></i></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1"><i
-                                            class="fas fa-car-side fs-3"></i></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1"><i
-                                            class="fas fa-briefcase fs-3"></i></i></button></a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 img-fluid text-center">
-                    <img src="./img/header.svg" class="img-fluid animated" alt="">
-                </div>
-            </div>
-        </header>
-    </section>
-
-    <form action="{{ route('search.results') }}" method="get">
-        <div class="row search-row p-3 m-0 justify-content-center text-center">
-
-            <div class="col-10 col-lg-5 d-flex align-items-center ">
-                <div class="input-group border rounded-pill p-1 icon-search">
-                    <input type="text" name="query" placeholder="Cosa stai cercando?" aria-describedby="button-addon3"
-                        class="form-control form-control-search bg-none border-0">
-                    <div class="input-group-append  justify-content-center text-center align-self-center">
-                        <button id="button-addon3" type="submit" class="btn btn-link"><i
-                                class="fa fa-search "></i></button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </form>
+    <!-- ===============================================-->
+    <!--    Messaggi POPUP -->
+    <!-- ===============================================-->
 
     <!-- messaggio utente loggato -->
     @if (session('message'))
@@ -74,7 +15,7 @@
             {{ session('message') }}
         </div> --}}
         <script>
-            swal("Ben fatto!", "{{ session('message') }}", "success");
+            swal("{{ session('message') }}", "Adesso è in fase di revisione, ti avviseremo appena sarà pubblico", "success");
         </script>
     @endif
 
@@ -88,6 +29,78 @@
         </script>
     @endif
 
+
+    {{-- /*--------------------------------------------------------------
+    # Header
+    --------------------------------------------------------------*/ --}}
+
+    <section id="header" class="d-flex align-items-center">
+        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center">
+            <div class="row align-items-center ">
+                <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
+                    <h5 class="tc-main fw-black">Acquista subito e goditi i tuoi risparmi</h5>
+                    {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                            class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                    </h2> --}}
+                    <h2 class="display-4 tc-white fw-bold">Vendi e compra in modo semplice</h2>
+                    <p class="lead fs-5">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
+                    </p>
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
+                                    Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                <h5 class="tc-main fw-black my-3">Main categories:</h5>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 button-header"><i
+                                            class="fas fa-tshirt"></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1 button-header"><i
+                                            class="fas fa-home"></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1 button-header"><i
+                                            class="fas fa-car-side"></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1 button-header"><i
+                                            class="fas fa-briefcase"></i></button></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 img-fluid text-center">
+                    <img src="./img/header.svg" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </header>
+    </section>
+
+
+    <!-- ===============================================-->
+    <!--    Search Bar -->
+    <!-- ===============================================-->
+
+    <form action="{{ route('search.results') }}" method="get">
+        <div class="row justify-content-center m-0">
+            <div class="col-12 col-md-6  search-row p-3 m-0 justify-content-center text-center">
+                <div class="row justify-content-center text-center  mx-1">
+                    <div class=" col-12 d-flex align-items-center justify-content-center">
+                        <div class="input-group border rounded-pill p-1 icon-search">
+                            <input type="text" name="query" placeholder="Cosa stai cercando?"
+                                aria-describedby="button-addon3"
+                                class="form-control form-control-search bg-none border-0">
+                            <div class="input-group-append  justify-content-center text-center align-self-center">
+                                <button id="button-addon3" type="submit" class="btn btn-link"><i
+                                        class="fa fa-search "></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 
     {{-- /*--------------------------------------------------------------
     # Ultimi annunci
@@ -138,56 +151,164 @@
     </section> -->
 
 
-     <section id="categories" class="categories section-category-header">
+    {{-- <section id="categories" class="categories section-bg">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>
                 <p>Scopri gli ultimi annunci</p>
             </div>
             <div class="row justify-content-around">
-                <div class="gallery js-flickity"  data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
-                @foreach ($announcements as $announcement)
-                @if ($announcement->is_accepted == true)
-                    <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
-                        <div class="product-card">
-                            <div class="product-card-body">
-                                <div class="card-img-actions"> <img
-                                        src="https://via.placeholder.com/150C/O https://placeholder.com/"
-                                        class="card-img img-fluid" width="96" height="350" alt=""> </div>
-                            </div>
-                            <div class="product-card-body text-center m-2" style="height:300px;">
-                                <div class="mb-2">
-                                    <h6 class="mb-2"> <a
-                                            href="{{ route('announcement.show', compact('announcement')) }}"
-                                            class="product-card-title mb-2"
-                                            data-abc="true">{{ $announcement->title }}</a></h6>
-                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                        class="text-muted" data-abc="true"> {{ $announcement->category->name }}</a>
+                <div class="gallery js-flickity"
+                    data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
+                    @foreach ($announcements as $announcement)
+                        @if ($announcement->is_accepted == true)
+                            <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
+                                <div class="product-card">
+                                    <div class="product-card-body">
+                                        <div class="card-img-actions"> <img
+                                                src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                                class="card-img img-fluid" width="96" height="350" alt=""> </div>
+                                    </div>
+                                    <div class="product-card-body text-center m-2" style="height:300px;">
+                                        <div class="mb-2">
+                                            <h6 class="mb-2"> <a
+                                                    href="{{ route('announcement.show', compact('announcement')) }}"
+                                                    class="product-card-title mb-2"
+                                                    data-abc="true">{{ $announcement->title }}</a></h6>
+                                            <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                                class="text-muted" data-abc="true">
+                                                {{ $announcement->category->name }}</a>
+                                        </div>
+                                        <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
+                                        <p class="description">{{ substr($announcement->description, 0, 10) . '..' }}
+                                        </p>
+                                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                                class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                                        <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}
+                                        </div>
+                                        <button type="button" class="btn btn-product-card"><i
+                                                class="fa fa-cart-plus mr-2"></i>
+                                            Add to cart</button>
+                                    </div>
                                 </div>
-                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
-                                <p class="description">{{substr($announcement->description, 0, 10).".."}}</p>
-                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                                <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}</div>
-                                <button type="button" class="btn btn-product-card"><i class="fa fa-cart-plus mr-2"></i>
-                                    Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    @endif                    
-                @endforeach
-            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
-    </section> 
+    </section> --}}
 
+
+
+    {{-- <section id="categories" class="categories section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Annunci</h2>
+                <p>Scopri gli ultimi annunci</p>
+            </div>
+            <div class="row justify-content-around">
+                @foreach ($announcements as $announcement)
+                    @if ($announcement->is_accepted == true)
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="col-8 offset-2 mt-2 comp-product-card gallery-cell">
+                                    <div class="product-card">
+                                        <div class="product-card-body">
+                                            <div class="card-img-actions"> <img
+                                                    src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                                    class="card-img img-fluid" width="96" height="350" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="product-card-body text-center m-2" style="height:300px;">
+                                            <div class="mb-2">
+                                                <h6 class="mb-2"> <a
+                                                        href="{{ route('announcement.show', compact('announcement')) }}"
+                                                        class="product-card-title mb-2"
+                                                        data-abc="true">{{ $announcement->title }}</a></h6>
+                                                <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                                    class="text-muted" data-abc="true">
+                                                    {{ $announcement->category->name }}</a>
+                                            </div>
+                                            <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
+                                            </h3>
+                                            <p class="description">
+                                                {{ substr($announcement->description, 0, 10) . '..' }}
+                                            </p>
+                                            <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                                    class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+                                            </div>
+                                            <div class="text-muted mb-3">
+                                                {{ $announcement->created_at->format('j F Y') }}
+                                            </div>
+                                            <button type="button" class="btn btn-product-card"><i
+                                                    class="fa fa-cart-plus mr-2"></i>
+                                                Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+        </div>
+    </section> --}}
+
+    <section id="categories" class="categories section-category-header">
+        <div class="container">
+            <div class="section-title">
+                <h2>Annunci</h2>
+                <p>Scopri gli ultimi annunci</p>
+            </div>
+            <div class="row justify-content-around">
+                <div class="gallery js-flickity"
+                    data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
+                    @foreach ($announcements as $announcement)
+                        @if ($announcement->is_accepted == true)
+                            <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
+                                <div class="product-card">
+                                    <div class="product-card-body">
+                                        <div class="card-img-actions"> <img
+                                                src="https://via.placeholder.com/150C/O https://placeholder.com/"
+                                                class="card-img img-fluid" width="96" height="350" alt=""> </div>
+                                    </div>
+                                    <div class="product-card-body text-center m-2" style="height:300px;">
+                                        <div class="mb-2">
+                                            <h6 class="mb-2"> <a
+                                                    href="{{ route('announcement.show', compact('announcement')) }}"
+                                                    class="product-card-title mb-2"
+                                                    data-abc="true">{{ $announcement->title }}</a></h6>
+                                            <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                                class="text-muted" data-abc="true">
+                                                {{ $announcement->category->name }}</a>
+                                        </div>
+                                        <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
+                                        <p class="description">{{ substr($announcement->description, 0, 10) . '..' }}
+                                        </p>
+                                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                                class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                                        <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}
+                                        </div>
+                                        <button type="button" class="btn btn-product-card"><i
+                                                class="fa fa-cart-plus mr-2"></i>
+                                            Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{-- /*--------------------------------------------------------------
     # Categorie
     --------------------------------------------------------------*/ --}}
 
-    <section id="categories" class="categories section-bg">
-        <div class="container">
+    <section id="categories" class="categories section-bg categories-add-pb">
+        <div class="container p-0">
 
             <div class="section-title">
                 <h2>Categorie</h2>
@@ -242,7 +363,7 @@
     # Info section
     --------------------------------------------------------------*/ --}}
 
-    <section id="section-info" class="d-flex align-items-center">
+    {{-- <section id="section-info" class="d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column justify-content-center">
@@ -257,13 +378,29 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section id="section-info">
+        <div class="container">
+            <div class="row align-items-center g-2">
+                <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100"
+                        src="/img/section-info.gif" alt="hero-header" /></div>
+                <div class="col-md-7 col-lg-6 py-6 text-md-start text-center">
+                    <p class="fs-0 text-uppercase fw-bold text-600 mt-5">Chiedi ai nostri esperti</p>
+                    <h5 class="tc-main fw-black mt-3"> Saremo pronti ad aiutarti</h5>
+                    <h1 class="display-4 tc-white fw-bold">Saremo pronti ad aiutarti per ogni necessità</h1>
+                    <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 mt-4">
+                            Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a>
+                </div>
+            </div>
+        </div>
     </section>
 
     {{-- /*--------------------------------------------------------------
     # F.A.Q.
     --------------------------------------------------------------*/ --}}
 
-    <section id="faq" class="faq section-bg">
+    <section id="faq" class="faq">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -375,5 +512,6 @@
 
         </div>
     </section>
+
 
 </x-layout>
