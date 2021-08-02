@@ -25,8 +25,9 @@
                                 placeholder="Titolo Annuncio" name="title" value="{{old('title')}}">
                         </div>
                         <div class="mb-3">
-                            <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Descrizione annuncio" name="description" value="{{old('description')}}">
+                            <textarea type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Descrizione annuncio" name="description" value="{{old('description')}}" style="color: var(--black)";>
+                            </textarea>    
                         </div>
 
                         <div class="mb-3">
