@@ -10923,12 +10923,12 @@ li {
 
 ::-moz-selection {
     color: var(--black);
-    background: var(--gray);
+    background: var(--main);
 }
 
 ::selection {
     color: var(--black);
-    background: var(--gray);
+    background: var(--main);
 }
 
 ::-moz-selection {
@@ -10962,13 +10962,45 @@ li {
     box-shadow: 10px 10px 100px black;
 }
 
-.pointer{
+.pointer {
     cursor: pointer !important;
 }
 
 a {
     text-decoration: none !important;
 }
+
+.selectpicker {
+    border-radius: 100px;
+    color: var(--black);
+    padding: 0px 20px;
+    margin: 10px 0px;
+}
+
+.btn-product-cart {
+    background-color: var(--violet);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 43px;
+    /* padding: 7px 30px; */
+    line-height: 47px;
+    transition: 250ms;
+}
+
+.btn-product-cart:hover {
+    background-color: var(--violet);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 43px;
+    /* padding: 7px 30px; */
+    line-height: 47px;
+    box-shadow: 0px 0px 10px var(--violet);
+}
+
 
 /* ------------------ Footer  ------------------ */
 
@@ -11090,15 +11122,14 @@ footer ul li a {
     font-size: max(1vw, 25px);
     max-height: 30px !important;
     transition: 250ms;
-
 }
 
-.icon-brand-p{
+.icon-brand-p {
     padding: 2vh;
 }
 
-@media (max-width: 500px){
-    .icon-brand-p{
+@media (max-width: 500px) {
+    .icon-brand-p {
         padding: 1vh;
     }
 }
@@ -11248,7 +11279,7 @@ nav {
 .navbar-btn-revisore {
     position: relative;
     font-weight: 600;
-    border: 1px solid var(--orange);
+    border: 2px solid var(--orange);
     background: var(--orange);
     color: var(--black);
     border-radius: 15px;
@@ -11261,7 +11292,7 @@ nav {
 
 .navbar-btn-revisore:hover {
     font-weight: 600;
-    border: 1px solid var(--orange) !important;
+    border: 2px solid var(--orange) !important;
     background: var(--orange) !important;
     box-shadow: 0px 0px 5px var(--orange);
     color: var(--warmgray);
@@ -11549,18 +11580,18 @@ nav {
     .navbar-btn-revisore, .navbar-btn-annuncio {
         font-size: 12px !important;
         padding: 0px 10px;
-        margin: 6px 8px;
+        margin: 16px 8px;
     }
     .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
         font-size: 12px !important;
         padding: 0px 10px;
-        margin: 6px 8px;
+        margin: 16px 8px;
     }
     .unseen-count {
         width: 1.7rem;
         height: 1.7rem;
-        top: 1rem;
-        left: 6rem;
+        top: 0.8rem;
+        left: 7rem;
         text-align: center;
         font-size: 0.7rem;
         line-height: 1.7rem;
@@ -11575,12 +11606,22 @@ nav {
     .navbar-btn-revisore, .navbar-btn-annuncio {
         font-size: 14px !important;
         padding: 0px 10px;
-        margin: 10px 8px;
+        margin: 16px 8px;
     }
     .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
         font-size: 14px !important;
         padding: 0px 10px;
-        margin: 10px 8px;
+        margin: 16px 8px;
+    }
+
+    #unseen_count {
+        width: 1.7rem;
+        height: 1.7rem;
+        top: 1rem;
+        left: 120px;
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1.7rem;
     }
 }
 
@@ -12213,6 +12254,35 @@ section {
 # Home carosell
 --------------------------------------------------------------*/
 
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 /*--------------------------------------------------------------
 # Log IN
 --------------------------------------------------------------*/
@@ -12471,7 +12541,6 @@ input {
     font-size: 1.5em !important;
 }
 
-
 .media {
     display: flex;
     align-items: flex-start
@@ -12488,7 +12557,6 @@ input {
 .tab-content>.active {
     display: block
 }
-
 
 .review {
     padding-top: 2rem;
@@ -12652,39 +12720,39 @@ body {
     text-align: left;
     background-color: #fff
 }
+
 .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6
 }
 
-.tab-content h5{
+.tab-content h5 {
     color: var(--black);
     font-weight: 800;
 }
 
-.tab-content p{
+.tab-content p {
     color: var(--warmgray);
     font-weight: 300;
 }
 
-.tab-content li{
+.tab-content li {
     color: var(--black);
     font-weight: 500;
 }
 
-.tab-content span{
+.tab-content span {
     color: var(--main);
     font-weight: 700;
     text-transform: none !important;
 }
 
-.form-container h5{
+.form-container h5 {
     font-size: 1.5em;
     font-weight: 800;
 }
 
 /* ------ SEARCH SECTION ------ */
-
 
 /* aside{
     position: -webkit-sticky;
@@ -12695,43 +12763,43 @@ body {
     
 } */
 
-aside .card-header:first-child{
+aside .card-header:first-child {
     background-color: rgba(237, 237, 237, 0.679) !important;
     border-radius: 50px !important;
     border: hidden !important;
     margin-bottom: 10px !important;
 }
 
-aside .card-header:first-child h6{
+aside .card-header:first-child h6 {
     font-size: 0.8em !important;
     font-weight: 600 !important;
     color: var(--black) !important;
 }
 
-aside .card-header:first-child i{
+aside .card-header:first-child i {
     font-size: 0.8em !important;
     font-weight: 600 !important;
     color: var(--orange) !important;
 }
 
-aside label{
+aside label {
     font-size: 0.8em !important;
 }
 
-aside select{
+aside select {
     border-radius: 50px !important;
 }
 
-aside input{
+aside input {
     border-radius: 50px !important;
 }
 
-option{
+option {
     font-size: 0.8em !important;
     font-weight: 600 !important;
 }
 
-.pagination{
+.pagination {
     position: relative;
     bottom: 0px;
 }

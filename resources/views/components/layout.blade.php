@@ -35,6 +35,8 @@
 
     <!-- Swiper -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- jQuery 1.8 or later, 33 KB -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -43,7 +45,16 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Slider home non funzionante -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+
+
 
 </head>
 
@@ -66,15 +77,22 @@
     /* ------------------ +++ SCRIPT +++  ------------------ */
     /* ||||||||||||||||||||||||||||||||||||||||||||||||||||| */ --}}
 
-
-
+    
     <!-- Script custom -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+   
 
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
 
     <!-- Bootstrap Bundle -->
     <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ asset('js/app.js') }}"></script>
+
 
 
 </body>

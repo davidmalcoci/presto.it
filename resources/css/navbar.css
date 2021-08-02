@@ -102,7 +102,7 @@ nav {
 .navbar-btn-revisore {
     position: relative;
     font-weight: 600;
-    border: 1px solid var(--orange);
+    border: 2px solid var(--orange);
     background: var(--orange);
     color: var(--black);
     border-radius: 15px;
@@ -115,7 +115,7 @@ nav {
 
 .navbar-btn-revisore:hover {
     font-weight: 600;
-    border: 1px solid var(--orange) !important;
+    border: 2px solid var(--orange) !important;
     background: var(--orange) !important;
     box-shadow: 0px 0px 5px var(--orange);
     color: var(--warmgray);
@@ -372,18 +372,18 @@ nav {
     .navbar-btn-revisore, .navbar-btn-annuncio {
         font-size: 12px !important;
         padding: 0px 10px;
-        margin: 6px 8px;
+        margin: 16px 8px;
     }
     .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
         font-size: 12px !important;
         padding: 0px 10px;
-        margin: 6px 8px;
+        margin: 16px 8px;
     }
     .unseen-count {
         width: 1.7rem;
         height: 1.7rem;
-        top: 1rem;
-        left: 6rem;
+        top: 0.8rem;
+        left: 7rem;
         text-align: center;
         font-size: 0.7rem;
         line-height: 1.7rem;
@@ -398,12 +398,22 @@ nav {
     .navbar-btn-revisore, .navbar-btn-annuncio {
         font-size: 14px !important;
         padding: 0px 10px;
-        margin: 10px 8px;
+        margin: 16px 8px;
     }
     .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
         font-size: 14px !important;
         padding: 0px 10px;
-        margin: 10px 8px;
+        margin: 16px 8px;
+    }
+
+    #unseen_count {
+        width: 1.7rem;
+        height: 1.7rem;
+        top: 1rem;
+        left: 120px;
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1.7rem;
     }
 }
 

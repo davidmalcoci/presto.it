@@ -135,7 +135,6 @@
     font-size: 1.5em !important;
 }
 
-
 .media {
     display: -ms-flexbox;
     display: flex;
@@ -155,7 +154,6 @@
 .tab-content>.active {
     display: block
 }
-
 
 .review {
     padding-top: 2rem;
@@ -321,39 +319,39 @@ body {
     text-align: left;
     background-color: #fff
 }
+
 .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6
 }
 
-.tab-content h5{
+.tab-content h5 {
     color: var(--black);
     font-weight: 800;
 }
 
-.tab-content p{
+.tab-content p {
     color: var(--warmgray);
     font-weight: 300;
 }
 
-.tab-content li{
+.tab-content li {
     color: var(--black);
     font-weight: 500;
 }
 
-.tab-content span{
+.tab-content span {
     color: var(--main);
     font-weight: 700;
     text-transform: none !important;
 }
 
-.form-container h5{
+.form-container h5 {
     font-size: 1.5em;
     font-weight: 800;
 }
 
 /* ------ SEARCH SECTION ------ */
-
 
 /* aside{
     position: -webkit-sticky;
@@ -364,43 +362,43 @@ body {
     
 } */
 
-aside .card-header:first-child{
+aside .card-header:first-child {
     background-color: rgba(237, 237, 237, 0.679) !important;
     border-radius: 50px !important;
     border: hidden !important;
     margin-bottom: 10px !important;
 }
 
-aside .card-header:first-child h6{
+aside .card-header:first-child h6 {
     font-size: 0.8em !important;
     font-weight: 600 !important;
     color: var(--black) !important;
 }
 
-aside .card-header:first-child i{
+aside .card-header:first-child i {
     font-size: 0.8em !important;
     font-weight: 600 !important;
     color: var(--orange) !important;
 }
 
-aside label{
+aside label {
     font-size: 0.8em !important;
 }
 
-aside select{
+aside select {
     border-radius: 50px !important;
 }
 
-aside input{
+aside input {
     border-radius: 50px !important;
 }
 
-option{
+option {
     font-size: 0.8em !important;
     font-weight: 600 !important;
 }
 
-.pagination{
+.pagination {
     position: relative;
     bottom: 0px;
 }

@@ -56,10 +56,10 @@
                             </div>
                         </li> --}}
 
-                <div class="align-self-center">
+                {{-- <div class="align-self-center">
                     <a href="{{ route('announcement.create') }}"><button class="navbar-btn-annuncio">Inserisci
-                            Annuncio</button></a>
-                </div>
+                            Annuncio <i class="fas fa-plus-circle"></i></button></a>
+                </div> --}}
 
 
 
@@ -80,14 +80,20 @@
                         </div>
                     @else
                         <div class="align-self-center">
-                            <a href="{{ route('work') }}"><button class="navbar-btn-annuncio">Diventa
-                                    revisore</button></a>
+                            <a href="{{ route('work') }}">
+                                <button class="navbar-btn-revisore d-flex">
+                                    <div lass="nav-link"> Diventa revisore</div>
+                                </button>
+                            </a>
                         </div>
                     @endif
                 @endif
             </ul>
 
-
+            <div class="align-self-center text-center">
+                <a href="{{ route('announcement.create') }}"><button class="navbar-btn-annuncio">Inserisci
+                        Annuncio <i class="fas fa-plus-circle"></i></button></a>
+            </div>
 
             <ul class="d-flex  navbar-nav  mb-2 mb-lg-0 px-4 text-center">
                 <li class="nav-item nav-link dropdown align-self-center">
@@ -102,13 +108,16 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         @if (Auth::user() == false)
-                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
+                                    href="{{ route('login') }}">Accedi</a></li>
                             {{-- <li>
                                 <hr class="dropdown-divider">
                             </li> --}}
-                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
+                                    href="{{ route('register') }}">Registrati</a></li>
                         @else
-                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item" href="{{ route('logout') }}"
+                            <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
+                                    href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
                                 <form method="POST" action="{{ route('logout') }}" id="form-logout">
                                     @csrf
@@ -122,8 +131,7 @@
 
             </ul>
             <li id="#sidebarCart" class="nav-item d-flex justify-content-center me-5">
-                <a class="nav-link d-inline-block px-2 pointer" href=""><i
-                        class="fas fa-shopping-cart cart"></i></a>
+                <a class="nav-link d-inline-block px-2 pointer" href=""><i class="fas fa-shopping-cart cart"></i></a>
             </li>
             <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -138,7 +146,8 @@
                     <div class="contForm" id="search">
                         <nav class="navbar navbar-light ">
                             <form class="form-inline">
-                                <input type="text" name="query" placeholder="Cosa stai cercando?" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                                <input type="text" name="query" placeholder="Cosa stai cercando?"
+                                    class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                             </form>
                         </nav>

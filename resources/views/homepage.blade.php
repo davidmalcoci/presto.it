@@ -78,9 +78,9 @@
     </section>
 
 
-    <!-- ===============================================-->
-    <!--    Search Bar -->
-    <!-- ===============================================-->
+    {{-- /*--------------------------------------------------------------
+    # Search bar
+    --------------------------------------------------------------*/ --}}
 
     <form action="{{ route('search.results') }}" method="get">
         <div class="row justify-content-center m-0">
@@ -105,6 +105,7 @@
     {{-- /*--------------------------------------------------------------
     # Ultimi annunci
     --------------------------------------------------------------*/ --}}
+
 
     <!-- <section id="categories" class="categories section-category-header">
         <div class="container">
@@ -149,8 +150,6 @@
             </div>
         </div>
     </section> -->
-    
-
 
     {{-- <section id="categories" class="categories section-bg">
         <div class="container">
@@ -199,7 +198,6 @@
             </div>
         </div>
     </section> --}}
-
 
 
     {{-- <section id="categories" class="categories section-bg">
@@ -256,7 +254,7 @@
         </div>
     </section> --}}
 
-    <section id="categories" class="categories section-category-header">
+    {{-- <section id="categories" class="categories section-category-header">
         <div class="container">
             <div class="section-title">
                 <h2>Annunci</h2>
@@ -302,6 +300,78 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section id="" class="categories section-bg categories-add-pb">
+        <div class="container">
+            <div class="section-title">
+                <h2>Annunci</h2>
+                <p>Scopri gli ultimi annunci</p>
+            </div>
+            <div class="row justify-content-around m-0">
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        @foreach ($announcements as $announcement)
+                            @if ($announcement->is_accepted == true)
+                                <div class="swiper-slide">
+                                    <div class="col-6 mt-2 comp-product-card">
+                                        <div class="product-card">
+                                            <div class="product-card-body">
+                                                <div class="card-img-actions"> <img
+                                                        src="https://via.placeholder.com/150/0000FF/808080"
+                                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="product-card-body text-center m-2" style="height:300px;">
+                                                <div class="mb-2">
+                                                    <h6 class="mb-2"> <a
+                                                            href="{{ route('announcement.show', compact('announcement')) }}"
+                                                            class="product-card-title mb-2"
+                                                            data-abc="true">{{ $announcement->title }}</a></h6>
+                                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                                        class="text-muted" data-abc="true">
+                                                        {{ $announcement->category->name }}</a>
+                                                </div>
+                                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
+                                                </h3>
+                                                <p class="description">
+                                                    {{ substr($announcement->description, 0, 10) . '..' }}
+                                                </p>
+                                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+                                                </div>
+                                                <div class="text-muted mb-3">
+                                                    {{ $announcement->created_at->format('j F Y') }}
+                                                </div>
+                                                <button type="button" class="btn btn-product-card"><i
+                                                        class="fa fa-cart-plus mr-2"></i>
+                                                    Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+
+                    {{-- <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div> --}}
+
+                    {{-- <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div> --}}
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    {{-- <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div> --}}
+                </div>
+            </div>
+        </div>
     </section>
 
     {{-- /*--------------------------------------------------------------
@@ -330,7 +400,8 @@
                     <div class="icon-box">
                         <div class="icon"><i class="fas fa-home"></i></div>
                         <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum
                             dolore eu fugiat nulla</p>
                     </div>
                 </div>
@@ -412,14 +483,17 @@
             <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
 
                 <li>
-                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a
+                        erat
                         nam at
                         lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i
                             class="bi bi-chevron-up icon-close"></i></div>
                     <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                         <p>
-                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                            curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
+                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                            non
+                            curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                            purus
                             non.
                         </p>
                     </div>
@@ -436,7 +510,8 @@
                             velit
                             laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
                             pretium.
-                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
+                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis
+                            massa
                             tincidunt dui.
                         </p>
                     </div>
@@ -446,13 +521,16 @@
                     <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet
                         consectetur
                         adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i
-                            class="bi bi-chevron-up icon-close"></i></div>
+                            class="bi bi-chevron-up icon-close"></i>
+                    </div>
                     <div id="faq3" class="collapse" data-bs-parent=".faq-list">
                         <p>
                             Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
                             pulvinar
-                            elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                            pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
+                            elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
+                            tellus
+                            pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
+                            molestie at
                             elementum eu facilisis sed odio morbi quis
                         </p>
                     </div>
@@ -469,20 +547,23 @@
                             velit
                             laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
                             pretium.
-                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
+                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis
+                            massa
                             tincidunt dui.
                         </p>
                     </div>
                 </li>
 
                 <li>
-                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque
+                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam
+                        pellentesque
                         nec
                         nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i
                             class="bi bi-chevron-up icon-close"></i></div>
                     <div id="faq5" class="collapse" data-bs-parent=".faq-list">
                         <p>
-                            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
+                            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
+                            est
                             ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
                             adipiscing
                             bibendum est. Purus gravida quis blandit turpis cursus in
@@ -500,10 +581,12 @@
                         <p>
                             Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
                             integer
-                            malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem
+                            malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget
+                            lorem
                             dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam
                             volutpat
-                            commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non
+                            commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc
+                            non
                             blandit massa enim nec.
                         </p>
                     </div>

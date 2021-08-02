@@ -3186,39 +3186,45 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
   \********************************/
 /***/ (() => {
 
-//--------------- Cambio colore menù ---------------
-document.addEventListener('scroll', function () {
-  var navbar = document.querySelector('#navbar-presto');
-  var navbarSupported = document.querySelector('#navbarSupportedContent');
-  var navbarToggler = document.querySelector('#navbar-toggler');
-
-  if (window.scrollY > 100) {
-    navbar.classList.add('p-bg-white', 'shadow', 'transition');
-  } else {
-    navbar.classList.remove('p-bg-white', 'shadow');
-  }
-
-  if (navbarSupported.classList.contains('show') && window.scrollY < 1) {
-    navbar.classList.add('p-bg-white');
-  }
-});
-document.addEventListener('click', function () {
-  var navbar = document.querySelector('#navbar-presto');
-  navbar.classList.add('p-bg-white', 'shadow', 'transition');
-}); //--------------- Cambio icona menù ---------------
-
-var iconMenu = document.querySelector('#icon-menu');
-var iconIcs = document.querySelector('#icon-ics');
-iconMenu.addEventListener('click', function icon() {
-  if (iconIcs.classList.contains('d-none')) {
-    iconIcs.classList.remove('d-none');
-    iconMenu.classList.add('d-none');
-  }
-});
-iconIcs.addEventListener('click', function icon() {
-  if (iconMenu.classList.contains('d-none')) {
-    iconMenu.classList.remove('d-none');
-    iconIcs.classList.add('d-none');
+//--------------- Swiper  ---------------
+var swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  // // If we need pagination
+  // pagination: {
+  //     el: '.swiper-pagination',
+  // },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar'
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50
+    },
+    1430: {
+      slidesPerView: 2,
+      spaceBetween: 50
+    },
+    1700: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
   }
 }); //--------------- Gallery  ---------------
 
@@ -3306,7 +3312,42 @@ var App = function () {
   };
 }();
 
-App.init(); //--------------- Notification  ---------------
+App.init(); //--------------- Cambio colore menù ---------------
+
+document.addEventListener('scroll', function () {
+  var navbar = document.querySelector('#navbar-presto');
+  var navbarSupported = document.querySelector('#navbarSupportedContent');
+  var navbarToggler = document.querySelector('#navbar-toggler');
+
+  if (window.scrollY > 100) {
+    navbar.classList.add('p-bg-white', 'shadow', 'transition');
+  } else {
+    navbar.classList.remove('p-bg-white', 'shadow');
+  }
+
+  if (navbarSupported.classList.contains('show') && window.scrollY < 1) {
+    navbar.classList.add('p-bg-white');
+  }
+});
+document.addEventListener('click', function () {
+  var navbar = document.querySelector('#navbar-presto');
+  navbar.classList.add('p-bg-white', 'shadow', 'transition');
+}); //--------------- Cambio icona menù ---------------
+
+var iconMenu = document.querySelector('#icon-menu');
+var iconIcs = document.querySelector('#icon-ics');
+iconMenu.addEventListener('click', function icon() {
+  if (iconIcs.classList.contains('d-none')) {
+    iconIcs.classList.remove('d-none');
+    iconMenu.classList.add('d-none');
+  }
+});
+iconIcs.addEventListener('click', function icon() {
+  if (iconMenu.classList.contains('d-none')) {
+    iconMenu.classList.remove('d-none');
+    iconIcs.classList.add('d-none');
+  }
+}); //--------------- Notification  ---------------
 
 var countIndicator = document.getElementById("unseen_count"); // let currentCount = 0;
 
@@ -3349,7 +3390,7 @@ btn.on('click', function (e) {
   $('html, body').animate({
     scrollTop: 0
   }, '300');
-}); //--------------- Swiper  ---------------
+});
 
 /***/ }),
 

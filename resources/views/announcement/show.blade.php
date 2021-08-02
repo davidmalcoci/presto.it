@@ -1,6 +1,6 @@
 <x-layout>
     @push('title')
-         {{ $announcement->title }} | Presto.it
+        {{ $announcement->title }} | Presto.it
     @endpush
 
 
@@ -58,8 +58,7 @@
 
                 </div>
 
-                <div class="col-md-6">
-
+                {{-- <div class="col-md-6">
                     <a
                         href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}">
                         <h4 class=" mb-1">{{ $announcement->category->name }}</h4>
@@ -76,6 +75,72 @@
                         <button type="button" class="btn btn-product-card"><i class="fa fa-cart-plus mr-2"></i>
                             Add to cart</button>
                         </button>
+                    </div>
+                </div> --}}
+
+
+                <div class="col-lg-6 col-xl-4 pt-4 order-1 order-lg-2 ml-lg-auto">
+                    <div class="sticky-top" style="top: 100px;">
+                        <h1 class="display-5 fw-bolder mb-4">{{ $announcement->title }}</h1>
+                        <div
+                            class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
+                            <ul class="list-inline mb-2 mb-sm-0">
+                                <li class="list-inline-item h4 font-weight-light mb-0">{{ $announcement->price }}€</li>
+                                <li class="list-inline-item text-muted font-weight-light">
+                                    <del>2000.00€</del>
+                                </li>
+                            </ul>                            
+                        </div>
+
+                        <div class="d-flex align-items-center text-sm">
+                            <ul class="list-inline mr-2 mb-4">
+                                <li class="list-inline-item mr-0"><i class="fa fa-star" style="color: var(--orange) !important;"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fa fa-star" style="color: var(--orange) !important;"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fa fa-star" style="color: var(--orange) !important;"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fa fa-star" style="color: var(--orange) !important;"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fa fa-star" style="color: var(--gray) !important;"></i></li>
+                            </ul><span class="text-muted text-uppercase ms-3 mb-4">25 reviews</span>
+                        </div>
+
+                        <p class="mb-4 text-muted">{{ $announcement->description }}
+                        </p>
+                        <form id="buyForm" action="#">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6 col-lg-6 detail-option mb-4">
+                                    <h6 class="detail-option-heading">Quantità:</h6>
+                                    <select class="selectpicker" name="size" data-style="btn-selectpicker">
+                                        <option value="value_0">10</option>
+                                        <option value="value_1">12</option>
+                                        <option value="value_2">14</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-lg-6 detail-option mb-4">
+                                    <h6 class="detail-option-heading">Pagamento:</h6>
+                                    <label class="btn btn-product-card text-white"
+                                        for="material_0" style="background-color: var(--orange) !important;"><i class="fas fa-university fs-4 p-1"></i>
+                                    </label>
+                                    <label class="btn btn-product-card text-white"
+                                        for="material_1" style="background-color: var(--orange) !important;"><i class="fas fa-money-check-alt  fs-4 p-1"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class=" d-flex mb-5">
+                                <button type="button" class="btn btn-product-cart"><i class="fa fa-cart-plus mr-2"></i>
+                                    Add to cart </button>
+                                </button>
+                                {{-- <input class="form-control text-center ms-3" id="inputQuantity" type="num" value="1"
+                                style="max-width: 3rem" />                             --}}
+                            </div>
+                            <div class="row mb-4 d-flex">
+                                <div class="col-6"><i class="far fa-heart mr-2 fs-3"></i>
+                                    <i class="fas fa-share-alt ms-4 fs-3"></i>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <div class="d-flex"><p class="me-1">Categoria:  </p> <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"><h5 class=" m-0">  {{ $announcement->category->name }}</h5></a></div>
+                                Aggiunto il: <a class="text-muted" href="#">{{ $announcement->created_at->format('d F Y') }}</a>
+                            </ul>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -103,8 +168,12 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h5>About</h5>
-                            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, similique repudiandae numquam voluptate quia quam delectus aliquid! Quis minus praesentium corrupti maiores inventore ullam nostrum itaque enim fugiat eos! Illum?</p>
-                            <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quis ab unde reprehenderit omnis impedit cum ipsam earum! Beatae quos labore autem non eius quod doloribus. Dignissimos adipisci id sit?</p>
+                            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+                                similique repudiandae numquam voluptate quia quam delectus aliquid! Quis minus
+                                praesentium corrupti maiores inventore ullam nostrum itaque enim fugiat eos! Illum?</p>
+                            <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                quis ab unde reprehenderit omnis impedit cum ipsam earum! Beatae quos labore autem non
+                                eius quod doloribus. Dignissimos adipisci id sit?</p>
                             <h5>Lorem ipsum</h5>
                             <ul class="text-muted">
                                 <li>Lorem ipsum dolor sit amet</li>
@@ -175,7 +244,8 @@
                             {{-- /* ------ Review ------ */ --}}
                             <div class="media review">
                                 <div class="text-center mr-4 mr-xl-5"><img class="review-image"
-                                        src="https://via.placeholder.com/600C/O https://placeholder.com"><span class="text-uppercase text-muted">Dec 2018</span></div>
+                                        src="https://via.placeholder.com/600C/O https://placeholder.com"><span
+                                        class="text-uppercase text-muted">Dec 2018</span></div>
                                 <div class="ms-3 media-body">
                                     <h5 class="mt-2 mb-1">Han Solo</h5>
                                     <div class="mb-2"><i class="fa fa-xs fa-star text-warning"></i><i
@@ -184,7 +254,10 @@
                                             class="fa fa-xs fa-star text-warning"></i><i
                                             class="fa fa-xs fa-star text-warning"></i>
                                     </div>
-                                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore temporibus nesciunt doloremque officia voluptatem molestiae ducimus, amet necessitatibus dicta quia qui cum incidunt debitis delectus. Culpa similique recusandae optio aliquam!</p>
+                                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolore temporibus nesciunt doloremque officia voluptatem molestiae ducimus, amet
+                                        necessitatibus dicta quia qui cum incidunt debitis delectus. Culpa similique
+                                        recusandae optio aliquam!</p>
                                 </div>
                             </div>
 
@@ -204,9 +277,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                              
-                                <input class="" type="text" name="name" id="name"
-                                    placeholder="Nome" required="required">
+                                <input class="" type="text" name="name" id="name" placeholder="Nome"
+                                    required="required">
                             </div>
                         </div>
                         <div class="col-sm-6 text-center align-self-center">
@@ -224,8 +296,8 @@
                     </div>
                     <div class="form-group">
 
-                        <input class="" type="email" name="email" id="emailReview"
-                            placeholder="Email" required="required">
+                        <input class="" type="email" name="email" id="emailReview" placeholder="Email"
+                            required="required">
                     </div>
                     <div class="form-group">
 
