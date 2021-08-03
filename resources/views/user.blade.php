@@ -6,12 +6,16 @@
         .profile-wrapper{
             text-color:black;
         }
+        .profile{
+            box-shadow: 1px 3px 4px grey;
+        }
+
         </style>
 <div class="container-fluid">
         <div class="row profile-wrapper mt-5">
             <div class="col-12 col-md-6 offset-md-3 user-profile mt-5">
                 <h1 class="text-center fw-bold pt-5">Welcome {{$user->name}}</h1>
-                <img src="https://icon-library.com/images/anonymous-icon/anonymous-icon-3.jpg" class="img-fluid rounded-circle d-block mx-auto" alt="">
+                <img src="https://icon-library.com/images/anonymous-icon/anonymous-icon-3.jpg" class="img-fluid rounded-circle d-block mx-auto profile" alt="">
                 <h4 class=" pt-3 text-center mt-3">You signed up with the following information:</h4>
                 <p class=" text-center pt-5">Email: {{$user->email}}</p>
                 <p class=" text-center">Username: {{$user->name}}</p>
