@@ -137,7 +137,9 @@
                         <main class="col-md-9">
                             <header class="border-bottom mb-4 pb-3">
                                 <div class="form-inline">
-                                    <span class="mr-md-auto" id="numberItems">??? Items found</span>
+                                
+                                    <span class="mr-md-auto" id="numberItems">Total Announcements: {{$announcements->count()}}</span>
+                                    
                                 </div>
                             </header>
                             {{-- ---------- Result - Card Product  ---------- --}}
