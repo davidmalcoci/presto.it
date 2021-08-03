@@ -114,7 +114,8 @@
                     <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @if (Auth::user())
-                            <i class="fas fa-user-circle"></i>
+                            <!-- <i class="fas fa-user-circle"></i> -->
+                            <img src="https://icon-library.com/images/anonymous-icon/anonymous-icon-3.jpg" alt="" class="img-fluid rounded-circle" style="width:15px; height:15px;">
                             {{ Auth::user()->name }}
                         @else
                             Account
