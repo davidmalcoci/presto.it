@@ -313,8 +313,8 @@
     <section id="" class="categories section-bg">
         <div class="container">
             <div class="section-title">
-                <h2>Annunci</h2>
-                <p>Scopri gli ultimi annunci</p>
+            <h2>{{__('ui.annunci')}}</h2>
+                <p>{{__('ui.scopri')}}</p>
             </div>
             <div class="row justify-content-around m-0">
                 <!-- Slider main container -->
@@ -324,13 +324,22 @@
                         <!-- Slides -->
                         @foreach ($announcements as $announcement)
                             @if ($announcement->is_accepted == true)
-                                <div class="swiper-slide">
+                            <div class="swiper-slide">
                                     <div class="col-6 mt-2 comp-product-card">
                                         <div class="product-card">
                                             <div class="product-card-body">
-                                                <div class="card-img-actions"> <img
-                                                        src="https://via.placeholder.com/150/0000FF/808080"
+                                                <div class="card-img-actions"> 
+                                                @foreach($announcement->images as $image)
+                                                @php
+                                                $imagenum = $image->id-1
+                                                @endphp
+                                                @if ($imagenum < $image->id)
+                                                    <img
+                                                        src="{{ $image->getUrl(400, 500) }}"
                                                         class="card-img img-fluid" width="96" height="350" alt="">
+                                                        @break;
+                                                        @endif
+                                                        @endforeach
                                                 </div>
                                             </div>
                                             <div class="product-card-body text-center m-2" style="height:300px;">
@@ -398,7 +407,10 @@
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="icon"><i class="fas fa-tshirt"></i></div>
-                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                       
+                        <h4 class="title"><a href="">{{__('ui.clothes')}}</a></h4>
+                        
+                        
                         <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
                             excepturi sint occaecati cupiditate</p>
                     </div>
@@ -407,7 +419,7 @@
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                     <div class="icon-box">
                         <div class="icon"><i class="fas fa-home"></i></div>
-                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                        <h4 class="title"><a href="">{{__('ui.properties')}}</a></h4>
                         <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
                             cillum
                             dolore eu fugiat nulla</p>
@@ -417,7 +429,7 @@
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
                     <div class="icon-box">
                         <div class="icon"><i class="fas fa-car-side"></i></div>
-                        <h4 class="title"><a href="">Magni Dolores</a></h4>
+                        <h4 class="title"><a href="">{{__('ui.autos')}}</a></h4>
                         <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
                             officia
                             deserunt mollit anim</p>
@@ -427,7 +439,7 @@
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
                     <div class="icon-box">
                         <div class="icon"><i class="fas fa-briefcase"></i></div>
-                        <h4 class="title"><a href="">Nemo Enim</a></h4>
+                        <h4 class="title"><a href="">{{__('ui.office')}}</a></h4>
                         <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
                             blanditiis
                             praesentium voluptatum</p>

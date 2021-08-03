@@ -1,16 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Category;
 use App\Mail\RevisorMail;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
 {
     function homepage() {
         $announcements = Announcement::all()->sortByDesc('created_at')->take(5);
-        return view('homepage', compact('announcements'));
+        $categories = Category::all();
+        return view('homepage', compact('announcements', 'categories'));
     }
 
     public function Register(){
@@ -49,6 +52,24 @@ class FrontController extends Controller
     public function locale($locale){
         session()->put('locale', $locale);
         return redirect()->back();
+    }
+
+
+    public function user(Announcement $announcement){
+
+        $user = Auth::user();
+        $announcements = Announcement::where('user_id', Auth::user()->name)->get();
+        
+
+        $starter = 100;
+        if($starter - Auth::user()->created_at->format('d') > 0){
+            $starter = "Newbie*";
+        
+        } else {
+            $starter = "Veteran";
+        }
+
+        return view ('user', compact('user', 'announcements','starter'));
     }
 
 }

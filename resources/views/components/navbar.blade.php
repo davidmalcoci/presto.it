@@ -37,14 +37,16 @@
                         href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-inline-block pointer" href="#">Categorie</a>
+                    <a class="nav-link d-inline-block pointer" href="#categories">Categorie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-inline-block pointer" href="./articles.html">Tutti gli
+                    <a class="nav-link d-inline-block pointer" href="{{route('latest')}}">Tutti gli
                         annunci</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-inline-block pointer" href="#">Profilo</a>
+                    @if (Auth::user())
+                    <a class="nav-link d-inline-block pointer" href="{{ route('user', Auth::user()->name)}}">Profilo</a>
+                    @endif
                 </li>
 
                 {{-- <li class="nav-item pl-md-0 ml-0 ml-md-4">

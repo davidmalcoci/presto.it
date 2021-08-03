@@ -14,6 +14,10 @@ return [
     'pronti' => 'Saremo pronti ad aiutarti',
     'pronti_bis' => 'Saremo pronti ad aiutarti per ogni necessità',
     'annun' => 'Annunci',
+    'clothes' =>'Abbigliamento',
+    'properties'=>'Immobili',
+    'autos'=>'Auto',
+    'office'=>'Ufficio'
     
 
 ];

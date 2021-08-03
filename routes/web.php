@@ -40,3 +40,5 @@ Route::get('/search', [FrontController::class, 'search'])->name('search.results'
 Route::get('/lavora-con-noi', [FrontController::class, 'work'])->name('work');
 
 Route::post('/richiesta/revisore', [FrontController::class, 'send'])->name('send');
+Route::get('/user/{name}',[FrontController::class, 'user'])->name('user');
+Route::get('/latest',[AnnouncementController::class, 'index'])->name('latest');

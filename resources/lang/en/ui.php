@@ -14,5 +14,9 @@ return [
     'pronti' => 'We are ready to help',
     'pronti_bis' => 'We will be ready to help you',
     'annun' => 'Ads',
+    'clothes'=> 'Clothing',
+    'properties'=>'Properties',
+    'autos'=>'Vehicles',
+    'office'=> 'Office'
 
 ];
