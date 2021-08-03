@@ -81,9 +81,13 @@
     {{-- /*--------------------------------------------------------------
     # Search bar
     --------------------------------------------------------------*/ --}}
-
+<style>
+    .searcher {
+        background-color: #eaeced;
+    }
+</style>
     <form action="{{ route('search.results') }}" method="get">
-        <div class="row justify-content-center m-0">
+        <div class="row justify-content-center m-0 searcher">
             <div class="col-12 col-md-6  search-row p-3 m-0 justify-content-center text-center">
                 <div class="row justify-content-center text-center  mx-1">
                     <div class=" col-12 d-flex align-items-center justify-content-center">
