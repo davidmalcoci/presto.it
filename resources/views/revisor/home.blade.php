@@ -71,13 +71,20 @@
                                     <img src="{{Storage::url($image->file)}}">
                                     @break;
                                     @endif
-                                    @endforeach
+                                @endforeach
                                 </div>
                                 <!--Gallery Hero-->
                                 
                                 <!--Gallery Thumbs-->
                                 <div class="gallery__thumbs">
                                 @foreach($announcement->images as $image)
+                                <div class="col-8">
+                                    Adult: {{$image->adult}} <br>
+                                    spoof: {{$image->spoof}} <br>
+                                    medical: {{$image->medical}} <br>
+                                    violence: {{$image->violence}} <br>
+                                    racy: {{$image->racy}} <br>
+                                </div>
                                     <a href="{{ Storage::url($image->file) }}"
                                         data-gallery="thumb" class="is-active">
                                         <img src="{{ $image->getUrl(400, 500) }}" alt="">
