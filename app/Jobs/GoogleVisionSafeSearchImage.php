@@ -43,7 +43,7 @@ class GoogleVisionSafeSearchImage implements ShouldQueue
 
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
-        $imageAnnotator = close();
+        $imageAnnotator->close();
 
         $safe = $response->getSafeSearchAnnotation();
 
