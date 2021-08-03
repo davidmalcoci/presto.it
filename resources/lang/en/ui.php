@@ -17,6 +17,12 @@ return [
     'clothes'=> 'Clothing',
     'properties'=>'Properties',
     'autos'=>'Vehicles',
-    'office'=> 'Office'
+    'office'=> 'Office',
+    'nav_cat'=> 'Categories',
+    'nav_all'=>'Announcements',
+    'nav_profile'=>'Profile',
+    'nav_revisor'=>'Admin Dashboard',
+    'nav_request'=>'Become admin',
+    'nav_publish'=>'Insert ad'
 
 ];

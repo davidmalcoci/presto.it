@@ -17,7 +17,13 @@ return [
     'clothes' =>'Abbigliamento',
     'properties'=>'Immobili',
     'autos'=>'Auto',
-    'office'=>'Ufficio'
+    'office'=>'Ufficio',
+    'nav_cat'=>'Categorie',
+    'nav_all'=>'Tutti gli annunci',
+    'nav_profile'=>'Profilo',
+    'nav_revisor'=>'Dashboard revisore',
+    'nav_request'=>'Diventa revisore',
+    'nav_publish'=>'Inserisci Annuncio'
     
 
 ];

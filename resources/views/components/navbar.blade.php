@@ -37,15 +37,14 @@
                         href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-inline-block pointer" href="#categories">Categorie</a>
+                    <a class="nav-link d-inline-block pointer" href="#categories">{{__('ui.nav_cat')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-inline-block pointer" href="{{route('latest')}}">Tutti gli
-                        annunci</a>
+                    <a class="nav-link d-inline-block pointer" href="{{route('latest')}}">{{__('ui.nav_all')}}</a>
                 </li>
                 <li class="nav-item">
                     @if (Auth::user())
-                    <a class="nav-link d-inline-block pointer" href="{{ route('user', Auth::user()->name)}}">Profilo</a>
+                    <a class="nav-link d-inline-block pointer" href="{{ route('user', Auth::user()->name)}}">{{__('ui.nav_profile')}}</a>
                     @endif
                 </li>
 
@@ -73,7 +72,7 @@
                         <div class="align-self-center">
                             <a href="{{ route('revisor.home') }}">
                                 <button class="navbar-btn-revisore d-flex">
-                                    <div lass="nav-link"> Dashboard revisore</div>
+                                    <div lass="nav-link"> {{__('ui.nav_revisor')}}</div>
                                     <div class="unseen-count" id="unseen_count">
                                         {{ \App\Models\Announcement::ToBeRevisionedCount() }}</div>
                                     {{-- <div class="revisore-badge">{{\App\Models\Announcement::ToBeRevisionedCount()}}</div> --}}
@@ -84,7 +83,7 @@
                         <div class="align-self-center">
                             <a href="{{ route('work') }}">
                                 <button class="navbar-btn-revisore d-flex">
-                                    <div lass="nav-link"> Diventa revisore</div>
+                                    <div lass="nav-link"> {{__('ui.nav_request')}}</div>
                                 </button>
                             </a>
                         </div>
@@ -93,8 +92,7 @@
             </ul>
 
             <div class="align-self-center text-center px-4">
-                <a href="{{ route('announcement.create') }}"><button class="navbar-btn-annuncio">Inserisci
-                        Annuncio <i class="fas fa-plus-circle"></i></button></a>
+                <a href="{{ route('announcement.create') }}"><button class="navbar-btn-annuncio">{{__('ui.nav_publish')}} <i class="fas fa-plus-circle"></i></button></a>
             </div>
 
             <li class="nav-item">

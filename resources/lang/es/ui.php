@@ -14,4 +14,10 @@ return [
     'pronti' => 'Nosotras estamos listas para ayudar',
     'pronti_bis' => 'Estaremos listos para ayudarte',
     'annun' => 'Anuncios',
+    'nav_cat'=>'Categorias',
+    'nav_all'=>'Todos los anuncios',
+    'nav_profile'=>'Profilo',
+    'nav_revisor'=>'Panel administración',
+    'nav_request'=>'Convertirse administrador',
+    'nav_publish'=>'Agregar anuncio'
 ];
