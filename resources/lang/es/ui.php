@@ -19,5 +19,8 @@ return [
     'nav_profile'=>'Profilo',
     'nav_revisor'=>'Panel administración',
     'nav_request'=>'Convertirse administrador',
-    'nav_publish'=>'Agregar anuncio'
+    'nav_publish'=>'Agregar anuncio',
+    'nav_login'=>'Acceso',
+    'nav_register'=>'Registrarse',
+    'nav_logout'=>'Cerrar'
 ];

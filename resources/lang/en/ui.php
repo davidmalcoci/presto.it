@@ -23,6 +23,9 @@ return [
     'nav_profile'=>'Profile',
     'nav_revisor'=>'Admin Dashboard',
     'nav_request'=>'Become admin',
-    'nav_publish'=>'Insert ad'
+    'nav_publish'=>'Insert ad',
+    'nav_login'=>'Login',
+    'nav_register'=>'Register',
+    'nav_logout'=>'Logout'
 
 ];

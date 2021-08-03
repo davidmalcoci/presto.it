@@ -124,16 +124,16 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         @if (Auth::user() == false)
                             <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
-                                    href="{{ route('login') }}">Accedi</a></li>
+                                    href="{{ route('login') }}">{{__('ui.nav_login')}}</a></li>
                             {{-- <li>
                                 <hr class="dropdown-divider">
                             </li> --}}
                             <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
-                                    href="{{ route('register') }}">Registrati</a></li>
+                                    href="{{ route('register') }}">{{__('ui.nav_register')}}</a></li>
                         @else
                             <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
                                     href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
+                                    onclick="event.preventDefault(); document.getElementById('form-logout').submit();">{{__('ui.nav_logout')}}</a>
                                 <form method="POST" action="{{ route('logout') }}" id="form-logout">
                                     @csrf
                                 </form>

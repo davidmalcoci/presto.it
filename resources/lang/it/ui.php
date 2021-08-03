@@ -23,7 +23,10 @@ return [
     'nav_profile'=>'Profilo',
     'nav_revisor'=>'Dashboard revisore',
     'nav_request'=>'Diventa revisore',
-    'nav_publish'=>'Inserisci Annuncio'
+    'nav_publish'=>'Inserisci Annuncio',
+    'nav_login'=>'Accedi',
+    'nav_register'=>'Registrati',
+    'nav_logout'=>'Esci'
     
 
 ];
