@@ -4,6 +4,11 @@
 
 <x-layout>
     <div class="container">
+        <style>
+            .div-login{
+                height: 100%;
+            }
+        </style>
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3 div-login">
                 <div class="form-container sign-in-container">
@@ -65,7 +70,7 @@
                             </div>
 
                         </div>
-                        <button type="submit" class="button-login">Crea</button>
+                        <button type="submit" class="button-login mb-5">Crea</button>
                     </form>
                 </div>
             </div>
