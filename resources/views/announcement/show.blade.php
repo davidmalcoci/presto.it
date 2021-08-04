@@ -38,7 +38,7 @@
                                 @foreach($announcement->images as $image)
                                     <a href="{{$image->getUrl(400, 500)}}"
                                         data-gallery="thumb" class="is-active">
-                                        <img src="{{ $image->getUrl(80, 80)}}" alt="">
+                                        <img src="{{$image->getUrl(400, 500)}}" alt="">
                                     </a>
                                     @endforeach
                                 </div>
