@@ -136,7 +136,7 @@
                         <div class="col-12 col-md-6">
                             <div>
                                 <h4>Photos Summary:</h4>
-                                @if($image->adult && $image->spoof && $image->medical && $image->violence && $image->racy == 'VERY_LIKELY')
+                                @if($image->adult && $image->spoof && $image->medical && $image->violence && $image->racy == 'LIKELY')
                                 <ul>
                                     <li>Adult: {{$image->adult}}</li>
                                     <li>Spoof: {{$image->spoof}}</li>
