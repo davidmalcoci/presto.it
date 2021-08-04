@@ -137,7 +137,7 @@
                             <div>
                                 <h4>Photos Summary:</h4>
                                 <ul>
-                                    <li>Adult: {{$image->adult}}</li>
+                                    <li>Adult : {{$image->adult}}</li>
                                     <li>Spoof: {{$image->spoof}}</li>
                                     <li>Medical: {{$image->medical}}</li>
                                     <li>Violence: {{$image->violence}}</li>
