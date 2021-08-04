@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "presto-hack29",
+  "private_key_id": "34d5a6288c7b93c1152b02e1f3ee54b4baeab73d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDMZAn1TvqiKOmR\nwPqfb6nZQigILViISYPtiMeDRrGTXvWZsYy3KF/IgPqqIAQ+BMYxpcb0OFRE3rXv\nvM4fIJOh7f6FDxW+hJA+Gzh+4NW/Whx/kxXL3DWopSntWyXCZKN3kxuDbugxxnUL\nciMPGzJZc8CzOsdJcKDbhsAl0/vf8OicpF/yMWwQy6n40w7W3cj3JBboMf9iw/bj\nKKAjg8V41LlxVew5owO1/5zJva9sxSEoDFbwvB3d8D2qYlicUZ+jrxxuL5hV5Vk5\nVhoz/ua6YqC9saUPcKEC/DrjRKKOP60RFS4EdBFKup9sVvRcDKwd/Gk8pKW/ZQsA\nFOwOoiZFAgMBAAECggEAN37wL0GnDtGh/bfStOiqSvnKCdJaKAMiBaRuW6gdviB5\n+iW5yd92Bmhy5y9zR22fbMqQ1y3WP67i4nm207/SJhULVxCN/GFdEufsMpMUpnSu\nqTsEH4qmrShPVom5mmsd8XEpdsnt1NoIXLe8ajUduikSSPfsNXYVzxVq5bqFuLth\n4G9AfXlcfB8MAkjF8Mb0FfClfud0AoiEYBe1HzhTPaiHcpA8MQIJLE7JqAwrQ1e6\nUFFzyrtXMK78UOLoS8a2mZLmX65r5AWKFtaVOFgoGazi0jEjn8Vcp1ouxYggk+3i\nxwRGcSPdxeK0jYcoVelWxc0rT0U+8tBvVLT7sSbFHwKBgQDxPu27mC5LZrl/eK4U\n85k8FlpUq2PzrXNBlIUIENYKzcpFVKyOI6PN2w4JaqGGRt6+Wbs2D1rfVHejaSJK\n18phNlqLkRXdmh3xP6clMM+1UgK77B7dqnDw7DjphaOLXSWTeFpqKRy1ZYR/liwa\n3eLi+1U2auazEas1I7guKUo9XwKBgQDY5BahLRe1QVZG4VtgFND4rWr7SyRHirHp\nZiU0sTm3nlG+gp+Afq8Ywsg6vv26mFZU/oeB+NXIcgEWRKC4lTCCdreupHpy2FvQ\nu25CortngNTvWwlgWk15//oma0a6RM/bC68RyEZVdgLz3GpPbMZQo7UwEK6WVpTh\ntLzHtJwa2wKBgFMJlA7EPPsbKrJjuZfgmVgDYahPLiJMC6YBFyFFmkcxunPOx25N\nei57PgOjvmFXt4fRnwzmkCLbEisfHvyf9jsr2FK958bVK4VEoaW9fWEuD17b0Wv/\nJMzoolZO95Iax7pQ7N4ptIYDoW3BJQFCarwyQoxuk2YDqOirmNPaxoEFAoGAHRi8\nUHMUMyTIxkmFUKZ6QmJBb+TswQxCQeWKKD9+VrvOi5hKfZqBMvkuk3L75wR40H40\n/6K6S2G/85TRWvHoyBfVHIDETJPp/V6ntBjQu1n1Nwcngt2adzt3+594pZSFrgUr\nP1920BA85So0uOMG19qefAxA37pNztnIWaJJLvECgYAuzjZpmSg3kVMWyg7BPbPm\nU7CTEDLIOtImVo88yaI5yvSWXk4Oin9m7V1J2NrYP+9GjapkI3KFVqRzBUVE1KY3\n1FSbold3U/aeKusYQqhSlvsnVfrLA/QVX3DqPiKvYc65bwKleOrBThue2Wv1abMy\n3eMEGWi4Tjz7Hq0IVGRo6Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "presto-davidm@presto-hack29.iam.gserviceaccount.com",
+  "client_id": "112793146432503298014",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/presto-davidm%40presto-hack29.iam.gserviceaccount.com"
+}

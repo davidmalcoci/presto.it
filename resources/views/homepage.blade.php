@@ -425,7 +425,7 @@
                                 <div class="product-card">
                                     <div class="product-card-body">
                                         <div class="card-img-actions"> <img
-                                                src="{{ $image->getUrl(400, 500) }}"
+                                                src="{{ $image->getUrl(500, 500) }}"
                                                 class="card-img img-fluid" width="96" height="350" alt=""> </div>
                                     </div>
                                     @break;
@@ -460,6 +460,91 @@
             </div>
         </div>
     </section> --}}
+
+    <section id="" class="categories section-bg">
+        <div class="container">
+            <div class="section-title">
+            <h2>{{__('ui.annunci')}}</h2>
+                <p>{{__('ui.scopri')}}</p>
+            </div>
+            <div class="row justify-content-around m-0">
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        @foreach ($announcements as $announcement)
+                            @if ($announcement->is_accepted == true)
+                            <div class="swiper-slide">
+                                    <div class="col-6 mt-2 comp-product-card">
+                                        <div class="product-card">
+                                            <div class="product-card-body">
+                                                <div class="card-img-actions"> 
+                                                @foreach($announcement->images as $image)
+                                                @php
+                                                $imagenum = $image->id-1
+                                                @endphp
+                                                @if ($imagenum < $image->id)
+                                                    <img
+                                                        src="{{ $image->getUrl(500, 500) }}"
+                                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                                        @break;
+                                                        @endif
+                                                        @endforeach
+                                                </div>
+                                            </div>
+                                            <div class="product-card-body text-center m-2" style="height:300px;">
+                                                <div class="mb-2">
+                                                    <h6 class="mb-2"> <a
+                                                            href="{{ route('announcement.show', compact('announcement')) }}"
+                                                            class="product-card-title mb-2"
+                                                            data-abc="true">{{ $announcement->title }}</a></h6>
+                                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                                        class="text-muted" data-abc="true">
+                                                        {{ $announcement->category->name }}</a>
+                                                </div>
+                                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
+                                                </h3>
+                                                <p class="description">
+                                                    {{ substr($announcement->description, 0, 10) . '..' }}
+                                                </p>
+                                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+                                                </div>
+                                                <div class="text-muted mb-3">
+                                                    {{ $announcement->created_at->format('j F Y') }}
+                                                </div>
+                                                <button type="button" class="btn btn-product-card"><i
+                                                        class="fa fa-cart-plus mr-2"></i>
+                                                    Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+
+                    {{-- <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div> --}}
+
+                    {{-- <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div> --}}
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    {{-- <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div> --}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- /*--------------------------------------------------------------
+    # Categorie
+    --------------------------------------------------------------*/ --}}
 
     <section id="categories" class="categories section-bg categories-add-pb">
         <div class="container p-0">

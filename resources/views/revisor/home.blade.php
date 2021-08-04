@@ -67,22 +67,39 @@
                                 @endphp
                                
                                 @if ($imagenum < $image->id)
-                                    {{-- <a href="" class="gallery__hero-enlarge ir" data-gallery="zoom">Zoom</a> --}}
-                                    <img src="{{Storage::url($image->file)}}">
+                                    <a href="{{$image->getUrl(500, 500)}}" class="gallery__hero-enlarge ir" data-gallery="zoom"></a>
+                                    <img src="{{$image->getUrl(500, 500)}}">
                                     @break;
                                     @endif
-                                    @endforeach
+                                @endforeach
                                 </div>
                                 <!--Gallery Hero-->
                                 
                                 <!--Gallery Thumbs-->
                                 <div class="gallery__thumbs">
                                 @foreach($announcement->images as $image)
-                                    <a href="{{ Storage::url($image->file) }}"
+                                
+                                    <a href="{{$image->getUrl(500, 500)}}"
                                         data-gallery="thumb" class="is-active">
-                                        <img src="{{ $image->getUrl(400, 500) }}" alt="">
+                                        <img src="{{$image->getUrl(500, 500)}}" alt="">
+                                        <!-- <p>Adult: {{$image->adult}} <br>
+                                    spoof: {{$image->spoof}} <br>
+                                    medical: {{$image->medical}} <br>
+                                    violence: {{$image->violence}} <br>
+                                    racy: {{$image->racy}} <br></p>
+                                    <b>Labels</b><br>
+                                    <ul>
+                                        @if ($image->labels)
+                                            @foreach ($image->labels as $label)
+                                                <li>{{ $label }}</li>
+                                            @endforeach
+                                        @endif
+                                    </ul> -->
                                     </a>
-                                    @endforeach
+
+                                @endforeach
+                                
+
                                 </div>
                                 <!--Gallery Thumbs-->
                             </div>
@@ -115,8 +132,31 @@
                             <h2>{{ $announcement->price }}<span>€</span></h2>
                         </div>
                         <p class="lead">{{ $announcement->description }}</p>
+                        <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div>
+                                <h4>Photos Summary:</h4>
+                                <ul>
+                                    <li>Adult: {{$image->adult}}</li>
+                                    <li>Spoof: {{$image->spoof}}</li>
+                                    <li>Medical: {{$image->medical}}</li>
+                                    <li>Violence: {{$image->violence}}</li>
+                                    <li>Racy: {{$image->racy}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Labels Summary:</h4>
+                            <ul>
+                            @if ($image->labels)
+                                            @foreach ($image->labels as $label)
+                                                <li>{{ $label }}</li>
+                                            @endforeach
+                                        @endif
+                            </ul>
+                        </div>
+                        </div>
                         <div class="d-flex pt-3">
-
 
                             <form action="{{ route('revisor.accept', [$announcement->id]) }}" method="post">
                                 @csrf
