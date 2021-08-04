@@ -23,7 +23,8 @@
 
 .row-header{
     /* height: 80vh !important; */
-    margin: 50px 0 80px 0;
+    margin: 50px 0 0px 0;
+    padding-bottom: 50px;
 }
 
 /* #myCarousel .carousel-item .mask {
@@ -94,8 +95,9 @@
 }
 
 #myCarousel .container {
-    max-width: 1430px;
+    /* max-width: 1430px; */
     padding-bottom: 0px !important;
+    
 }
 
 #myCarousel .carousel-item {
@@ -107,9 +109,9 @@
     /* height: 80vh; */
     position: relative;
     z-index: 1;
-    background: var(--white) !important;
+    background-color: var(--white) !important;
     /* background: url(https://i.imgur.com/6axE29k.jpg) center center no-repeat; */
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -119,6 +121,7 @@
     top: 50%;
     bottom: auto;
     transform: translateY(-50%);
+    background-color: var(--warmgray);
     /* background-color: #f47735; */
 }
 

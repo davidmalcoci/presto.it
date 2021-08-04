@@ -28,9 +28,9 @@
     @endif
 
     <script>
-        $('#myCarousel').carousel({
-            interval: 2,
-        })
+        // $('#myCarousel').carousel({
+        //     interval: 2,
+        // })
     </script>
 
     {{-- /*--------------------------------------------------------------
@@ -174,8 +174,7 @@
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span
-                class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <i class="fas fa-chevron-left"></i> </a>
         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span
                 class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
     </div>
@@ -183,53 +182,12 @@
     <!--slide end-->
 
 
-
-
-    {{-- <section id="header" class="d-flex align-items-center">
-        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center">
-            <div class="row align-items-center ">
-                <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
-                    <h5 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h5>
-                    <h2 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h2>
-                    <p class="lead fs-5">
-                        Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
-                    </p>
-                    <div class="container-fluid p-0">
-                        <div class="row">
-                            <div class="col-12 align-self-top p-0 px-2 icon-header">
-                                <h5 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h5>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 button-header"><i
-                                            class="fas fa-tshirt"></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1 button-header"><i
-                                            class="fas fa-home"></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1 button-header"><i
-                                            class="fas fa-car-side"></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1 button-header"><i
-                                            class="fas fa-briefcase"></i></button></a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 img-fluid text-center">
-                    <img src="./img/header.svg" class="img-fluid animated" alt="">
-                </div>
-            </div>
-        </header>
-    </section> --}}
-
-
     {{-- /*--------------------------------------------------------------
     # Search bar
     --------------------------------------------------------------*/ --}}
     <style>
         .searcher {
-            background-color: #eaeced;
+            background-color: var(--white);
         }
 
     </style>
@@ -253,294 +211,6 @@
         </div>
     </form>
 
-    {{-- /*--------------------------------------------------------------
-    # Categorie
-    --------------------------------------------------------------*/ --}}
-
-
-    <!-- <section id="categories" class="categories section-category-header">
-        <div class="container">
-            <div class="section-title">
-                <h2>Annunci</h2>
-                <p>Scopri gli ultimi annunci</p>
-            </div>
-            <div class="row justify-content-around">
-                @foreach ($announcements as $announcement)
-                    @if ($announcement->is_accepted == true)
-                        <div class="col-6 col-lg-2 mt-2 comp-product-card ">
-                            <div class="product-card">
-                                <div class="product-card-body">
-                                    <div class="card-img-actions"> <img
-                                            src="https://via.placeholder.com/150C/O https://placeholder.com/"
-                                            class="card-img img-fluid" width="96" height="350" alt=""> </div>
-                                </div>
-                                <div class="product-card-body text-center m-2">
-                                    <div class="mb-2">
-                                        <h6 class="mb-2"> <a
-                                                href="{{ route('announcement.show', compact('announcement')) }}"
-                                                class="product-card-title mb-2"
-                                                data-abc="true">{{ $announcement->title }}</a></h6>
-                                        <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                            class="text-muted" data-abc="true">
-                                            {{ $announcement->category->name }}</a>
-                                    </div>
-                                    <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
-                                    <p class="description">{{ $announcement->description }}</p>
-                                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                            class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                                    <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}
-                                    </div>
-                                    <button type="button" class="btn btn-product-card"><i
-                                            class="fa fa-cart-plus mr-2"></i>
-                                        Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-            </div>
-        </div>
-    </section> -->
-
-    {{-- <section id="categories" class="categories section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Annunci</h2>
-                <p>Scopri gli ultimi annunci</p>
-            </div>
-            <div class="row justify-content-around">
-                <div class="gallery js-flickity"
-                    data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
-                    @foreach ($announcements as $announcement)
-                        @if ($announcement->is_accepted == true)
-                            <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
-                                <div class="product-card">
-                                    <div class="product-card-body">
-                                        <div class="card-img-actions"> <img
-                                                src="https://via.placeholder.com/150C/O https://placeholder.com/"
-                                                class="card-img img-fluid" width="96" height="350" alt=""> </div>
-                                    </div>
-                                    <div class="product-card-body text-center m-2" style="height:300px;">
-                                        <div class="mb-2">
-                                            <h6 class="mb-2"> <a
-                                                    href="{{ route('announcement.show', compact('announcement')) }}"
-                                                    class="product-card-title mb-2"
-                                                    data-abc="true">{{ $announcement->title }}</a></h6>
-                                            <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                                class="text-muted" data-abc="true">
-                                                {{ $announcement->category->name }}</a>
-                                        </div>
-                                        <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
-                                        <p class="description">{{ substr($announcement->description, 0, 10) . '..' }}
-                                        </p>
-                                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                                class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                                        <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}
-                                        </div>
-                                        <button type="button" class="btn btn-product-card"><i
-                                                class="fa fa-cart-plus mr-2"></i>
-                                            Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-
-    {{-- <section id="categories" class="categories section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Annunci</h2>
-                <p>Scopri gli ultimi annunci</p>
-            </div>
-            <div class="row justify-content-around">
-                @foreach ($announcements as $announcement)
-                    @if ($announcement->is_accepted == true)
-                        <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="col-8 offset-2 mt-2 comp-product-card gallery-cell">
-                                    <div class="product-card">
-                                        <div class="product-card-body">
-                                            <div class="card-img-actions"> <img
-                                                    src="https://via.placeholder.com/150C/O https://placeholder.com/"
-                                                    class="card-img img-fluid" width="96" height="350" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="product-card-body text-center m-2" style="height:300px;">
-                                            <div class="mb-2">
-                                                <h6 class="mb-2"> <a
-                                                        href="{{ route('announcement.show', compact('announcement')) }}"
-                                                        class="product-card-title mb-2"
-                                                        data-abc="true">{{ $announcement->title }}</a></h6>
-                                                <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                                    class="text-muted" data-abc="true">
-                                                    {{ $announcement->category->name }}</a>
-                                            </div>
-                                            <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
-                                            </h3>
-                                            <p class="description">
-                                                {{ substr($announcement->description, 0, 10) . '..' }}
-                                            </p>
-                                            <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                                    class="fa fa-star star"></i> <i class="fa fa-star star"></i>
-                                            </div>
-                                            <div class="text-muted mb-3">
-                                                {{ $announcement->created_at->format('j F Y') }}
-                                            </div>
-                                            <button type="button" class="btn btn-product-card"><i
-                                                    class="fa fa-cart-plus mr-2"></i>
-                                                Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    @endif
-                @endforeach
-            </div>
-        </div>
-        </div>
-    </section> --}}
-
-    {{-- <section id="categories" class="categories section-category-header">
-        <div class="container">
-            <div class="section-title">
-                <h2>{{__('ui.annunci')}}</h2>
-                <p>{{__('ui.scopri')}}</p>
-            </div>
-            <div class="row justify-content-around">
-                <div class="gallery js-flickity"
-                    data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
-                    @foreach ($announcements as $announcement)
-                        @if ($announcement->is_accepted == true)
-                        @foreach ($announcement->images as $image)
-                        @php
-                        $imagenum = $image->id-1
-                        @endphp
-                        <div class="col-6 col-lg-2 mt-2 comp-product-card gallery-cell">
-                                @if ($imagenum < $image->id)
-                                <div class="product-card">
-                                    <div class="product-card-body">
-                                        <div class="card-img-actions"> <img
-                                                src="{{ $image->getUrl(500, 500) }}"
-                                                class="card-img img-fluid" width="96" height="350" alt=""> </div>
-                                    </div>
-                                    @break;
-                                    @endif
-                                    @endforeach
-                                    <div class="product-card-body text-center m-2" style="height:300px;">
-                                        <div class="mb-2">
-                                            <h6 class="mb-2"> <a
-                                                    href="{{ route('announcement.show', compact('announcement')) }}"
-                                                    class="product-card-title mb-2"
-                                                    data-abc="true">{{ $announcement->title }}</a></h6>
-                                            <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                                class="text-muted" data-abc="true">
-                                                {{ $announcement->category->name }}</a>
-                                        </div>
-                                        <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€</h3>
-                                        <p class="description">{{ substr($announcement->description, 0, 10) . '..' }}
-                                        </p>
-                                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                                class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                                        <div class="text-muted mb-3">{{ $announcement->created_at->format('j F Y') }}
-                                        </div>
-                                        <button type="button" class="btn btn-product-card"><i
-                                                class="fa fa-cart-plus mr-2"></i>
-                                            Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    <section id="" class="categories section-bg">
-        <div class="container">
-            <div class="section-title">
-            <h2>{{__('ui.annunci')}}</h2>
-                <p>{{__('ui.scopri')}}</p>
-            </div>
-            <div class="row justify-content-around m-0">
-                <!-- Slider main container -->
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        @foreach ($announcements as $announcement)
-                            @if ($announcement->is_accepted == true)
-                            <div class="swiper-slide">
-                                    <div class="col-6 mt-2 comp-product-card">
-                                        <div class="product-card">
-                                            <div class="product-card-body">
-                                                <div class="card-img-actions"> 
-                                                @foreach($announcement->images as $image)
-                                                @php
-                                                $imagenum = $image->id-1
-                                                @endphp
-                                                @if ($imagenum < $image->id)
-                                                    <img
-                                                        src="{{ $image->getUrl(500, 500) }}"
-                                                        class="card-img img-fluid" width="96" height="350" alt="">
-                                                        @break;
-                                                        @endif
-                                                        @endforeach
-                                                </div>
-                                            </div>
-                                            <div class="product-card-body text-center m-2" style="height:300px;">
-                                                <div class="mb-2">
-                                                    <h6 class="mb-2"> <a
-                                                            href="{{ route('announcement.show', compact('announcement')) }}"
-                                                            class="product-card-title mb-2"
-                                                            data-abc="true">{{ $announcement->title }}</a></h6>
-                                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                                        class="text-muted" data-abc="true">
-                                                        {{ $announcement->category->name }}</a>
-                                                </div>
-                                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
-                                                </h3>
-                                                <p class="description">
-                                                    {{ substr($announcement->description, 0, 10) . '..' }}
-                                                </p>
-                                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i>
-                                                </div>
-                                                <div class="text-muted mb-3">
-                                                    {{ $announcement->created_at->format('j F Y') }}
-                                                </div>
-                                                <button type="button" class="btn btn-product-card"><i
-                                                        class="fa fa-cart-plus mr-2"></i>
-                                                    Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach
-                    </div>
-
-                    {{-- <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div> --}}
-
-                    {{-- <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div> --}}
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    {{-- <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div> --}}
-                </div>
-            </div>
-        </div>
-    </section>
 
     {{-- /*--------------------------------------------------------------
     # Categorie
@@ -624,55 +294,55 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         @foreach ($announcements as $announcement)
-                            @if ($announcement->is_accepted == true)
-                                <div class="swiper-slide">
-                                    <div class="col-8 mt-2 comp-product-card">
-                                        <div class="product-card">
-                                            <div class="product-card-body">
-                                                <div class="card-img-actions">
-                                                    @foreach ($announcement->images as $image)
-                                                        @php
-                                                            $imagenum = $image->id - 1;
-                                                        @endphp
-                                                        @if ($imagenum < $image->id)
-                                                            <img src="{{ $image->getUrl(400, 500) }}"
-                                                                class="card-img img-fluid" width="96" height="350"
-                                                                alt="">
-                                                        @break;
+                        @if ($announcement->is_accepted == true)
+                        <div class="swiper-slide">
+                                <div class="col-8 mt-2 comp-product-card">
+                                    <div class="product-card">
+                                        <div class="product-card-body">
+                                            <div class="card-img-actions"> 
+                                            @foreach($announcement->images as $image)
+                                            @php
+                                            $imagenum = $image->id-1
+                                            @endphp
+                                            @if ($imagenum < $image->id)
+                                                <img
+                                                    src="{{ $image->getUrl(500, 500) }}"
+                                                    class="card-img img-fluid" width="96" height="350" alt="">
+                                                    @break;
                                                     @endif
-                            @endforeach
-                    </div>
-                </div>
-                <div class="product-card-body text-center m-2">
-                    <div class="mb-2">
-                        <h6 class="mb-2"> <a href="{{ route('announcement.show', compact('announcement')) }}"
-                                class="product-card-title mb-2" data-abc="true">{{ $announcement->title }}</a></h6>
-                        <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                            class="text-muted" data-abc="true">
-                            {{ $announcement->category->name }}</a>
-                    </div>
-                    <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
-                    </h3>
-                    {{-- <p class="description">
-                        {{ substr($announcement->description, 0, 10) . '..' }}
-                    </p>
-                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                            class="fa fa-star star"></i> <i class="fa fa-star star"></i>
-                    </div>
-                    <div class="text-muted mb-3">
-                        {{ $announcement->created_at->format('j F Y') }}
-                    </div> --}}
-                    <a href="{{ route('announcement.show', compact('announcement')) }}" class="text-muted"
-                        data-abc="true">
-                        <button type="button" class="btn btn-product-card mt-3"><i class="fa fa-cart-plus mr-2"></i>
-                            Show more</button></a>
-
-                </div>
-            </div>
-        </div>
-        </div>
-        @endif
-        @endforeach
+                                                    @endforeach
+                                            </div>
+                                        </div>
+                                        <div class="product-card-body text-center m-2">
+                                            <div class="mb-2">
+                                                <h6 class="mb-2"> <a
+                                                        href="{{ route('announcement.show', compact('announcement')) }}"
+                                                        class="product-card-title mb-2"
+                                                        data-abc="true">{{ $announcement->title }}</a></h6>
+                                                <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                                                    class="text-muted" data-abc="true">
+                                                    {{ $announcement->category->name }}</a>
+                                            </div>
+                                            <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
+                                            </h3>
+                                            <p class="description">
+                                                {{ substr($announcement->description, 0, 10) . '..' }}
+                                            </p>
+                                            {{-- <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                                                    class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+                                            </div> --}}
+                                            {{-- <div class="text-muted mb-3">
+                                                {{ $announcement->created_at->format('j F Y') }}
+                                            </div> --}}
+                                            {{-- <button type="button" class="btn btn-product-card"><i
+                                                    class="fa fa-cart-plus mr-2"></i>
+                                                Add to cart</button> --}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
         </div>
 
         {{-- <div class="swiper-slide">Slide 2</div>
@@ -695,23 +365,6 @@
     {{-- /*--------------------------------------------------------------
     # Info section
     --------------------------------------------------------------*/ --}}
-
-    {{-- <section id="section-info" class="d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column justify-content-center">
-                    <h1>Vendi il tuo usato o diventa un revisore</h1>
-                    <h2>Nuove opportunità e tante offerte</h2>
-                    <div>
-                        <a href="#about" class="btn-get-started">Scopri</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-2 order-lg-1 section-info-img">
-                    <img src="./img/header.svg" class="img-fluid animated" alt="">
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
     <section id="section-info">
         <div class="container">
@@ -885,49 +538,6 @@
     {{-- /*--------------------------------------------------------------
     # Row
     --------------------------------------------------------------*/ --}}
-
-    <section id="header" class="d-flex align-items-center">
-        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center">
-            <div class="row align-items-center ">
-                <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
-                    <h5 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h5>
-                    {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
-                            class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
-                    </h2> --}}
-                    <h2 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h2>
-                    <p class="lead fs-5">
-                        Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
-                    </p>
-                    <div class="container-fluid p-0">
-                        <div class="row">
-                            <div class="col-12 align-self-top p-0 px-2 icon-header">
-                                {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
-                                    Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
-                                <h5 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h5>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 button-header"><i
-                                            class="fas fa-tshirt"></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1 button-header"><i
-                                            class="fas fa-home"></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1 button-header"><i
-                                            class="fas fa-car-side"></i></button></a>
-                                <a href="{{ route('homepage') }}"><button type="submit"
-                                        class="btn btn-product-card p-3 ms-1 button-header"><i
-                                            class="fas fa-briefcase"></i></button></a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 img-fluid text-center">
-                    <img src="./img/header.svg" class="img-fluid animated" alt="">
-                </div>
-            </div>
-        </header>
-    </section>
 
 
 </x-layout>

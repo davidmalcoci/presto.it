@@ -24,7 +24,7 @@
             @if (!$announcement)
                 <h3>Non ci sono annunci da revisionare</h3>
                 <div class="row justify-content-center">
-                    <div class="col-4"><img src="/img/smile.gif" alt=""></div>
+                    <div class="col-4"><img style="max-height:300px; margin:30px;" src="/img/smile.gif" alt=""></div>
                 </div>
                 <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 mt-5">
                         Torna alla home <i class="fas fa-arrow-right ms-2"></i></i></button></a>
@@ -35,16 +35,6 @@
             @endif
         </div>
     </div>
-
-    {{-- style="background-image: url('{{asset('assets/img/graph/animation-smile.jpg')}}');" --}}
-
-    <!-- <div class="row icon-revisor">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <i class="fas fa-arrow-down px-3"></i>
-            <i class="fas fa-arrow-down px-3"></i>
-            <i class="fas fa-arrow-down px-3"></i>
-        </div>
-    </div> -->
 
 
     <div id="revisor-show" class="row justify-content-center align-items-center border-bottom pb-5">
@@ -92,7 +82,7 @@
 
     </div>
 
-    <div class="col-md-6 mt-5">
+    <div class="col-md-6 mt-5 ">
         <div class="user-revisor d-flex">
             <div class="col-3 justify-content-center align-self-center text-center">
                 <i class="fas fa-user-circle fs-1"></i>
@@ -115,59 +105,9 @@
         </div>
         <p class="lead">{{ $announcement->description }}</p>
 
+        <div class="d-flex pt-3 mb-5 border-bottom">
 
-
-
-
-        <div class="row mt-5 mb-5">
-            <div class="col-8">
-                <div class="accordion" id="accordionExample">
-                    @foreach ($announcement->images as $image)
-                        <div class="accordion-item">
-                            <div class="row">
-                                <div class="col-12 d-flex">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            {{ $image->id }}
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <h4>Photos Summary:</h4>
-                                            <ul>
-                                                <li>Adult : {{ $image->adult }}</li>
-                                                <li>Spoof: {{ $image->spoof }}</li>
-                                                <li>Medical: {{ $image->medical }}</li>
-                                                <li>Violence: {{ $image->violence }}</li>
-                                                <li>Racy: {{ $image->racy }}</li>
-                                            </ul>
-                                            @if ($image->labels)
-                                                @foreach ($image->labels as $label)
-                                                    <li>{{ $label }}</li>
-                                                @endforeach
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="d-flex pt-3">
-
-            <form action="{{ route('revisor.accept', [$announcement->id]) }}" method="post">
+            <form class="mb-5" action="{{ route('revisor.accept', [$announcement->id]) }}" method="post">
                 @csrf
                 <button type="submit" class="btn btn-product-card">
                     Approva <i class="fa fa-check ms-2"></i></button>
@@ -181,14 +121,66 @@
 
 
         </div>
+
+        <div id="check-image" class="row mt-5 mb-5 justify-content-start">
+            <h2>Controllo immagini</h2>
+            <p class="text-muted text-left">Qui troverai i controlli per le immagini che hai caricato. Se hai problemi, <a
+                    href="contact.html">contattaci</a>.</p>
+            @php
+                $i = 0;
+                $i = 'a';
+                $x = 0;
+    
+            @endphp
+            @foreach ($announcement->images as $image)
+                @php
+                    $i++;
+                    $x++;
+                @endphp
+                <div class="col-lg-8 col-10 p-0 justify-content-center">
+                    <p>
+                        <a class="btn-accordion" data-bs-toggle="collapse" href="#<?php echo $i; ?>" role="button"
+                            aria-expanded="false" aria-controls="{{ $i }}">
+                            <i class="fas fa-chevron-down me-5"></i> Image {{ $x }} 
+                        </a>
+                    </p>
+                    <div class="collapse" id="{{ $i }}">
+                        <div class="row d-flex ">
+                            <div class="col-6 me-5">
+                                <h4>Photos Summary:</h4>                            
+                                    <p>Adult : <span>{{ $image->adult }}</span></p>
+                                    <p>Spoof:  <span>{{ $image->spoof }}</span></p>
+                                    <p>Medical:  <span>{{ $image->medical }}</span></p>
+                                    <p>Violence:  <span>{{ $image->violence }}</span></p>
+                                    <p>Racy:  <span>{{ $image->racy }}</span></p>                            
+                            </div>
+                            <div class="col-3 pb-5">
+                                @if ($image->labels)
+                                <h4>Image tags:</h4>          
+                                    @foreach ($image->labels as $label)
+                                        <p class="m-0">- {{ $label }}</p>
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+
+
+
     </div>
 
     @endif
 
-    </div>
+</div>
     </div>
 
     </div>
+
 
     <section class="p-0 container-trash">
         {{-- @if ($announcements = !0) --}}
@@ -201,40 +193,6 @@
             </div>
         </section>
         {{-- @endif --}}
-
-
-        {{-- <div class="container px-4 px-lg-5 mt-5 ">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                @foreach ($announcements as $single)
-                    @if ($single->is_accepted === 0)
-                        <div id="card-product-category" class="col mb-5">
-                            <div class="card h-100">
-                                <img class="card-img-top"
-                                    src="https://via.placeholder.com/300C/O https://placeholder.com/" alt="" />
-                                <div class="card-body p-4">
-                                    <div class="text-center">
-                                        <div id="badge" class="badge badge-trash"">Rifiutato</div>
-                                    <h3 class=" fw-bolder"> {{ $single->title }}</h3>
-                                            <h4 class="">{{ $single->price }}€</h4>
-                                        </div>
-                                        <p class="card-text">{{ $single->description }}</p>
-                                    </div>
-                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-
-                                        <form action="{{ route('revisor.nullify', [$single->id]) }}" method="post">
-                                            @csrf
-                                            <button type="submit" class="btn btn-category-card"><i
-                                                    class="fas fa-undo ms-2"></i> Redo</button></a>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                    @endif
-                @endforeach
-            </div>
-        </div> --}}
 
         <div id="content ">
             <div class="container mb-5">
@@ -290,22 +248,5 @@
         </div>
 
     </section>
-
-    {{-- @foreach ($announcements as $single)
-        @if ($single->is_accepted === 0)
-            <div class="row">
-                <div class="col-12 col-md-6 offset-md-3">
-                    {{ $single->title }}
-                    <form action="{{ route('revisor.nullify', [$single->id]) }}" method="post">
-                        @csrf
-                        <button type="submit" class="btn2 btn-product-card ms-3">
-                            Redo <i class="fas fa-undo ms-2"></i></button>
-                    </form>
-                </div>
-            </div>
-
-        @endif
-    @endforeach --}}
-
 
 </x-layout>

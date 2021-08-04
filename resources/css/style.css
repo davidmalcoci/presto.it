@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    background-color: #fffcfc;
+    background-color: var(--white);
 }
 
 li {

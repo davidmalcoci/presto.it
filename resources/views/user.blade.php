@@ -73,7 +73,7 @@
     <div class="container light-style flex-grow-1 container-p-y container-user">
         <div class="row profile-wrapper ">
    
-        <div class="card overflow-hidden">
+        <div id="user-card" class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
@@ -192,11 +192,11 @@
                                 <div class="form-group">
                                     <label class="form-label">Country</label>
                                     <select class="custom-select">
-                                        <option>USA</option>
-                                        <option selected="">Canada</option>
-                                        <option>UK</option>
-                                        <option>Germany</option>
-                                        <option>France</option>
+                                        <option>Lombardia</option>
+                                        <option selected="">Basilicata</option>
+                                        <option>Toscana</option>
+                                        <option>Piemonte</option>
+                                        <option>Lazio</option>
                                     </select>
                                 </div>
 
@@ -230,7 +230,7 @@
                                     <input type="text" class="form-control" value="https://www.facebook.com/user">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Google+</label>
+                                    <label class="form-label">Discord</label>
                                     <input type="text" class="form-control" value="">
                                 </div>
                                 <div class="form-group">
@@ -245,11 +245,6 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="account-connections">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-twitter">Connect to
-                                    <strong>Twitter</strong></button>
-                            </div>
-                            <hr class="border-light m-0">
                             <div class="card-body">
                                 <h5 class="mb-2">
                                     <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i

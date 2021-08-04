@@ -7,7 +7,7 @@
             <div id="header" class="col-12 col-md-6">
                 <img src="./img/register-illustration.svg" class="img-fluid animated" alt="">
             </div>
-            <div class="col-12 col-md-6 ">
+            <div class="col-12 col-md-6" id="create">
                 <div class="form-container sign-in-container">
                     <form class="form-login" method="POST" action="{{ route('register') }}">
                         @csrf
