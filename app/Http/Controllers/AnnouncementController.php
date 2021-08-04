@@ -128,8 +128,8 @@ class AnnouncementController extends Controller
             GoogleVisionSafeSearchImage::withChain([
                 new ResizeImage($i->file, 500, 500),
                 new ResizeImage($i->file, 80, 80),
-                new GoogleVisionLabelImage($i->id),
                 new GoogleVisionRemoveFaces($i->id),
+                new GoogleVisionLabelImage($i->id),
                 new ResizeImage($i->file, 500, 500),
                 new ResizeImage($i->file, 80, 80)
 
@@ -209,7 +209,7 @@ class AnnouncementController extends Controller
         foreach($images as $image) {
             $data[] = [
                 'id' => $image,
-                'src' => AnnouncementImage::getUrlByFilePath($image, 500, 500)
+                'src' => AnnouncementImage::getUrlByFilePath($image, 80, 80)
             ];
         }
 
