@@ -125,9 +125,12 @@ class AnnouncementController extends Controller
             $i->announcement_id = $announcement->id;
             $i->save();
 
+            dispatch(new ResizeImage($i->file, 500,500));
+            dispatch(new ResizeImage($i->file, 80,80));
+
             GoogleVisionSafeSearchImage::withChain([
-                new ResizeImage($i->file, 500, 500),
-                new ResizeImage($i->file, 80, 80),
+                // new ResizeImage($i->file, 500, 500),
+                // new ResizeImage($i->file, 80, 80),
                 new GoogleVisionRemoveFaces($i->id),
                 new GoogleVisionLabelImage($i->id),
                 new ResizeImage($i->file, 500, 500),
