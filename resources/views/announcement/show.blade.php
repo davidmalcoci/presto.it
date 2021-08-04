@@ -6,7 +6,7 @@
 
 
 
-    <section id="product-show" class="py-5">
+    <section id="product-show" class="py-5  section-show-product">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
             @if ($announcement)
@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                             <div class=" d-flex mb-5">
-                                <button type="button" class="btn btn-product-cart"><i class="fa fa-cart-plus mr-2"></i>
+                                <button type="button" class="btn-product-cart"><i class="fa fa-cart-plus mr-2"></i>
                                     Add to cart </button>
                                 </button>
                                 {{-- <input class="form-control text-center ms-3" id="inputQuantity" type="num" value="1"
@@ -122,7 +122,7 @@
         </div>
     </section>
 
-    <section class="p-0 border-bottom">
+    <section class="border-bottom section-show-reviews">
         <div class="container">
 
             {{-- /* ------ Tab Header ------ */ --}}

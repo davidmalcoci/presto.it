@@ -1,9 +1,7 @@
 <x-layout>
     @push('title')
-       {{ __('ui.welcome')}}
+        {{ __('ui.welcome') }}
     @endpush
-
-
 
     <!-- ===============================================-->
     <!--    Messaggi POPUP -->
@@ -29,29 +27,177 @@
         </script>
     @endif
 
+    <script>
+        $('#myCarousel').carousel({
+            interval: 2,
+        })
+    </script>
 
     {{-- /*--------------------------------------------------------------
     # Header
     --------------------------------------------------------------*/ --}}
 
-    <section id="header" class="d-flex align-items-center">
+    <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide carousel-fade pt-5 row-header" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center pt-5 justify-content-center">
+                            <div class="col-9 col-lg-6 tc-gray justify-content-between px-4  order-md-1 order-2">
+                                <h4 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h4>
+                                {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                                        class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                                </h2> --}}
+                                <h4 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h4>
+                                <p class="lead fs-5">
+                                    Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa
+                                    temporibus.
+                                </p>
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                            {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
+                                                Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                            <h4 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h4>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 button-header"><i
+                                                        class="fas fa-tshirt"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-home"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-car-side"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-briefcase"></i></button></a>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/famele-illustration.svg"
+                                    class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center pt-5 justify-content-center">
+                            <div class="col-9 col-lg-6 tc-gray justify-content-between px-4  order-md-1 order-2">
+                                <h4 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h4>
+                                {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                                        class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                                </h2> --}}
+                                <h4 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h4>
+                                <p class="lead fs-5">
+                                    Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa
+                                    temporibus.
+                                </p>
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                            {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
+                                                Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                            <h4 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h4>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 button-header"><i
+                                                        class="fas fa-tshirt"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-home"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-car-side"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-briefcase"></i></button></a>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/dream-illustration.svg"
+                                    class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center pt-5 justify-content-center">
+                            <div class="col-9 col-lg-6 tc-gray justify-content-between px-4  order-md-1 order-2">
+                                <h4 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h4>
+                                {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                                        class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                                </h2> --}}
+                                <h4 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h4>
+                                <p class="lead fs-5">
+                                    Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa
+                                    temporibus.
+                                </p>
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                            {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn p-3">
+                                                Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                            <h4 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h4>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 button-header"><i
+                                                        class="fas fa-tshirt"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-home"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-car-side"></i></button></a>
+                                            <a href="{{ route('homepage') }}"><button type="submit"
+                                                    class="btn p-3 ms-1 button-header"><i
+                                                        class="fas fa-briefcase"></i></button></a>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/family-illustration.svg"
+                                    class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span
+                class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span
+                class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+    </div>
+
+    <!--slide end-->
+
+
+
+
+    {{-- <section id="header" class="d-flex align-items-center">
         <header class="container-fluid p-0 bg-home-header col-8 justify-content-center">
             <div class="row align-items-center ">
                 <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
-                    <h5 class="tc-main fw-black">{{__('ui.acquista_subito')}}</h5>
-                    {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
-                            class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
-                    </h2> --}}
-                    <h2 class="display-4 tc-white fw-bold">{{__('ui.vendi_subito')}}</h2>
+                    <h5 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h5>
+                    <h2 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h2>
                     <p class="lead fs-5">
                         Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
                     </p>
                     <div class="container-fluid p-0">
                         <div class="row">
                             <div class="col-12 align-self-top p-0 px-2 icon-header">
-                                {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
-                                    Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
-                                <h5 class="tc-main fw-black my-3">{{__('ui.categorie')}}</h5>
+                                <h5 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h5>
                                 <a href="{{ route('homepage') }}"><button type="submit"
                                         class="btn btn-product-card p-3 button-header"><i
                                             class="fas fa-tshirt"></i></button></a>
@@ -75,24 +221,25 @@
                 </div>
             </div>
         </header>
-    </section>
+    </section> --}}
 
 
     {{-- /*--------------------------------------------------------------
     # Search bar
     --------------------------------------------------------------*/ --}}
-<style>
-    .searcher {
-        background-color: #eaeced;
-    }
-</style>
+    <style>
+        .searcher {
+            background-color: #eaeced;
+        }
+
+    </style>
     <form action="{{ route('search.results') }}" method="get">
         <div class="row justify-content-center m-0 searcher">
-            <div class="col-12 col-md-6  search-row p-3 m-0 justify-content-center text-center">
+            <div class="col-12 col-md-6  search-row  m-0 justify-content-center text-center">
                 <div class="row justify-content-center text-center  mx-1">
                     <div class=" col-12 d-flex align-items-center justify-content-center">
                         <div class="input-group border rounded-pill p-1 icon-search">
-                            <input type="text" name="query" placeholder="{{__('ui.search')}}"
+                            <input type="text" name="query" placeholder="{{ __('ui.search') }}"
                                 aria-describedby="button-addon3"
                                 class="form-control form-control-search bg-none border-0">
                             <div class="input-group-append  justify-content-center text-center align-self-center">
@@ -107,7 +254,7 @@
     </form>
 
     {{-- /*--------------------------------------------------------------
-    # Ultimi annunci
+    # Categorie
     --------------------------------------------------------------*/ --}}
 
 
@@ -269,7 +416,7 @@
                     data-flickity-options='{ "freeScroll": true, "wrapAround": true,  "cellAlign": "left", "contain": false  }'>
                     @foreach ($announcements as $announcement)
                         @if ($announcement->is_accepted == true)
-                        @foreach($announcement->images as $image)
+                        @foreach ($announcement->images as $image)
                         @php
                         $imagenum = $image->id-1
                         @endphp
@@ -314,11 +461,76 @@
         </div>
     </section> --}}
 
-    <section id="" class="categories section-bg">
+    <section id="categories" class="categories section-bg categories-add-pb">
+        <div class="container p-0">
+
+            <div class="section-title">
+                <h2>{{ __('ui.categorie') }}</h2>
+                <p>{{ __('ui.scopri_categorie') }}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-6 col-lg-3 d-flex align-items-center justify-content-center" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-tshirt"></i></div>
+
+                        <h4 class="title"><a href="">{{ __('ui.clothes') }}</a></h4>
+
+
+                        {{-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+                            excepturi sint occaecati cupiditate</p> --}}
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex align-items-center justify-content-center" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-home"></i></div>
+                        <h4 class="title"><a href="">{{ __('ui.properties') }}</a></h4>
+                        {{-- <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum
+                            dolore eu fugiat nulla</p> --}}
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex align-items-center justify-content-center" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-car-side"></i></div>
+                        <h4 class="title"><a href="">{{ __('ui.autos') }}</a></h4>
+                        {{-- <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia
+                            deserunt mollit anim</p> --}}
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex align-items-center justify-content-center" data-aos="zoom-in"
+                    data-aos-delay="400">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <h4 class="title"><a href="">{{ __('ui.office') }}</a></h4>
+                        {{-- <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis
+                            praesentium voluptatum</p> --}}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    {{-- /*--------------------------------------------------------------
+    # Ultimi annunci
+    --------------------------------------------------------------*/ --}}
+
+    <section id="" class="categories section-bg categories-add-pt">
         <div class="container">
             <div class="section-title">
-            <h2>{{__('ui.annunci')}}</h2>
-                <p>{{__('ui.scopri')}}</p>
+                <h2>{{ __('ui.annunci') }}</h2>
+                <p>{{ __('ui.scopri') }}</p>
             </div>
             <div class="row justify-content-around m-0">
                 <!-- Slider main container -->
@@ -328,130 +540,70 @@
                         <!-- Slides -->
                         @foreach ($announcements as $announcement)
                             @if ($announcement->is_accepted == true)
-                            <div class="swiper-slide">
-                                    <div class="col-6 mt-2 comp-product-card">
+                                <div class="swiper-slide">
+                                    <div class="col-8 mt-2 comp-product-card">
                                         <div class="product-card">
                                             <div class="product-card-body">
-                                                <div class="card-img-actions"> 
-                                                @foreach($announcement->images as $image)
-                                                @php
-                                                $imagenum = $image->id-1
-                                                @endphp
-                                                @if ($imagenum < $image->id)
-                                                    <img
-                                                        src="{{ $image->getUrl(400, 500) }}"
-                                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                                <div class="card-img-actions">
+                                                    @foreach ($announcement->images as $image)
+                                                        @php
+                                                            $imagenum = $image->id - 1;
+                                                        @endphp
+                                                        @if ($imagenum < $image->id)
+                                                            <img src="{{ $image->getUrl(400, 500) }}"
+                                                                class="card-img img-fluid" width="96" height="350"
+                                                                alt="">
                                                         @break;
-                                                        @endif
-                                                        @endforeach
-                                                </div>
-                                            </div>
-                                            <div class="product-card-body text-center m-2" style="height:300px;">
-                                                <div class="mb-2">
-                                                    <h6 class="mb-2"> <a
-                                                            href="{{ route('announcement.show', compact('announcement')) }}"
-                                                            class="product-card-title mb-2"
-                                                            data-abc="true">{{ $announcement->title }}</a></h6>
-                                                    <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
-                                                        class="text-muted" data-abc="true">
-                                                        {{ $announcement->category->name }}</a>
-                                                </div>
-                                                <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
-                                                </h3>
-                                                <p class="description">
-                                                    {{ substr($announcement->description, 0, 10) . '..' }}
-                                                </p>
-                                                <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
-                                                        class="fa fa-star star"></i> <i class="fa fa-star star"></i>
-                                                </div>
-                                                <div class="text-muted mb-3">
-                                                    {{ $announcement->created_at->format('j F Y') }}
-                                                </div>
-                                                <button type="button" class="btn btn-product-card"><i
-                                                        class="fa fa-cart-plus mr-2"></i>
-                                                    Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach
+                                                    @endif
+                            @endforeach
                     </div>
+                </div>
+                <div class="product-card-body text-center m-2">
+                    <div class="mb-2">
+                        <h6 class="mb-2"> <a href="{{ route('announcement.show', compact('announcement')) }}"
+                                class="product-card-title mb-2" data-abc="true">{{ $announcement->title }}</a></h6>
+                        <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
+                            class="text-muted" data-abc="true">
+                            {{ $announcement->category->name }}</a>
+                    </div>
+                    <h3 class="mb-0 font-weight-semibold">{{ $announcement->price }}€
+                    </h3>
+                    {{-- <p class="description">
+                        {{ substr($announcement->description, 0, 10) . '..' }}
+                    </p>
+                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                            class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+                    </div>
+                    <div class="text-muted mb-3">
+                        {{ $announcement->created_at->format('j F Y') }}
+                    </div> --}}
+                    <a href="{{ route('announcement.show', compact('announcement')) }}" class="text-muted"
+                        data-abc="true">
+                        <button type="button" class="btn btn-product-card mt-3"><i class="fa fa-cart-plus mr-2"></i>
+                            Show more</button></a>
 
-                    {{-- <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div> --}}
-
-                    {{-- <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div> --}}
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    {{-- <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div> --}}
                 </div>
             </div>
         </div>
-    </section>
+        </div>
+        @endif
+        @endforeach
+        </div>
 
-    {{-- /*--------------------------------------------------------------
-    # Categorie
-    --------------------------------------------------------------*/ --}}
+        {{-- <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div> --}}
 
-    <section id="categories" class="categories section-bg categories-add-pb">
-        <div class="container p-0">
+        {{-- <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div> --}}
 
-            <div class="section-title">
-                <h2>{{__('ui.categorie')}}</h2>
-                <p>{{__('ui.scopri_categorie')}}</p>
-            </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-            <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-tshirt"></i></div>
-                       
-                        <h4 class="title"><a href="">{{__('ui.clothes')}}</a></h4>
-                        
-                        
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-home"></i></div>
-                        <h4 class="title"><a href="">{{__('ui.properties')}}</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum
-                            dolore eu fugiat nulla</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-car-side"></i></div>
-                        <h4 class="title"><a href="">{{__('ui.autos')}}</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia
-                            deserunt mollit anim</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-briefcase"></i></div>
-                        <h4 class="title"><a href="">{{__('ui.office')}}</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum</p>
-                    </div>
-                </div>
-
-            </div>
-
+        {{-- <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div> --}}
+        </div>
+        </div>
         </div>
     </section>
 
@@ -480,14 +632,38 @@
         <div class="container">
             <div class="row align-items-center g-2">
                 <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100"
-                        src="/img/section-info.gif" alt="hero-header" /></div>
-                <div class="col-md-7 col-lg-6 py-6 text-md-start text-center">
-                    <p class="fs-0 text-uppercase fw-bold text-600 mt-5">{{__('ui.chiedi')}}</p>
-                    <h5 class="tc-main fw-black mt-3">{{__('ui.pronti')}}</h5>
-                    <h1 class="display-4 tc-white fw-bold">{{__('ui.pronti_bis')}}</h1>
-                    <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 mt-4">
-                    {{__('ui.annun')}} <i class="fas fa-arrow-right ms-2"></i></i></button></a>
-                </div>
+                        src="/img/section-info.gif" alt="hero-header" /></div> 
+                    <div class="col-md-7 col-lg-6 py-6 tc-gray justify-content-between px-4  order-md-1 order-2">
+                        <h4 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h4>
+                        {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                                class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                        </h2> --}}
+                        <h4 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h4>
+                        <p class="lead fs-5">
+                            Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa
+                            temporibus.
+                        </p>
+                        <div class="container-fluid p-0">
+                            <div class="row">
+                                <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                    {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
+                                        Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                    <h4 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h4>
+                                    <a href="{{ route('homepage') }}"><button type="submit"
+                                            class="btn p-3 button-header"><i
+                                                class="fas fa-tshirt"></i></button></a>
+                                    <a href="{{ route('homepage') }}"><button type="submit"
+                                            class="btn p-3 ms-1 button-header"><i
+                                                class="fas fa-home"></i></button></a>
+                                    <a href="{{ route('homepage') }}"><button type="submit"
+                                            class="btn p-3 ms-1 button-header"><i
+                                                class="fas fa-car-side"></i></button></a>
+                                    <a href="{{ route('homepage') }}"><button type="submit"
+                                            class="btn p-3 ms-1 button-header"><i
+                                                class="fas fa-briefcase"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </div>
     </section>
@@ -619,6 +795,53 @@
             </ul>
 
         </div>
+    </section>
+
+    {{-- /*--------------------------------------------------------------
+    # Row
+    --------------------------------------------------------------*/ --}}
+
+    <section id="header" class="d-flex align-items-center">
+        <header class="container-fluid p-0 bg-home-header col-8 justify-content-center">
+            <div class="row align-items-center ">
+                <div class="col-12 col-lg-6 tc-gray justify-content-between px-4">
+                    <h5 class="tc-main fw-black">{{ __('ui.acquista_subito') }}</h5>
+                    {{-- <h2 class="display-4 tc-white fw-bold">Vendi i tuoi prodotti e acquista usato <span
+                            class="display-4 tc-white fw-bold evidenziation">garantito</span> dal nostro team
+                    </h2> --}}
+                    <h2 class="display-4 tc-white fw-bold">{{ __('ui.vendi_subito') }}</h2>
+                    <p class="lead fs-5">
+                        Lorem ipsumm, dolor sit amet consectetur adipisicing elit. Dolor nemo culpa ipsa temporibus.
+                    </p>
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12 align-self-top p-0 px-2 icon-header">
+                                {{-- <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3">
+                                    Annunci <i class="fas fa-arrow-right ms-2"></i></i></button></a> --}}
+                                <h5 class="tc-main fw-black my-3">{{ __('ui.categorie') }}</h5>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 button-header"><i
+                                            class="fas fa-tshirt"></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1 button-header"><i
+                                            class="fas fa-home"></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1 button-header"><i
+                                            class="fas fa-car-side"></i></button></a>
+                                <a href="{{ route('homepage') }}"><button type="submit"
+                                        class="btn btn-product-card p-3 ms-1 button-header"><i
+                                            class="fas fa-briefcase"></i></button></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 img-fluid text-center">
+                    <img src="./img/header.svg" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </header>
     </section>
 
 

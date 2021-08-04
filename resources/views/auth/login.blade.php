@@ -3,16 +3,23 @@
 @endpush
 <x-layout>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 offset-md-3 div-login">
+        <div class="row  div-login">
+            <div id="header" class="col-12 col-md-6">
+                <img src="./img/login-illustration.svg" class="img-fluid animated" alt="">
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-container sign-in-container">
                     <form class="form-login" method="POST" action="{{ route('login') }}">
                         @csrf
                         <h1 class="mb-3">Log in</h1>
-                        <span>entra nella community</span>
-                        <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"
-                            name="email">
-                        <input type="password" id="exampleInputPassword1" placeholder="Password" name="password">
+                        <h6>ricevi offerte e novità</h6>
+                        <div class="mb-3">
+                            <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"
+                                name="email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="exampleInputPassword1" placeholder="Password" name="password">
+                        </div>
                         <p>Non sei ancora registrato? <a href="{{ route('register') }}">Registrati adesso</a></p>
                         @if ($errors->any())
                             <div class="alert alert-danger">

@@ -145,78 +145,78 @@ box-shadow: 0px 0px 10px #f0f0f0 ; */
     /* position: absolute;
     bottom: -20px;
     right: -20px; */
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    background-color: var(--orange);
-    color: var(--black);
-    padding: 16px 35px;
-    font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.11);
-    transition: 250ms;
+    border: none !important;
+    outline: none !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: var(--orange) !important;
+    color: var(--black) !important;
+    padding: 16px 35px !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.11) !important;
+    transition: 250ms !important;
 }
 
 #revisor-show .btn:hover {
     /* position: absolute;
     bottom: -20px;
     right: -20px; */
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    background-color: var(--orange);
-    padding: 16px 35px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0px 20px var(--orange);
-    transform: scale(1.02);
+    border: none !important;
+    outline: none !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: var(--orange) !important;
+    padding: 16px 35px !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    box-shadow: 0 0px 20px var(--orange) !important;
+    transform: scale(1.02) !important;
 }
 
 #revisor-show .btn2 {
     /* position: absolute;
     bottom: -20px;
     right: -20px; */
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid transparent;
-    color: var(--black);
-    padding: 8px 22px;
-    font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.11);
-    transition: 250ms;
+    border: none !important;
+    outline: none !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: transparent !important;
+    border: 2px solid transparent !important;
+    color: var(--black) !important;
+    padding: 8px 22px !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.11) !important;
+    transition: 250ms !important;
 }
 
 #revisor-show .btn2:hover {
     /* position: absolute;
     bottom: -20px;
     right: -20px; */
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    background-color: rgb(250, 75, 75);
-    border: 2px solid transparent;
-    padding: 8px 22px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0px 20px #d4d7d8c7;
-    transform: scale(1.02);
+    border: none !important;
+    outline: none !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: rgb(250, 75, 75) !important;
+    border: 2px solid transparent !important;
+    padding: 8px 22px !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    box-shadow: 0 0px 20px #d4d7d8c7 !important;
+    transform: scale(1.02) !important;
 }
 
 .section-category-revisortrash {

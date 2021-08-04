@@ -9,6 +9,12 @@ img {
     max-width: 100%;
    /* 2 */
 }
+
+
+.gallery__hero img{
+    width: 600px;
+    height: auto;
+}
 /** * Container Styles */
 .container-gallery {
     max-width: 30em;
@@ -78,4 +84,12 @@ img {
 }
 .gallery__thumbs a.is-active {
     opacity: 0.2;
+}
+
+.section-show-product{
+    background-color: var(--gray) !important;
+}
+
+.section-show-reviews{
+    padding-top: 100px;
 }

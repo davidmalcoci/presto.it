@@ -29,8 +29,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     {{-- <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"> --}}
 
     <!-- Swiper -->
@@ -54,7 +53,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
 
+    <!-- Header animation -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
 
@@ -77,14 +80,16 @@
     /* ------------------ +++ SCRIPT +++  ------------------ */
     /* ||||||||||||||||||||||||||||||||||||||||||||||||||||| */ --}}
 
-    
+
     <!-- Script custom -->
-    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <!-- Swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
-   
+
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="{{ asset('js/app.js') }}"></script>
 
@@ -92,7 +97,7 @@
     <!-- Bootstrap Bundle -->
     <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  
+
 
 
 </body>

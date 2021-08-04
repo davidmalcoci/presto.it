@@ -5,9 +5,15 @@
 #header {
     /* width: 100vw; */
     margin-top: 0em;
-    height: 90vh;
-    background: var(--white);
+    /* height: 70vh; */
+  
 }
+
+#header img {
+    width: 80%;
+}
+
+/* background: var(--gray); */
 
 .icon-header button {
     color: var(--black);
@@ -70,14 +76,14 @@
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 1080px) {
+/* @media (max-width: 1080px) {
     #header {
         height: calc(100vh - 72px);
         margin-top: 2em !important;
     }
-}
+} */
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     #header {
         height: calc(100vh - 72px);
         margin-top: 0em !important;
@@ -100,28 +106,16 @@
         width: 80%;
         margin: 80px 0px;
     }
-}
+} */
 
 @media (max-width: 768px) {
-    #header h1 {
-        font-size: 28px;
-        line-height: 36px;
+    #header {
+       display: none;
     }
-    #header h2, .evidenziation {
-        font-size: 38px;
-        line-height: 44px;
-    }
-    #header .header-img img {
-        width: 70%;
-    }
-    .button-header {
-        max-width: 70px;
-        max-height: 70px;
-        font-size: 1em !important;
-    }
+
 }
 
-@media (max-width: 575px) {
+/* @media (max-width: 575px) {
     #header .header-img img {
         width: 80%;
     }
@@ -131,7 +125,7 @@
     #header {
         height: calc(120vh);
     }
-}
+} */
 
 @-webkit-keyframes up-down {
     0% {
@@ -195,7 +189,7 @@
     border: hidden !important;
     border-radius: 100px !important;
     color: white !important;
-    margin: 20px 20px 20px 0px;
+    margin: 20px 20px 20px 0px !important;
 }
 
 .btn-header:hover {
@@ -211,6 +205,7 @@
 --------------------------------------------------------------*/
 
 .search-row {
+    padding-top: 50px;
     background: var(--gray);
     /* border-radius: 100px; */
     border-top-left-radius: 50px;
@@ -235,6 +230,10 @@ textarea::placeholder {
     max-height: 20px !important;
 } */
 
+.icon-search{
+    overflow: hidden !important;
+}
+
 .icon-search i {
     font-size: 1.2em !important;
     color: var(--main);
@@ -250,7 +249,7 @@ textarea::placeholder {
 
 #section-info {
     /* width: 100vw; */
-    padding: 250px 0px 50px 0px;
+    padding: 130px 0px 0px 0px;
     /* height: 80vh; */
     /* background: var(--gray); */
 }
@@ -270,21 +269,21 @@ textarea::placeholder {
 }
 
 #section-info .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border-radius: 20px;
-    transition: 0.5s;
-    margin-top: 30px;
-    color: #fff;
-    background: var(--orange);
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+    display: inline-block !important;
+    padding: 8px 28px !important;
+    border-radius: 20px !important;
+    transition: 0.5s !important;
+    margin-top: 30px !important;
+    color: #fff !important;
+    background: var(--orange) !important;
 }
 
 #section-info .btn-get-started:hover {
-    background: var(--main);
+    background: var(--main) !important;
 }
 
 #section-info .animated {
@@ -357,14 +356,25 @@ textarea::placeholder {
 --------------------------------------------------------------*/
 
 #categories {
-    padding: 250px 0px 50px 0px;
+    padding: 100px 0px 50px 0px;
 }
 
+/* .categories {
+    padding-top: 120px;
+} */
+
 .categories-add-pb {
-    padding-bottom: 250px !important;
+    padding-bottom: 50px !important;
+}
+
+.categories-add-pt {
+    padding-bottom: 150px !important;
 }
 
 .categories .icon-box {
+    cursor: pointer;
+    height: 10em;
+    width: 10em;
     padding: 30px;
     position: relative;
     overflow: hidden;

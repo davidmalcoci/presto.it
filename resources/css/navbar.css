@@ -97,6 +97,35 @@ nav {
     transform: scale(1.05);
 }
 
+.navbar-btn-annunciored {
+    font-size: 0.8em;
+    font-weight: 600;
+    border: 1px solid var(--red);
+    background: transparent !important;
+    color: var(--red);
+    border-radius: 15px;
+    padding: 0px 20px;
+    margin: 0px 0px 0px 5px;
+    /* outline: none; */
+    max-height: 30px;
+    transition: 250ms;
+}
+
+.navbar-btn-annunciored:hover {
+    font-size: 0.8em;
+    font-weight: 600;
+    border: 1px solid var(--red) !important;
+    background: var(--red) !important;
+    box-shadow: 0px 0px 5px var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    padding: 0px 20px;
+    margin: 0px 0px 0px 5px;
+    /* outline: none; */
+    max-height: 30px;
+    transform: scale(1.05);
+}
+
 /* //--------------- Revisore  --------------- */
 
 .navbar-btn-revisore {
@@ -250,12 +279,12 @@ nav {
         font-size: 12px !important;
         padding: 7px !important;
     }
-    .navbar-btn-revisore, .navbar-btn-annuncio {
+    .navbar-btn-revisore, .navbar-btn-annuncio, .navbar-btn-annunciored {
         font-size: 12px !important;
         padding: 0px 10px;
         margin: 0px 8px;
     }
-    .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
+    .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover,  .navbar-btn-annunciored:hover {
         font-size: 12px !important;
         padding: 0px 10px;
         margin: 0px 8px;
@@ -331,18 +360,53 @@ nav {
 
 @media (max-width: 1075px) {
     .nav-link {
-        font-size: 12px !important;
-        padding: 8px !important;
+        font-size: 11px !important;
+        padding: 7px !important;
     }
     .navbar-btn-revisore, .navbar-btn-annuncio {
-        font-size: 13px !important;
-        padding: 0px 8px;
-        margin: 0px 6px;
+        font-size: 12px !important;
+        padding: 0px 10px;
+        margin: 0px 8px;
     }
     .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
-        font-size: 13px !important;
-        padding: 0px 8px;
-        margin: 0px 6px;
+        font-size: 12px !important;
+        padding: 0px 10px;
+        margin: 0px 8px;
+    }
+    .unseen-count {
+        width: 1.7rem;
+        height: 1.7rem;
+        top: 1rem;
+        left: 6rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+}
+
+@media (max-width: 1031px) {
+    .nav-link {
+        font-size: 10px !important;
+        padding: 7px !important;
+    }
+    .navbar-btn-revisore, .navbar-btn-annuncio {
+        font-size: 10px !important;
+        padding: 0px 10px;
+        margin: 0px 8px;
+    }
+    .navbar-btn-revisore:hover, .navbar-btn-annuncio:hover {
+        font-size: 10px !important;
+        padding: 0px 10px;
+        margin: 0px 8px;
+    }
+    .unseen-count {
+        width: 1.7rem;
+        height: 1.7rem;
+        top: 1rem;
+        left: 6rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.7rem;
     }
 }
 
@@ -405,7 +469,6 @@ nav {
         padding: 0px 10px;
         margin: 16px 8px;
     }
-
     #unseen_count {
         width: 1.7rem;
         height: 1.7rem;

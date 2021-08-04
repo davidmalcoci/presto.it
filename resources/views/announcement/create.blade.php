@@ -32,9 +32,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">Descrizione:</label>
-                            <textarea type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
-                               name="description" value="{{old('description')}}">
-                            </textarea>    
+                            <textarea placeholder="Scrivi qualcosa..." name="description" value="{{old('description')}}"></textarea>    
                         </div>
 
                         <div class="mb-3">

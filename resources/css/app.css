@@ -1,5 +1,6 @@
 @import'~bootstrap/dist/css/bootstrap';
 @import'style';
+@import'homeadd';
 @import'navbar';
 @import'home';
 @import'auth';

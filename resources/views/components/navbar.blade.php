@@ -42,11 +42,11 @@
                 <li class="nav-item">
                     <a class="nav-link d-inline-block pointer" href="{{route('latest')}}">{{__('ui.nav_all')}}</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     @if (Auth::user())
                     <a class="nav-link d-inline-block pointer" href="{{ route('user', Auth::user()->name)}}">{{__('ui.nav_profile')}}</a>
                     @endif
-                </li>
+                </li> --}}
 
                 {{-- <li class="nav-item pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
@@ -104,8 +104,6 @@
             <li class="nav-item">
                 @include('components.locale', ['lang' => 'es', 'nation' => 'es'])
             </li>
-
-
            
 
 
@@ -131,6 +129,11 @@
                             <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
                                     href="{{ route('register') }}">{{__('ui.nav_register')}}</a></li>
                         @else
+                        <li class="nav-item nav-link dropdown align-self-center">
+                            {{-- @if (Auth::user()) --}}
+                            <a class="dropdown-item d-inline-block pointer" href="{{ route('user', Auth::user()->name)}}">{{__('ui.nav_profile')}}</a>
+                            {{-- @endif --}}
+                        </li>
                             <li class="nav-item nav-link dropdown align-self-center"><a class="dropdown-item"
                                     href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('form-logout').submit();">{{__('ui.nav_logout')}}</a>

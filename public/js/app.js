@@ -3211,15 +3211,15 @@ var swiper = new Swiper('.swiper-container', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 40
+      spaceBetween: 30
     },
     1024: {
       slidesPerView: 2,
-      spaceBetween: 50
+      spaceBetween: 30
     },
     1430: {
-      slidesPerView: 2,
-      spaceBetween: 50
+      slidesPerView: 3,
+      spaceBetween: 30
     },
     1700: {
       slidesPerView: 3,

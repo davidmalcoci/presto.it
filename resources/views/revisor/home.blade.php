@@ -24,7 +24,7 @@
             @if (!$announcement)
                 <h3>Non ci sono annunci da revisionare</h3>
                 <div class="row justify-content-center">
-                    <div id="sprites" class="col-4"></div>
+                    <div class="col-4"><img src="/img/smile.gif" alt=""></div>
                 </div>
                 <a href="{{ route('homepage') }}"><button type="submit" class="btn btn-product-card p-3 mt-5">
                         Torna alla home <i class="fas fa-arrow-right ms-2"></i></i></button></a>
@@ -141,11 +141,6 @@
 
     </div>
 
- 
-
-
-
-
     <section class="p-0 container-trash">
         {{-- @if ($announcements = !0) --}}
         <section class="section-category-revisortrash">
@@ -245,8 +240,6 @@
         </div>
 
     </section>
-
-
 
     {{-- @foreach ($announcements as $single)
         @if ($single->is_accepted === 0)
