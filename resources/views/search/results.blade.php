@@ -139,16 +139,24 @@
                         <main class="col-md-9">
                             <header class="border-bottom mb-4 pb-3">
                                 <div class="form-inline">
-                                    <span class="mr-md-auto" id="numberItems">??? Items found</span>
+                                    <span class="mr-md-auto" id="numberItems">Total Announcements: {{$announcements->count()}}</span>
                                 </div>
                             </header>
                             {{-- ---------- Result - Card Product  ---------- --}}
                             <div class="row">
                                 <div id="showProducts" class="container">
                                     @foreach ($announcements as $announcement)
+                                    @foreach ($announcement->images as $image)
+                                    @php
+                                                $imagenum = $image->id - 1;
+                                            @endphp
+                                            @if ($imagenum < $image->id)
                                         <div class="card-product-search">
                                             <img class="card__image"
-                                                src="https://via.placeholder.com/500C/O https://placeholder.com/" />
+                                                src="{{ $image->getUrl(500, 500) }}" />
+                                                @break;
+                                        @endif
+                                    @endforeach
                                             <main class="card__content">
 
                                                 <a href="{{ route('category.show', [$announcement->category->name, $announcement->category->id]) }}"
