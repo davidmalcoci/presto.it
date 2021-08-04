@@ -143,7 +143,6 @@
                                     <li>Violence: {{$image->violence}}</li>
                                     <li>Racy: {{$image->racy}}</li>
                                 </ul>
-                                <p>Image can pass, no issues detected</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
