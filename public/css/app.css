@@ -13848,6 +13848,10 @@ a.accion {
     font-weight: 700;
     margin: 0px;
 }
+
+.accordion-button{
+    background-color: var(--gray) !important;
+}
 .dropzone, .dropzone * {
   box-sizing: border-box;
 }

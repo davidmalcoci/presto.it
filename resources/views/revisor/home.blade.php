@@ -61,123 +61,132 @@
                             <div id="js-gallery" class="gallery">
                                 <!--Gallery Hero-->
                                 <div class="gallery__hero">
-                                @foreach($announcement->images as $image)
-                                @php
-                                $imagenum = $image->id-1
-                                @endphp
-                               
-                                @if ($imagenum < $image->id)
-                                    <a href="{{$image->getUrl(500, 500)}}" class="gallery__hero-enlarge ir" data-gallery="zoom"></a>
-                                    <img src="{{$image->getUrl(500, 500)}}">
-                                    @break;
+                                    @foreach ($announcement->images as $image)
+                                        @php
+                                            $imagenum = $image->id - 1;
+                                        @endphp
+                                        @if ($imagenum < $image->id)
+                                            <a href="{{ $image->getUrl(500, 500) }}" class="gallery__hero-enlarge ir"
+                                                data-gallery="zoom"></a>
+                                            <img src="{{ $image->getUrl(500, 500) }}">
+                                        @break;
                                     @endif
-                                @endforeach
-                                </div>
-                                <!--Gallery Hero-->
-                                
-                                <!--Gallery Thumbs-->
-                                <div class="gallery__thumbs">
-                                @foreach($announcement->images as $image)
-                                
-                                    <a href="{{$image->getUrl(500, 500)}}"
-                                        data-gallery="thumb" class="is-active">
-                                        <img src="{{$image->getUrl(500, 500)}}" alt="">
-                                        <!-- <p>Adult: {{$image->adult}} <br>
-                                    spoof: {{$image->spoof}} <br>
-                                    medical: {{$image->medical}} <br>
-                                    violence: {{$image->violence}} <br>
-                                    racy: {{$image->racy}} <br></p>
-                                    <b>Labels</b><br>
-                                    <ul>
-                                        @if ($image->labels)
-                                            @foreach ($image->labels as $label)
-                                                <li>{{ $label }}</li>
-                                            @endforeach
-                                        @endif
-                                    </ul> -->
-                                    </a>
+                @endforeach
+            </div>
+            <!--Gallery Hero-->
 
-                                @endforeach
-                                
+            <!--Gallery Thumbs-->
+            <div class="gallery__thumbs">
+                @foreach ($announcement->images as $image)
+                    <a href="{{ $image->getUrl(500, 500) }}" data-gallery="thumb" class="is-active">
+                        <img src="{{ $image->getUrl(500, 500) }}" alt="">
+                    </a>
+                @endforeach
+            </div>
+            <!--Gallery Thumbs-->
+        </div>
+        <!--.gallery-->
+        <!-- Gallery -->
 
-                                </div>
-                                <!--Gallery Thumbs-->
-                            </div>
-                            <!--.gallery-->
-                            <!-- Gallery -->
+    </div>
 
-                        </div>
+    </div>
 
-                    </div>
+    <div class="col-md-6 mt-5">
+        <div class="user-revisor d-flex">
+            <div class="col-3 justify-content-center align-self-center text-center">
+                <i class="fas fa-user-circle fs-1"></i>
+            </div>
+            <div class=" col-9 my-3">
+                <div class="d-flex align-items-end">
+                    <h4 class=" mb-0"><span>Utente:</span>{{ $announcement->user->name }}</h4>
+                </div>
 
-                    <div class="col-md-6 mt-5">
-                        <div class="user-revisor d-flex">
-                            <div class="col-3 justify-content-center align-self-center text-center">
-                                <i class="fas fa-user-circle fs-1"></i>
-                            </div>
-                            <div class=" col-9 my-3">
-                                <div class="d-flex align-items-end">
-                                    <h4 class=" mb-0"><span>Utente:</span>{{ $announcement->user->name }}</h4>
-                                </div>
-
-                                <h6 class=" mb-0"><span>Id:</span>{{ $announcement->user->id }}</h6>
-                                <div class="small mb-0"><span>Email:</span>{{ $announcement->user->email }}</div>
-                                <div class="small mb-0">
-                                    <span>Date:</span>{{ $announcement->created_at->format('j F Y') }}
-                                </div>
-                            </div>
-                        </div>
-                        <h1 class="display-5 fw-bolder">{{ $announcement->title }}</h1>
-                        <div class="fs-5 mb-2 price">
-                            <h2>{{ $announcement->price }}<span>€</span></h2>
-                        </div>
-                        <p class="lead">{{ $announcement->description }}</p>
-                        <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div>
-                                <h4>Photos Summary:</h4>
-                                <ul>
-                                    <li>Adult : {{$image->adult}}</li>
-                                    <li>Spoof: {{$image->spoof}}</li>
-                                    <li>Medical: {{$image->medical}}</li>
-                                    <li>Violence: {{$image->violence}}</li>
-                                    <li>Racy: {{$image->racy}}</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <h4>Labels Summary:</h4>
-                            <ul>
-                            @if ($image->labels)
-                                            @foreach ($image->labels as $label)
-                                                <li>{{ $label }}</li>
-                                            @endforeach
-                                        @endif
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="d-flex pt-3">
-
-                            <form action="{{ route('revisor.accept', [$announcement->id]) }}" method="post">
-                                @csrf
-                                <button type="submit" class="btn btn-product-card">
-                                    Approva <i class="fa fa-check ms-2"></i></button>
-                            </form>
-
-                            <form action="{{ route('revisor.reject', [$announcement->id]) }}" method="post">
-                                @csrf
-                                <button type="submit" class="btn2 btn-product-card ms-3">
-                                    Rifiuta <i class="fas fa-times ms-2"></i></button>
-                            </form>
-
-
-                        </div>
-                    </div>
-
-                @endif
-
+                <h6 class=" mb-0"><span>Id:</span>{{ $announcement->user->id }}</h6>
+                <div class="small mb-0"><span>Email:</span>{{ $announcement->user->email }}</div>
+                <div class="small mb-0">
+                    <span>Date:</span>{{ $announcement->created_at->format('j F Y') }}
+                </div>
             </div>
         </div>
+        <h1 class="display-5 fw-bolder">{{ $announcement->title }}</h1>
+        <div class="fs-5 mb-2 price">
+            <h2>{{ $announcement->price }}<span>€</span></h2>
+        </div>
+        <p class="lead">{{ $announcement->description }}</p>
+
+
+
+
+
+        <div class="row mt-5 mb-5">
+            <div class="col-8">
+                <div class="accordion" id="accordionExample">
+                    @foreach ($announcement->images as $image)
+                        <div class="accordion-item">
+                            <div class="row">
+                                <div class="col-12 d-flex">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            {{ $image->id }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <h4>Photos Summary:</h4>
+                                            <ul>
+                                                <li>Adult : {{ $image->adult }}</li>
+                                                <li>Spoof: {{ $image->spoof }}</li>
+                                                <li>Medical: {{ $image->medical }}</li>
+                                                <li>Violence: {{ $image->violence }}</li>
+                                                <li>Racy: {{ $image->racy }}</li>
+                                            </ul>
+                                            @if ($image->labels)
+                                                @foreach ($image->labels as $label)
+                                                    <li>{{ $label }}</li>
+                                                @endforeach
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="d-flex pt-3">
+
+            <form action="{{ route('revisor.accept', [$announcement->id]) }}" method="post">
+                @csrf
+                <button type="submit" class="btn btn-product-card">
+                    Approva <i class="fa fa-check ms-2"></i></button>
+            </form>
+
+            <form action="{{ route('revisor.reject', [$announcement->id]) }}" method="post">
+                @csrf
+                <button type="submit" class="btn2 btn-product-card ms-3">
+                    Rifiuta <i class="fas fa-times ms-2"></i></button>
+            </form>
+
+
+        </div>
+    </div>
+
+    @endif
+
+    </div>
+    </div>
 
     </div>
 
@@ -231,7 +240,8 @@
             <div class="container mb-5">
                 <div class="row bar mb-0">
                     <div id="customer-orders" class="col-md-12">
-                        <p class="text-muted text-center mb-5">Qui visualizzerai il tuo cestino, puoi ripristinare lo stato degli annunci
+                        <p class="text-muted text-center mb-5">Qui visualizzerai il tuo cestino, puoi ripristinare lo
+                            stato degli annunci
                             rifiutati. Se hai problemi, <a href="contact.html">contattaci</a>.</p>
                         <div class="box mt-0 mb-lg-0">
                             <div class="table-responsive">
