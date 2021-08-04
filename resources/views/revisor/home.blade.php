@@ -89,7 +89,16 @@
                                         data-gallery="thumb" class="is-active">
                                         <img src="{{ $image->getUrl(400, 500) }}" alt="">
                                     </a>
-                                    @endforeach
+                                @endforeach
+                                <b>Labels</b><br>
+                                <ul>
+                                    @if ($image->labels)
+                                        @foreach ($image->labels as $label)
+                                            <li>{{ $label }}</li>
+                                        @endforeach
+                                    @endif
+                                </ul>
+
                                 </div>
                                 <!--Gallery Thumbs-->
                             </div>
