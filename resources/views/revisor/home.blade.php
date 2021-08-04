@@ -78,26 +78,27 @@
                                 <!--Gallery Thumbs-->
                                 <div class="gallery__thumbs">
                                 @foreach($announcement->images as $image)
-                                <div class="col-8">
-                                    Adult: {{$image->adult}} <br>
-                                    spoof: {{$image->spoof}} <br>
-                                    medical: {{$image->medical}} <br>
-                                    violence: {{$image->violence}} <br>
-                                    racy: {{$image->racy}} <br>
-                                </div>
+                                
                                     <a href="{{ Storage::url($image->file) }}"
                                         data-gallery="thumb" class="is-active">
                                         <img src="{{ $image->getUrl(400, 500) }}" alt="">
+                                        <p>Adult: {{$image->adult}} <br>
+                                    spoof: {{$image->spoof}} <br>
+                                    medical: {{$image->medical}} <br>
+                                    violence: {{$image->violence}} <br>
+                                    racy: {{$image->racy}} <br></p>
+                                    <b>Labels</b><br>
+                                    <ul>
+                                        @if ($image->labels)
+                                            @foreach ($image->labels as $label)
+                                                <li>{{ $label }}</li>
+                                            @endforeach
+                                        @endif
+                                    </ul>
                                     </a>
+
                                 @endforeach
-                                <b>Labels</b><br>
-                                <ul>
-                                    @if ($image->labels)
-                                        @foreach ($image->labels as $label)
-                                            <li>{{ $label }}</li>
-                                        @endforeach
-                                    @endif
-                                </ul>
+                                
 
                                 </div>
                                 <!--Gallery Thumbs-->
