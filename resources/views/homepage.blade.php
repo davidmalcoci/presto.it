@@ -278,7 +278,7 @@
                                 <div class="product-card">
                                     <div class="product-card-body">
                                         <div class="card-img-actions"> <img
-                                                src="{{ $image->getUrl(400, 500) }}"
+                                                src="{{ $image->getUrl(500, 500) }}"
                                                 class="card-img img-fluid" width="96" height="350" alt=""> </div>
                                     </div>
                                     @break;
@@ -339,7 +339,7 @@
                                                 @endphp
                                                 @if ($imagenum < $image->id)
                                                     <img
-                                                        src="{{ $image->getUrl(400, 500) }}"
+                                                        src="{{ $image->getUrl(500, 500) }}"
                                                         class="card-img img-fluid" width="96" height="350" alt="">
                                                         @break;
                                                         @endif

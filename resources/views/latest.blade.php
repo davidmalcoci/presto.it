@@ -12,7 +12,7 @@
                                 @if ($imagenum < $image->id)
                                         <div class="card-product-search">
                                             <img class="card__image"
-                                                src="{{$image->getUrl(400, 500)}}" />
+                                                src="{{$image->getUrl(500, 500)}}" />
                                                 @break;
                                 @endif
                                 @endforeach

@@ -66,7 +66,7 @@ class AnnouncementController extends Controller
         $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
 
         dispatch(new ResizeImage($fileName, 80, 80));
-        dispatch(new ResizeImage($fileName, 400, 500));
+        dispatch(new ResizeImage($fileName, 500, 500));
 
         session()->push("images.{$uniqueSecret}", $fileName);
     
@@ -126,11 +126,11 @@ class AnnouncementController extends Controller
             $i->save();
 
             GoogleVisionSafeSearchImage::withChain([
-                new ResizeImage($i->file, 400, 500),
+                new ResizeImage($i->file, 500, 500),
                 new ResizeImage($i->file, 80, 80),
                 new GoogleVisionLabelImage($i->id),
                 new GoogleVisionRemoveFaces($i->id),
-                new ResizeImage($i->file, 400, 500),
+                new ResizeImage($i->file, 500, 500),
                 new ResizeImage($i->file, 80, 80)
 
             ])->dispatch($i->id);
@@ -209,7 +209,7 @@ class AnnouncementController extends Controller
         foreach($images as $image) {
             $data[] = [
                 'id' => $image,
-                'src' => AnnouncementImage::getUrlByFilePath($image, 400, 500)
+                'src' => AnnouncementImage::getUrlByFilePath($image, 500, 500)
             ];
         }
 
