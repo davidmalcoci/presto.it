@@ -25,9 +25,8 @@
                                 @endphp
                                
                                 @if ($imagenum < $image->id)
-                                {{-- <a href="" class="gallery__hero-enlarge ir" data-gallery="zoom">Zoom</a> --}}
-
-                                <img src="{{Storage::url($image->file)}}">
+                                <a href="{{$image->getUrl(400, 500)}}" class="gallery__hero-enlarge ir" data-gallery="zoom"></a>
+                                    <img src="{{$image->getUrl(400, 500)}}">
                                 @break;
                                 @endif
                                 @endforeach
@@ -37,9 +36,9 @@
                             <!--Gallery Thumbs-->
                             <div class="gallery__thumbs">
                                 @foreach($announcement->images as $image)
-                                    <a href="{{ Storage::url($image->file) }}"
+                                    <a href="{{$image->getUrl(400, 500)}}"
                                         data-gallery="thumb" class="is-active">
-                                        <img src="{{ $image->getUrl(400, 500) }}" alt="">
+                                        <img src="{{ $image->getUrl(80, 80)}}" alt="">
                                     </a>
                                     @endforeach
                                 </div>
