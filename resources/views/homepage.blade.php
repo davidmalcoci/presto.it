@@ -36,8 +36,11 @@
     {{-- /*--------------------------------------------------------------
     # Header
     --------------------------------------------------------------*/ --}}
-
-    <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css"> -->
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /> -->
 
     <div id="myCarousel" class="carousel slide carousel-fade pt-5 row-header" data-ride="carousel">
         <div class="carousel-inner">
