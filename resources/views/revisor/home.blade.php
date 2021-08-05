@@ -148,11 +148,11 @@
                         <div class="row d-flex ">
                             <div class="col-6 me-5">
                                 <h4>Photos Summary:</h4>                            
-                                    <p>Adult : <span>{{ $image->adult }}</span></p>
-                                    <p>Spoof:  <span>{{ $image->spoof }}</span></p>
-                                    <p>Medical:  <span>{{ $image->medical }}</span></p>
-                                    <p>Violence:  <span>{{ $image->violence }}</span></p>
-                                    <p>Racy:  <span>{{ $image->racy }}</span></p>                            
+                                    <p>Adult: <span>{{ $image->adult }}</span></p>
+                                    <p>Spoof: <span>{{ $image->spoof }}</span></p>
+                                    <p>Medical: <span>{{ $image->medical }}</span></p>
+                                    <p>Violence: <span>{{ $image->violence }}</span></p>
+                                    <p>Racy: <span>{{ $image->racy }}</span></p>                            
                             </div>
                             <div class="col-3 pb-5">
                                 @if ($image->labels)
